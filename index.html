@@ -6,6 +6,12 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="preloader">
+		<div class="flex items-center">
+			<img src="img/logo_small.svg" alt="" width="222px" class="preloader_logo">
+			<span class="preloader_text">The Art of Living SmArt</span>	
+		</div>
+	</div>
 	<header class="header">
 		<div class="container mx-auto">
 			<div class="flex justify-between items-center">
@@ -32,13 +38,27 @@
 					</ul>
 				</nav>
 				<div class="header_lang lang-toggle">
-					Lang
+					<div class="select">
+						<select>
+						  <option>RU</option>
+						  <option>ENG</option>
+						</select>	
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 	<main>
 		<section class="overview overview_01 smart-slide" data-slide-id="1">
+			<div class="overview_01_light_top">
+				<img src="img/light_top.png" alt="">
+			</div>
+			<div class="overview_01_light_side">
+				<img src="img/light_side.png" alt="">
+			</div>
+			<div class="overview_01_light_oval">
+				<img src="img/oval-full.svg" alt="" width="50px">
+			</div>
 			<div class="container mx-auto">
 				<div class="overview_content">
 					<div class="overview_01_title">
@@ -49,8 +69,8 @@
 							<div>
 								<img src="img/lamp.svg" alt="" width="36px">
 							</div>
-							<div>
-								<img src="img/power-on.svg" alt="" width="40px">
+							<div class="power-btn light-toggle-js">
+								<img src="img/power.svg" alt="" width="24px">
 							</div>
 						</div>
 						<div class="overview_01_item flex justify-between items-end p-2">
@@ -106,6 +126,27 @@
 					<div class="smart-btn">
 						Сделат
 					</div>	
+				</div>
+			</div>
+			<div class="container relative h-full mx-auto">
+				<div class="overview_02_notice animate-smart">
+					<div class="overview_02_notice_item justify-end items-end">
+						<img src="img/sun.svg" alt="" width="32px">
+					</div>
+					<div class="overview_02_notice_item justify-start items-end">
+						<img src="img/curtains.svg" alt="" width="32px">
+					</div>
+					<div class="overview_02_notice_item justify-start items-end">
+						<img src="img/snowflake.svg" alt="" width="32px">
+					</div>
+					<div class="overview_02_notice_item justify-between items-end">
+						<div>
+							<img src="img/music_ava.jpg" alt="" width="36px">
+						</div>
+						<div>
+							song
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="container mx-auto overview_bottom">

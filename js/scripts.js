@@ -1,3 +1,9 @@
+setTimeout(function(){
+	//Preloader
+	let preloader = document.querySelector('.preloader');
+	preloader.classList.add('hide');
+}, 3500);
+
 $.scrollify({
   section : ".smart-slide",
   easing: "easeOutExpo",
@@ -211,4 +217,67 @@ for (allSwipePhotoSix of allSwipePhotosSix) {
 		allSwipePhotoSix.style.left = swipePhotoNewLeftSix + 'px';
 		swipePhotoNewLeftSix = swipePhotoNewLeftSix + swipePhotoLeftSix;
 	}
+}
+
+
+//Размеры и отступы на первом экране
+let welcomeLightToggle = document.querySelector('.light-toggle-js');
+let welcomeLightTop = document.querySelector('.overview_01_light_top');
+let welcomeLightSide = document.querySelector('.overview_01_light_side');
+console.log(window.innerHeight);
+welcomeLightTop.style.height = window.innerHeight/1.24 + 'px';
+
+//Включаем свет на первом экране
+welcomeLightToggle.addEventListener('click', function(){
+	welcomeLightToggle.classList.toggle('on');
+	welcomeLightTop.classList.toggle('show');
+	welcomeLightSide.classList.toggle('show');
+});
+
+//Размеры и отступы на втором экране (Morning)
+let morningNotice = document.querySelector('.overview_02_notice');
+let morningNoticeItems = document.querySelectorAll('.overview_02_notice_item');
+
+if (morningNotice) {
+	morningNotice.style.bottom = 100 + windowPadding/1.5 + 'px';
+}
+for (morningNoticeItem of morningNoticeItems) {
+	if (morningNoticeItem) {
+		morningNoticeItem.style.height = window.innerHeight/11.73 + 'px';	
+	}
+}
+
+//Анимация при скроле
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('show-smart');
+
+      //Для Morning блока
+      morningTimeout = 2000;
+      function addClassFunc(classname) {
+      	classname.classList.add('show');
+      	classname.style.opacity = 1;
+      }
+      for (morningNoticeItem of morningNoticeItems) {
+    		if (morningNoticeItem) {
+    			morningTimeout = morningTimeout + 2000;
+    			(function(morningNoticeItem){
+		        setTimeout(function(){
+		          addClassFunc(morningNoticeItem);
+		        }, morningTimeout);
+			    })(morningNoticeItem);
+    		}
+    	}
+    }
+  });
+}
+
+let options = {
+  threshold: [0.1] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.animate-smart');
+
+for (let elm of elements) {
+  observer.observe(elm);
 }
