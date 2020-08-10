@@ -63382,7 +63382,6 @@ select::-ms-expand {
         padding: 12px;
         margin-bottom: 8px; }
         .overview_02_notice.show-smart .overview_02_notice_item.show {
-          opacity: 1;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -63390,8 +63389,8 @@ select::-ms-expand {
           -webkit-transition: all 0.35s;
           -o-transition: all 0.35s;
           transition: all 0.35s;
-          /*-webkit-animation: notice_move 10s forwards;
-						animation: notice_move 10s forwards;*/ }
+          -webkit-animation: notice_move 10s forwards;
+          animation: notice_move 10s forwards; }
   .overview_03 {
     background: url(../img/overview_03_bg.jpg);
     background-size: cover;
