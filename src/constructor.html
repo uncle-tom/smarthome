@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Constructor</title>
+	<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="constructor-page">
+	<div class="preloader">
+		<div class="flex items-center">
+			<img src="../assets/img/logo_small.svg" alt="" width="222px" class="preloader_logo">
+			<span class="preloader_text">The Art of Living SmArt</span>	
+		</div>
+	</div>
+	<!-- Constructor HEADER :: components/header/header.html -->
+	@@include('components/header/header.html')
+	<main>
+		<div class="constructor-slide active" data-constr-slide="1">
+			<!-- Constructor Slide 1 Select Option :: components/constructor/slides/select-option.html -->
+			@@include('components/constructor/slides/select-option.html')
+		</div>
+		<div class="constructor-slide" data-constr-slide="2">
+			<!-- Constructor Slide 1 Select Option :: components/constructor/slides/select-paket.html -->
+			@@include('components/constructor/slides/select-paket.html')
+		</div>
+		<div class="constructor-slide" data-constr-slide="3">
+			<!-- Constructor Slide 1 Select Option :: components/constructor/slides/select-advanced-options.html -->
+			@@include('components/constructor/slides/select-advanced-options.html')
+		</div>
+		<div class="constructor-slide" data-constr-slide="4">
+			<!-- Constructor Slide 1 Select Option :: components/constructor/slides/send-request.html -->
+			@@include('components/constructor/slides/send-request.html')
+		</div>
+	</main>
+	<!-- Constructor Modal :: components/constructor/constructor-modal.html -->
+	@@include('components/constructor/constructor-modal.html', {
+		'box-id': 1
+	})
+	<!-- Constructor Modal :: components/constructor/constructor-modal.html -->
+	@@include('components/constructor/constructor-modal.html', {
+		'box-id': 2
+	})
+	<!-- Constructor Modal :: components/constructor/constructor-modal.html -->
+	@@include('components/constructor/constructor-modal.html', {
+		'box-id': 3
+	})
+	<!-- Constructor Modal :: components/constructor/constructor-modal.html -->
+	@@include('components/constructor/constructor-modal.html', {
+		'box-id': 4
+	})
+	<!-- Constructor Modal :: components/constructor/constructor-modal.html -->
+	@@include('components/constructor/constructor-modal.html', {
+		'box-id': 5
+	})
+	<!-- Constructor Modal :: components/constructor/constructor-modal.html -->
+	@@include('components/constructor/constructor-modal.html', {
+		'box-id': 6
+	})
+	<div class="modal" data-modal-id="send_request">
+		<!-- Modal Main Block -->
+		<div class="modal_block p-6">
+			<div class="flex justify-between items-center mb-10">
+				<div class="modal_title">
+					Send a request
+				</div>
+				<div class="modal_close">
+					<img src="../assets/img/close.svg" alt="" width="24px">
+				</div>
+			</div>
+			<div>
+				<form action="">
+					<div class="flex justify-between items-center mb-6">
+						<div class="w-full relative mr-2">
+							<input type="text" placeholder="Name" class="input-with-icon">
+							<img src="../assets/img/name-icon.svg" alt="" class="input-icon-name">	
+						</div>
+						<div class="w-full relative mr-2">
+							<input type="number" placeholder="Phone" class="input-with-icon">	
+							<img src="../assets/img/phone-icon.svg" alt="" class="input-icon-phone">
+						</div>
+					</div>
+					<div class="mb-6">
+						<textarea name="message" id="" rows="3" placeholder="Message" class="w-full"></textarea>
+					</div>
+					<div class="flex justify-end">
+						<button type="submit" class="bg-main text-white uppercase rounded-full px-6 py-2">Send</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal-bg"></div>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../assets/js/jquery.scrollify.js"></script>
+	<script type="text/javascript" src="../assets/js/scripts.js"></script>
+</body>
+</html>

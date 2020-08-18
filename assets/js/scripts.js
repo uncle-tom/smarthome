@@ -11,7 +11,51 @@ $.scrollify({
   passive: false,
 });
 
-let windowPadding = (window.screen.width - 1280)/2;
+//Modal Open
+let bgModal = document.querySelector('.modal-bg');
+let modalsClickId = document.querySelectorAll('.modal_click_js');
+
+for (modalClickId of modalsClickId) {
+  if (modalClickId) {
+    modalClickId.addEventListener('click', function(){
+      modalThisId = this.dataset.modalId;
+      let modal = document.querySelector(".modal[data-modal-id='" + modalThisId + "'");
+      modal.classList.add('open');
+      bgModal.classList.add('open');
+      console.log(modalClickId);
+    });
+  }
+}
+
+//Modal Close
+let modalCloseBtns = document.querySelectorAll('.modal .modal_close');
+let allModals = document.querySelectorAll('.modal');
+document.addEventListener('click', function(e){
+  if(e.target.classList.value === 'modal-bg open') {
+    bgModal.classList.remove('open');
+    for (allModal of allModals) {
+      allModal.classList.remove('open');  
+    }
+  }
+});
+
+if (modalCloseBtns) {
+  for (modalCloseBtn of modalCloseBtns) {
+    modalCloseBtn.addEventListener('click', function(){
+      bgModal.classList.remove('open');
+      for (allModal of allModals) {
+        allModal.classList.remove('open');  
+      }
+    });
+  }
+}
+
+let containerClassWidth = window.getComputedStyle(document.querySelector('.container'),null).getPropertyValue('max-width')
+containerClassWidth = containerClassWidth.substring(0, containerClassWidth.lastIndexOf("px"));
+containerClassWidth = parseInt(containerClassWidth);
+console.log(containerClassWidth);
+
+let windowPadding = (window.screen.width - containerClassWidth)/2;
 let headerClass = document.querySelector('header');
 let overviewBottomAll = document.querySelectorAll('.overview_bottom');
 
@@ -21,8 +65,6 @@ for (overviewBottom of overviewBottomAll) {
 	}
 }
 headerClass.style.paddingTop = windowPadding/1.5 + 'px';
-
-
 
 //OVERVIEW SLIDER (Four)
 let prevBtnFour = document.querySelector('.overview_prev[data-swipe="4"]');
@@ -188,18 +230,27 @@ if (prevBtnSix) {
 
 function beforeStartSlide() {
 	let firstSlideFour = document.querySelector('.swipe[data-swipe="4"]');
-	firstSlideFour.classList.add('active');
+	if (firstSlideFour) {
+		firstSlideFour.classList.add('active');	
+	}
 
 	let firstSlideSix = document.querySelector('.swipe[data-swipe="6"]');
-	firstSlideSix.classList.add('active');
+	if (firstSlideSix) {
+		firstSlideSix.classList.add('active');
+	}
 }
 beforeStartSlide();
 
 //Считаем размер картинки в слайде
 let allSwipePhotosFour = document.querySelectorAll('.swipe-photos[data-swipe="4"] .swipe-photo');
-let swipePhotoWidthFour = document.querySelector('.swipe-photos[data-swipe="4"] .swipe-photo').offsetWidth;
-let swipePhotoLeftFour = swipePhotoWidthFour - (swipePhotoWidthFour/4) - 1;
-let swipePhotoNewLeftFour = swipePhotoLeftFour;
+let swipePhotoFour = document.querySelector('.swipe-photos[data-swipe="4"] .swipe-photo');
+if (swipePhotoFour) {
+	swipePhotoWidthFour = swipePhotoFour.offsetWidth;	
+	swipePhotoLeftFour = swipePhotoWidthFour - (swipePhotoWidthFour/4) - 1;
+	swipePhotoNewLeftFour = swipePhotoLeftFour;
+}
+
+
 for (allSwipePhotoFour of allSwipePhotosFour) {
 	if (allSwipePhotoFour) {
 		allSwipePhotoFour.style.left = swipePhotoNewLeftFour + 'px';
@@ -209,9 +260,13 @@ for (allSwipePhotoFour of allSwipePhotosFour) {
 
 //Считаем размер картинки в слайде
 let allSwipePhotosSix = document.querySelectorAll('.swipe-photos[data-swipe="6"] .swipe-photo');
-let swipePhotoWidthSix = document.querySelector('.swipe-photos[data-swipe="6"] .swipe-photo').offsetWidth;
-let swipePhotoLeftSix = swipePhotoWidthSix - (swipePhotoWidthSix/4) - 1;
-let swipePhotoNewLeftSix = swipePhotoLeftSix;
+let swipePhotoSix = document.querySelector('.swipe-photos[data-swipe="6"] .swipe-photo');
+if (swipePhotoSix) {
+	swipePhotoWidthSix = swipePhotoSix.offsetWidth;
+	swipePhotoLeftSix = swipePhotoWidthSix - (swipePhotoWidthSix/4) - 1;
+	swipePhotoNewLeftSix = swipePhotoLeftSix;	
+}
+
 for (allSwipePhotoSix of allSwipePhotosSix) {
 	if (allSwipePhotoSix) {
 		allSwipePhotoSix.style.left = swipePhotoNewLeftSix + 'px';
@@ -224,15 +279,38 @@ for (allSwipePhotoSix of allSwipePhotosSix) {
 let welcomeLightToggle = document.querySelector('.light-toggle-js');
 let welcomeLightTop = document.querySelector('.overview_01_light_top');
 let welcomeLightSide = document.querySelector('.overview_01_light_side');
-console.log(window.innerHeight);
-welcomeLightTop.style.height = window.innerHeight/1.24 + 'px';
+let welcomeShapeOne = document.querySelector('.overview_01_shape_01');
+let welcomeShapeTwo = document.querySelector('.overview_01_shape_02');
+let welcomeShapeThree = document.querySelector('.overview_01_shape_03');
+
+if (welcomeLightTop) {
+	welcomeLightTop.style.height = window.innerHeight/1.24 + 'px';	
+}
+
+if (welcomeShapeOne) {
+	welcomeShapeOne.style.top = (window.innerHeight/5.2) - 34 + 'px';
+	welcomeShapeOne.style.right = (window.screen.width/3.75) - 34 + 'px';	
+}
+
+if (welcomeShapeTwo) {
+	welcomeShapeTwo.style.top = (window.innerHeight/3.3) - 25 + 'px';
+	welcomeShapeTwo.style.right = (window.screen.width/4.1) - 25 + 'px';	
+}
+
+if (welcomeShapeThree) {
+	welcomeShapeThree.style.top = (window.innerHeight/3.8) - 34 + 'px';
+	welcomeShapeThree.style.right = (window.screen.width/4.5) - 34 + 'px';	
+}
+
 
 //Включаем свет на первом экране
-welcomeLightToggle.addEventListener('click', function(){
-	welcomeLightToggle.classList.toggle('on');
-	welcomeLightTop.classList.toggle('show');
-	welcomeLightSide.classList.toggle('show');
-});
+if (welcomeLightToggle) {
+	welcomeLightToggle.addEventListener('click', function(){
+		welcomeLightToggle.classList.toggle('on');
+		welcomeLightTop.classList.toggle('show');
+		welcomeLightSide.classList.toggle('show');
+	})
+}
 
 //Размеры и отступы на втором экране (Morning)
 let morningNotice = document.querySelector('.overview_02_notice');
@@ -245,6 +323,35 @@ for (morningNoticeItem of morningNoticeItems) {
 	if (morningNoticeItem) {
 		morningNoticeItem.style.height = window.innerHeight/11.73 + 'px';	
 	}
+}
+
+//Размеры и отступы в Конструкторе
+let constrWrapper = document.querySelectorAll('.constr_wrapper');
+let constrBlocks = document.querySelectorAll('.constr_block');
+let constrMetaSticky = document.querySelector('.constr_meta_sticky');
+let constrBoxes = document.querySelectorAll('.constr_box');
+let constrBlocksHeight = window.innerHeight*0.644;
+let constrBoxHeight = window.innerHeight/2.35;
+
+for (constrBlock of constrBlocks) {
+	if (constrBlock) {
+		constrBlock.style.minHeight = constrBlocksHeight + 'px';
+	}
+}
+
+for (constrBox of constrBoxes) {
+	if (constrBox) {
+		constrBox.style.height = constrBoxHeight + 'px';
+	}
+}
+
+for (cW of constrWrapper) {
+	if (cW) {
+		cW.style.top = window.innerHeight/4.736 + 'px';
+	}
+}
+if (constrMetaSticky) {
+	constrMetaSticky.style.top = window.innerHeight/4.736 + 'px';
 }
 
 //Анимация при скроле
@@ -281,3 +388,141 @@ let elements = document.querySelectorAll('.animate-smart');
 for (let elm of elements) {
   observer.observe(elm);
 }
+
+
+//Audio
+//Audio BTNS
+let prevSongBtn = document.querySelector('.player-prev-js');
+let nextSongBtn = document.querySelector('.player-next-js');
+let playSongBtn = document.querySelector('.player-play-pause-js');
+
+let songsArray = [];
+let audioNoticeAll = document.querySelectorAll('.overview_02_notice audio');
+for (audioNotice of audioNoticeAll) {
+	songsArray.push(audioNotice.src);
+}
+
+currentSongIndex = 0;
+
+function prevSong() {
+	if (currentSongIndex === 0) {
+		currentSongIndex = document.querySelectorAll('.overview_02_notice audio').length - 1;
+		stopOldSong();
+		playSong();
+	} else {
+		currentSongIndex = currentSongIndex - 1;
+		stopOldSong();
+		playSong();
+	}
+}
+
+function nextSong() {
+	if (currentSongIndex === document.querySelectorAll('.overview_02_notice audio').length - 1) {
+		currentSongIndex = 0;
+		stopOldSong();
+		playSong();
+	} else {
+		currentSongIndex = currentSongIndex + 1;	
+		stopOldSong();
+		playSong();
+	}
+}
+
+function playSong() {
+	console.log(currentSongIndex);
+	currentSong = document.querySelectorAll('.overview_02_notice audio')[currentSongIndex];
+	if (currentSong.paused) {
+	  currentSong.play();
+	}
+	else {
+	  currentSong.pause();
+	}
+}
+
+function stopOldSong() {
+	let allOldSong = document.querySelectorAll('.overview_02_notice audio');
+	for (oldSong of allOldSong) {
+		if (oldSong) {
+			oldSong.pause();	
+		}
+	}
+}
+
+//Play-Pause
+if (playSongBtn) {
+	playSongBtn.addEventListener('click', function(){
+		playSong();
+	});
+}
+
+//Prev Song
+if (prevSongBtn) {
+	prevSongBtn.addEventListener('click', function(){
+		prevSong();
+	});
+}
+
+//Next Song
+if (nextSongBtn) {
+	nextSongBtn.addEventListener('click', function(){
+		nextSong();
+	});
+}
+
+//Added Box
+$('.constr-add-js').each(function() {
+  var $this = $(this);
+  $this.on('click', function () {
+  	var addBtnDataId = $(this).data('box-id');
+
+  	//Уменьшаем размер тайтла
+		$('.constr_title').addClass('added');
+
+		//Делаем видимым элемент в "корзине"
+		$('.constr_selected_item[data-box-id='+addBtnDataId+']').addClass('added');
+
+		//Меняем кнопку -- add to qty
+    $('.constr-add-js[data-box-id='+addBtnDataId+']').addClass('added');
+  });
+});
+
+//Click Constr Count Minus
+$('.constr_count_minus').click(function () {
+	var currentCountId = $(this).closest('.constr-add-count').data('box-id');
+	var currentCountInput = $('.constr-add-count[data-box-id='+currentCountId+'] .constr_count_input');
+	var currentCountNumber = parseInt(currentCountInput.val()) - 1;
+	currentCountNumber = currentCountNumber < 1 ? 1 : currentCountNumber;
+	currentCountInput.val(currentCountNumber);
+	currentCountInput.change();
+	return false;
+});
+
+//Click Constr Count Plus
+$('.constr_count_plus').click(function () {
+	var currentCountId = $(this).closest('.constr-add-count').data('box-id');
+	var currentCountInput = $('.constr-add-count[data-box-id='+currentCountId+'] .constr_count_input');
+	var currentCountNumber = parseInt(currentCountInput.val()) + 1;
+	currentCountNumber = currentCountNumber < 1 ? 1 : currentCountNumber;
+	currentCountInput.val(currentCountNumber);
+	currentCountInput.change();
+	return false;
+});
+
+
+//Constr Slider Next
+$('.constr_next_slide_js').on('click', function(){
+	var currentConstrSlideId = $(this).closest('.constructor-slide').data('constr-slide');
+	$('.constructor-slide[data-constr-slide='+currentConstrSlideId+']').removeClass('active');
+	
+	ConstrSlideNumber = currentConstrSlideId + 1;
+	$('.constructor-slide[data-constr-slide='+ConstrSlideNumber+']').addClass('active');
+});
+
+//Constr Slider Back
+$('.constr_back_slide_js').on('click', function(){
+	var currentConstrSlideId = $(this).closest('.constructor-slide').data('constr-slide');
+	$('.constructor-slide[data-constr-slide='+currentConstrSlideId+']').removeClass('active');
+	
+	ConstrSlideNumber = currentConstrSlideId - 1;
+	$('.constructor-slide[data-constr-slide='+ConstrSlideNumber+']').addClass('active');
+})

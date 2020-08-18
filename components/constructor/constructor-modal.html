@@ -1,0 +1,45 @@
+<div class="modal" data-modal-id="constr_box_item_@@box-id">
+	<!-- Modal Main Block -->
+	<div class="modal_block flex">
+		<!-- Modal Constructor Photo (left/pc) -->
+		<div class="modal_constr_photo w-2/5">
+			<img src="../assets/img/constr/modal-photo-example.jpg" alt="" class="h-full w-full object-cover">
+		</div>
+		<!-- Modal Constructor (right/pc)  -->
+		<div class="w-3/5">
+			<!-- Modal Constructor Info  -->
+			<div class="modal_constr_info flex items-center justify-between">
+				<div class="flex justify-center items-center">
+					<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
+					@@include('components/constructor/constructor-about-item.html')
+				</div>
+				<!-- Modal Close  -->
+				<div class="modal_close">
+					<img src="../assets/img/close.svg" alt="" width="24px">
+				</div>
+			</div>
+			<!-- Modal Constructor Text  -->
+			<div class="modal_constr_text">
+				<p>When moisture enters the water sensor, the leakage protection system gives an alarm signal and automatically shuts off the water supply using ball actuators.</p>
+				<p>Resumption of supply will occur only after the elimination of the accident.</p>
+				<p>1 point / 2 valves for hot / cold water risers (there may be several risers)</p>
+			</div>
+			<!-- Modal Constructor Add Btn  -->
+			<div class="modal_constr_add constr-add-js flex items-center" data-box-id="@@box-id">
+				<div class="constr-add-btn flex">
+					<img src="../assets/img/plus.svg" alt="" width="24px" class="mr-2">
+					<span>Add</span>	
+				</div>
+				<!-- Modal Constructor Added Count  -->
+				<div class="constr-add-count flex items-center hidden" data-box-id="@@box-id">
+					<div class="constr_count flex mr-5">
+						<span class="constr_count_minus">-</span>
+						<input type="text" value="1"/ class="constr_count_input">
+						<span class="constr_count_plus plus">+</span>	
+					</div>
+					<span class="modal_constr_apply">Apply</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

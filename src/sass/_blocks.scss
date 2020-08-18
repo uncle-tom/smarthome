@@ -25,27 +25,27 @@
 			-o-transition: all 0.12s;
 			transition: all 0.12s;
 			&.active {
-				color: #FF6600;
+				color: $main_color;
 				&:before {
 					content: '';
 					width: 100%;
 					height: 100%;
 					position: absolute;
 					top: 0; left: 0;
-					background: #FF6600;
+					background: $main_color;
 					border-radius: 24px;
 					opacity: 0.12;
 				}
 			}
 			&:hover {
-				color: #FF6600;
+				color: $main_color;
 				&:before {
 					content: '';
 					width: 100%;
 					height: 100%;
 					position: absolute;
 					top: 0; left: 0;
-					background: #FF6600;
+					background: $main_color;
 					border-radius: 24px;
 					opacity: 0.12;
 				}
@@ -169,6 +169,83 @@
 				}
 			}
 		}
+		&_shape {
+			&_01 {
+				position: absolute;
+		    div {
+					width: 68px;
+					height: 68px;
+					position: absolute;
+					top: 0;
+					right: 0;
+					opacity: 0;
+					border: 5px solid #ffffff;
+					border-radius: 50%;
+					-webkit-transform: rotateX(75deg) scale(0.5);
+					transform: rotateX(75deg) scale(0.5);
+					-webkit-animation: welcome_shape 7s infinite;
+					animation: welcome_shape 7s infinite;
+				}
+			}
+			&_02 {
+				position: absolute;
+		    div {
+					width: 50px;
+					height: 50px;
+					position: absolute;
+					top: 0;
+					right: 0;
+					opacity: 0;
+					border: 5px solid #ffffff;
+					border-radius: 50%;
+					-webkit-transform: rotateX(75deg) scale(0.5);
+					transform: rotateX(75deg) scale(0.5);
+					-webkit-animation: welcome_shape 6s infinite;
+					animation: welcome_shape 6s infinite;
+				}
+			}
+			&_03 {
+				position: absolute;
+		    div {
+					width: 68px;
+					height: 68px;
+					position: absolute;
+					top: 0;
+					right: 0;
+					opacity: 0;
+					border: 5px solid #ffffff;
+					border-radius: 50%;
+					-webkit-transform: rotateX(75deg) scale(0.5);
+					transform: rotateX(75deg) scale(0.5);
+					-webkit-animation: welcome_shape 7s infinite;
+					animation: welcome_shape 7s infinite;
+				}
+			}
+			$i: 0;
+			$t: 0;
+			$r: 0;
+			$sharp_numbers_one: 1,2,3,4,5,6,7,8,9;
+			$sharp_numbers_two: 1.25,2.25,3.25,4.25,5.25,6.25,7.25,8.25,9.25;
+			$sharp_numbers_three: 1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5;
+			@each $n in $sharp_numbers_one {
+				$i: $i + 1;
+			  .overview_01_shape_01 div:nth-of-type(#{$i}) {
+			    animation-delay: #{$n}s;
+			  }
+			}
+			@each $n in $sharp_numbers_two {
+				$t: $t + 1;
+			  .overview_01_shape_02 div:nth-of-type(#{$t}) {
+			    animation-delay: #{$n}s;
+			  }
+			}
+			@each $n in $sharp_numbers_three {
+				$r: $r + 1;
+			  .overview_01_shape_03 div:nth-of-type(#{$r}) {
+			    animation-delay: #{$n}s;
+			  }
+			}
+		}
 	}
 	&_02 {
 		background: url(../img/overview_02_bg.jpg);
@@ -210,6 +287,7 @@
 					padding: 12px;
 					margin-bottom: 8px;
 					&.show {
+						opacity: 1;
 						display: -webkit-box;
 						display: -webkit-flex;
 						display: -ms-flexbox;
@@ -217,8 +295,8 @@
 						-webkit-transition: all 0.35s;
 						-o-transition: all 0.35s;
 						transition: all 0.35s;
-						-webkit-animation: notice_move 10s forwards;
-						animation: notice_move 10s forwards;
+						/*-webkit-animation: notice_move 10s forwards;
+						animation: notice_move 10s forwards;*/
 					}
 				}
 			}
@@ -301,7 +379,7 @@
 		line-height: 16px;
 		letter-spacing: 1.25px;
 		text-transform: uppercase;
-		color: #FF6600;
+		color: $main_color;
 		cursor: pointer;
 	}
 	&_bottom {

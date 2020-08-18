@@ -1,0 +1,36 @@
+<!-- Constructor BOX -->
+<div class="w-1/3 px-2 mb-2">
+	<div class="constr_box">
+		<!-- Constructor BOX -- Add Btn -->
+		<div class="constr_box_add constr-add-js flex items-center" data-box-id="@@box-id">
+			<div class="constr-add-btn flex">
+				<img src="../assets/img/plus.svg" alt="" width="24px">
+			</div>
+			<!-- Modal Constructor Added Count  -->
+			<div class="constr-add-count flex items-center hidden" data-box-id="@@box-id">
+				<div class="constr_count flex">
+					<span class="constr_count_minus">-</span>
+					<input type="text" value="1" class="constr_count_input">
+					<span class="constr_count_plus plus">+</span>	
+				</div>
+			</div>
+		</div>
+		<!-- Constructor BOX -- Box img -->
+		<div class="constr_box_img">
+			<img src="../assets/img/constr/shut-off.svg" alt="">
+		</div>
+		<!-- Constructor BOX -- Box Bottom info -->
+		<div class="constr_box_info flex items-center justify-between">
+			<!-- Constructor BOX -- Box Bottom info LEFT PART -->
+			
+			<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
+			@@include('components/constructor/constructor-about-item.html')
+			
+			<!-- Constructor BOX -- Box Bottom info RIGHT PART/Info -->
+			<div class="modal_click_js cursor-pointer" data-modal-id="constr_box_item_@@box-id">
+				<img src="../assets/img/info.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END Constructor BOX -->
