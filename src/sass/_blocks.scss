@@ -56,7 +56,7 @@
 
 .overview {
 	position: relative;
-	&:before {
+	/*&:before {
 		content: '';
 		width: 100%;
 		height: 100%;
@@ -69,7 +69,7 @@
 		-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 		-ms-transform: matrix(-1, 0, 0, 1, 0, 0);
 		transform: matrix(-1, 0, 0, 1, 0, 0);
-	}
+	}*/
 	&_01 {
 		background: url(../img/overview_01_bg.jpg);
 		background-size: cover;
@@ -112,7 +112,7 @@
 			padding-top: 0;
 		}
 		.overview_content {
-			width: 615px;
+			width: 38%;
 			padding: 25px;
 			margin-left: 65px;
 			&:before {

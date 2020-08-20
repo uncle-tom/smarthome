@@ -283,6 +283,11 @@ let welcomeShapeOne = document.querySelector('.overview_01_shape_01');
 let welcomeShapeTwo = document.querySelector('.overview_01_shape_02');
 let welcomeShapeThree = document.querySelector('.overview_01_shape_03');
 
+var widthTabletContent = $( window ).width() * 0.3510;
+var widthTabletBorder = $( window ).width() * 0.3817;
+$('.overview_welcome_tablet').css({'width':widthTabletContent});
+$('.overview_welcome_border-tablet').css({'width':widthTabletBorder});
+
 if (welcomeLightTop) {
 	welcomeLightTop.style.height = window.innerHeight/1.24 + 'px';	
 }

@@ -145,41 +145,42 @@
 				</div>
 			</div>
 		</div>
-	</main>
-	<div class="modal" data-modal-id="send_request">
-		<!-- Modal Main Block -->
-		<div class="modal_block p-6">
-			<div class="flex justify-between items-center mb-10">
-				<div class="modal_title">
-					Send a request
+		<div class="modal" data-modal-id="send_request">
+			<!-- Modal Main Block -->
+			<div class="modal_block p-6">
+				<div class="flex justify-between items-center mb-10">
+					<div class="modal_title">
+						Send a request
+					</div>
+					<div class="modal_close">
+						<img src="../assets/img/close.svg" alt="" width="24px">
+					</div>
 				</div>
-				<div class="modal_close">
-					<img src="../assets/img/close.svg" alt="" width="24px">
+				<div>
+					<form action="">
+						<div class="flex justify-between items-center mb-6">
+							<div class="w-full relative mr-2">
+								<input type="text" placeholder="Name" class="input-with-icon">
+								<img src="../assets/img/name-icon.svg" alt="" class="input-icon-name">	
+							</div>
+							<div class="w-full relative mr-2">
+								<input type="number" placeholder="Phone" class="input-with-icon">	
+								<img src="../assets/img/phone-icon.svg" alt="" class="input-icon-phone">
+							</div>
+						</div>
+						<div class="mb-6">
+							<textarea name="message" id="" rows="3" placeholder="Message" class="w-full"></textarea>
+						</div>
+						<div class="flex justify-end">
+							<button type="submit" class="bg-main text-white uppercase rounded-full px-6 py-2">Send</button>
+						</div>
+					</form>
 				</div>
-			</div>
-			<div>
-				<form action="">
-					<div class="flex justify-between items-center mb-6">
-						<div class="w-full relative mr-2">
-							<input type="text" placeholder="Name" class="input-with-icon">
-							<img src="../assets/img/name-icon.svg" alt="" class="input-icon-name">	
-						</div>
-						<div class="w-full relative mr-2">
-							<input type="number" placeholder="Phone" class="input-with-icon">	
-							<img src="../assets/img/phone-icon.svg" alt="" class="input-icon-phone">
-						</div>
-					</div>
-					<div class="mb-6">
-						<textarea name="message" id="" rows="3" placeholder="Message" class="w-full"></textarea>
-					</div>
-					<div class="flex justify-end">
-						<button type="submit" class="bg-main text-white uppercase rounded-full px-6 py-2">Send</button>
-					</div>
-				</form>
 			</div>
 		</div>
-	</div>
-	<div class="modal-bg"></div>
+		<div class="modal-bg"></div>
+	</main>
+	
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../assets/js/jquery.scrollify.js"></script>
 	<script type="text/javascript" src="../assets/js/scripts.js"></script>
