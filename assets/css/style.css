@@ -63003,7 +63003,7 @@ p {
   margin-bottom: 14px; }
 
 .wrapper {
-  padding: 5.2% 7.8%; }
+  padding: 0 7.8%; }
 
 .bg-main {
   background-color: #FF6600; }
@@ -63408,7 +63408,8 @@ input.input-with-icon {
 .header {
   width: 100%;
   position: fixed;
-  z-index: 9; }
+  z-index: 9;
+  padding-top: 5.2%; }
   .header_menu li {
     margin-right: 16px; }
     .header_menu li:last-of-type {
@@ -63883,12 +63884,56 @@ input.input-with-icon {
           @media (min-width: 1440px) and (max-width: 1920px) {
             .overview_welcome_tablet_box_subtitle {
               font-size: 14px; } }
+    .overview_welcome_notice {
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border-radius: 8px;
+      padding: 6px 12px; }
+      .overview_welcome_notice_line {
+        width: 1px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+        background-color: #ffffff;
+        opacity: 0.24; }
+      .overview_welcome_notice span {
+        color: #ffffff;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.5px; }
+    .overview_welcome_condit {
+      position: absolute;
+      top: 38.42%;
+      left: 54.32%; }
+    .overview_welcome_music {
+      position: absolute;
+      top: 27.5%;
+      left: 63.43%; }
+    .overview_welcome_lamp {
+      position: absolute;
+      top: 21.296%;
+      left: 80.8333%;
+      background-color: #FF6600; }
+      .overview_welcome_lamp_line {
+        height: 1px;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translate(-100%, 0);
+        -ms-transform: translate(-100%, 0);
+        transform: translate(-100%, 0); }
   .overview_bottom {
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0; }
+    right: 0;
+    padding-bottom: 5%; }
     .overview_bottom_down {
       font-family: 'Roboto Light';
       font-style: normal;
@@ -63907,7 +63952,7 @@ input.input-with-icon {
       color: rgba(255, 255, 255, 0.6); }
       .overview_bottom_numbers span:first-of-type {
         font-size: 48px;
-        line-height: 56px;
+        line-height: 1;
         color: #ffffff; }
 
 .constructor-page {

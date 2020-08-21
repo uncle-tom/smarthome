@@ -276,10 +276,13 @@ let welcomeShapeOne = document.querySelector('.overview_01_shape_01');
 let welcomeShapeTwo = document.querySelector('.overview_01_shape_02');
 let welcomeShapeThree = document.querySelector('.overview_01_shape_03');
 
-var widthTabletContent = ($( window ).width() * 0.3510) - 25;
-var widthTabletBorder = $( window ).width() * 0.3817;
-// $('.overview_welcome_tablet').css({'width':widthTabletContent});
-// $('.overview_welcome_border-tablet').css({'width':widthTabletBorder});
+
+var heightConditLine = $( window ).height() * 0.3842;
+$('.overview_welcome_condit_line').css({'height':heightConditLine});
+var heightMusicLine = $( window ).height() * 0.3842;
+$('.overview_welcome_music_line').css({'height':heightMusicLine});
+var widthLampLine = $( window ).width() * 0.0335;
+$('.overview_welcome_lamp_line').css({'width':widthLampLine});
 
 if (welcomeLightTop) {
 	welcomeLightTop.style.height = window.innerHeight/1.24 + 'px';	
