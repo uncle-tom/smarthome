@@ -14,7 +14,7 @@
 			font-family: 'Roboto Regular';
 			font-style: normal;
 			font-weight: bold;
-			font-size: 14px;
+			font-size: 18px;
 			line-height: 16px;
 			text-align: center;
 			letter-spacing: 1.25px;
@@ -24,6 +24,9 @@
 			-webkit-transition: all 0.12s;
 			-o-transition: all 0.12s;
 			transition: all 0.12s;
+			@include for-pc {
+				font-size: 14px;
+			}
 			&.active {
 				color: $main_color;
 				&:before {
@@ -381,36 +384,5 @@
 		text-transform: uppercase;
 		color: $main_color;
 		cursor: pointer;
-	}
-	&_bottom {
-		width: 100%;
-		position: absolute;
-		left: 0;
-		right: 0;
-		&_down {
-			font-family: 'Roboto Light';
-			font-style: normal;
-			font-weight: normal;
-			font-size: 14px;
-			line-height: 20px;
-			letter-spacing: 0.25px;
-			color: #FFFFFF;
-		}
-		&_numbers {
-			span {
-				font-family: 'Roboto Bold';
-				font-style: normal;
-				font-weight: bold;
-				font-size: 16px;
-				line-height: 24px;
-				letter-spacing: 0.15px;
-				color: rgba(255, 255, 255, 0.6);
-				&:first-of-type {
-					font-size: 48px;
-					line-height: 56px;
-					color: #ffffff;
-				}
-			}
-		}
 	}
 }

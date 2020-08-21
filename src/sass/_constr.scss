@@ -45,7 +45,7 @@
 	position: relative;
 	&_meta {
 		padding-right: 6rem;
-		@include for-pc {
+		@include for-desktop {
 			padding-right: 3rem;
 		}
 		&_sticky {
@@ -98,7 +98,7 @@
 		&.added {
 			font-size: 34px;
 			line-height: 40px;
-			@include for-pc {
+			@include for-desktop {
 				font-size: 28px;
 				line-height: 32px;
 			}
@@ -157,7 +157,7 @@
 			line-height: 112px;
 			letter-spacing: -1.5px;
 			text-transform: uppercase;
-			@include for-pc {
+			@include for-desktop {
 				font-size: 46px;
 				line-height: 53px;
 			}
@@ -184,7 +184,7 @@
 			grid-gap: 12px;
 			margin-bottom: 16px;
 			margin-top: 24px;	
-			@include for-pc {
+			@include for-desktop {
 				margin-top: 16px;	
 			}
 		}
@@ -200,13 +200,13 @@
 			align-items: center;
 			margin-bottom: 24px;
 			padding-left: 9px;
-			@include for-pc {
+			@include for-desktop {
 				margin-bottom: 12px;
 				padding-left: 6px;
 			}
 			img {
 				width: 24px;
-				@include for-pc {
+				@include for-desktop {
 					width: 16px;
 				}
 			}
@@ -218,7 +218,7 @@
 				line-height: 24px;
 				letter-spacing: 0.15px;
 				margin-left: 20px;
-				@include for-pc {
+				@include for-desktop {
 					margin-left: 16px;
 				}
 			}
@@ -232,7 +232,7 @@
 				right: 0;
 				background: #ffffff;
 				opacity: 0.12;
-				@include for-pc {
+				@include for-desktop {
 					width: -webkit-calc(100% - 40px);
 					width: calc(100% - 40px);
 					bottom: -6px;
@@ -249,7 +249,7 @@
 				-webkit-transform: translateY(-50%);
 				-ms-transform: translateY(-50%);
 				transform: translateY(-50%);
-				@include for-pc {
+				@include for-desktop {
 					width: 26px;
 					height: 26px;
 				}
@@ -356,7 +356,7 @@
 			img {
 				width: 24px;
 			}
-			@include for-pc {
+			@include for-desktop {
 				width: 26px;
 				height: 26px;
 				margin-right: 16px;
@@ -392,7 +392,7 @@
 			border-left: 1px solid #000000;
 			color: #ffffff;
 			text-align: center;
-			@include for-pc {
+			@include for-desktop {
 				width: 42px;
 				height: 42px;
 			}
@@ -413,7 +413,7 @@
 			-ms-flex-align: center;
 			align-items: center;
 			color: $main_color;
-			@include for-pc {
+			@include for-desktop {
 				width: 42px;
 				height: 42px;
 			}
@@ -433,7 +433,7 @@
 			-webkit-align-items: center;
 			-ms-flex-align: center;
 			align-items: center;
-			@include for-pc {
+			@include for-desktop {
 				width: 42px;
 				height: 42px;
 			}

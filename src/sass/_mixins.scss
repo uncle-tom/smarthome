@@ -2,6 +2,7 @@ $phone_size: 320px;
 $tablet_size: 767px;
 $desktop_size: 1280px;
 $pc_size: 1440px;
+$full_size: 1920px;
 @mixin for-phone {
   @media (max-width: $tablet_size) { @content; }
 }
@@ -10,6 +11,11 @@ $pc_size: 1440px;
   @media (min-width: $tablet_size) and (max-width: $desktop_size) { @content; }
 }
 
-@mixin for-pc {
+@mixin for-desktop {
   @media (min-width: $desktop_size) and (max-width: $pc_size) { @content; }
 }
+
+@mixin for-pc {
+  @media (min-width: $pc_size) and (max-width: $full_size) { @content; }
+}
+

@@ -8,6 +8,10 @@ p {
 	margin-bottom: 14px;
 }
 
+.wrapper {
+	padding: 5.2% 7.8%;
+}
+
 .bg-main {
 	background-color: $main_color;
 }
@@ -80,7 +84,7 @@ p {
 	color: #ffffff;
 	background-color: $main_color;
 	font-family: Roboto;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   font-stretch: condensed;
   font-style: normal;
@@ -91,6 +95,9 @@ p {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
   padding: 15px 24px;
+  @include for-pc {
+		font-size: 14px;
+	}
 }
 
 .power-btn {
@@ -246,7 +253,7 @@ select::-ms-expand {
   display: -ms-flexbox;
   display: flex;
   select {
-  	font-size: 14px;
+  	font-size: 18px;
 		line-height: 20px;
 		letter-spacing: 0.5px;
 		color: #FFFFFF;
@@ -257,7 +264,11 @@ select::-ms-expand {
 		border-radius: 8px;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		padding: 8px 32px 8px 16px;
+		padding: 10px 32px 10px 16px;
+		@include for-pc {
+			font-size: 14px;
+			padding: 8px 32px 8px 16px;
+		}
   }
   &:after {
   	content: '';
