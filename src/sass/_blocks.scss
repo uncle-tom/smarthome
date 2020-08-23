@@ -2,7 +2,7 @@
 	width: 100%;
 	position: fixed;
 	z-index: 9;
-	padding-top: 5.2%;
+	/**/
 	&_menu {
 		li {
 			margin-right: 16px;
@@ -306,84 +306,13 @@
 			}
 		}
 	}
-	&_03 {
-		background: url(../img/overview_03_bg.jpg);
-		background-size: cover;
-		background-position: 50%;
-	}
 	&_04 {
 		background-color: #121212;
 		overflow: hidden;
-	}
-	&_05 {
-		background: url(../img/overview_05_bg.jpg);
-		background-size: cover;
-		background-position: 50%;
 	}
 	&_06 {
 		background-color: #121212;
 		overflow: hidden;
 	}
-	&_07 {
-		background: url(../img/overview_07_bg.jpg);
-		background-size: cover;
-		background-position: 50%;
-	}
-	&_content {
-		width: 615px;
-		position: absolute;
-		top: 50%;
-		left: auto;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-		&_title {
-			font-family: 'Roboto Bold';
-			font-style: normal;
-			font-weight: bold;
-			font-size: 72px;
-			line-height: 108px;
-			letter-spacing: -1.5px;
-			text-transform: uppercase;
-			color: #FFFFFF;
-			margin-bottom: 25px;
-		}
-		&_subtitle {
-			font-family: 'Roboto Bold';
-			font-style: normal;
-			font-weight: bold;
-			font-size: 34px;
-			line-height: 40px;
-			letter-spacing: 0.25px;
-			text-transform: uppercase;
-			color: #FFFFFF;
-		}
-		&_text {
-			font-family: 'Roboto Light';
-			font-style: normal;
-			font-weight: normal;
-			font-size: 20px;
-			line-height: 26px;
-			letter-spacing: 0.25px;
-			color: #FFFFFF;
-			margin-bottom: 80px;
-		}
-	}
-	&_line {
-		width: 1px;
-		height: 48px;
-		background-color: #ffffff;
-		opacity: 0.12;
-		margin: 0 35px;
-	}
-	&_prev, &_next {
-		font-style: normal;
-		font-weight: bold;
-		font-size: 14px;
-		line-height: 16px;
-		letter-spacing: 1.25px;
-		text-transform: uppercase;
-		color: $main_color;
-		cursor: pointer;
-	}
+	
 }

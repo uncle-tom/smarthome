@@ -3,21 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home Page</title>
-	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<!-- PRELOADER :: components/blocks/preloader.html -->
 	<div class="preloader">
-		<div class="flex items-center">
-			<img src="../assets/img/logo_small.svg" alt="" width="222px" class="preloader_logo">
-			<span class="preloader_text">The Art of Living SmArt</span>	
-		</div>
+	<div class="flex items-center">
+		<img src="img/logo_small.svg" alt="" class="preloader_logo">
+		<span class="preloader_text">The Art of Living SmArt</span>	
 	</div>
-	<!-- Constructor HEADER :: components/header/header.html -->
+</div>
+	<!-- HEADER :: components/header/header.html -->
 	<header class="header">
 		<div class="wrapper mx-auto">
 			<div class="flex justify-between items-center">
 				<div class="header_logo">
-					<img src="../assets/img/logo.svg" alt="" width="222px">
+					<img src="img/logo.svg" alt="" width="222px">
 				</div>
 				<nav class="header_menu">
 					<ul class="flex justify-between">
@@ -50,28 +51,35 @@
 		</div>
 	</header>
 	<main>
-		<!-- Constructor OVERVIEW WELCOME :: components/overview/overview-welcome.html -->
+		<!-- Overview OVERVIEW WELCOME :: components/overview/sections/overview-welcome.html -->
 		<section class="overview smart-slide" data-slide-id="1">
-	<div class="overview_welcome">
+	<div class="overview_welcome overview_screen">
 		<!-- WELCOME NOTICES -->
 		<div class="overview_welcome_condit overview_welcome_notice flex items-center">
 			<div class="overview_welcome_condit_line overview_welcome_notice_line"></div>
-			<img src="../assets/img/overview/overview_welcome_condit.svg" alt="" width="18px" class="mr-1">
+			<img src="img/overview/overview_welcome_condit.svg" alt="" width="18px" class="mr-1">
 			<span>Кондиционер</span>
 		</div>
 		<div class="overview_welcome_music overview_welcome_notice flex items-center">
 			<div class="overview_welcome_music_line overview_welcome_notice_line"></div>
-			<img src="../assets/img/icons/small-play.svg" alt="" width="18px" class="mr-1">
+			<img src="img/icons/small-play.svg" alt="" width="18px" class="mr-1">
 			<span>Музыка</span>
 		</div>
 		<div class="overview_welcome_lamp overview_welcome_notice flex items-center">
 			<div class="overview_welcome_lamp_line overview_welcome_notice_line"></div>
-			<img src="../assets/img/icons/lamp.svg" alt="" width="18px" class="mr-1">
+			<div class="overview_welcome_lamp_circle"></div>
+			<img src="img/icons/lamp.svg" alt="" width="18px" class="mr-1">
 			<span>Lamp</span>
+		</div>
+		<div class="overview_welcome_torchere overview_welcome_notice flex items-center">
+			<div class="overview_welcome_torchere_line overview_welcome_notice_line"></div>
+			<div class="overview_welcome_torchere_circle"></div>
+			<img src="img/icons/lamp.svg" alt="" width="18px" class="mr-1">
+			<span>Torchere</span>
 		</div>
 		<div class="wrapper relative h-full mx-auto">
 			<div class="overview_welcome_border-tablet">
-				<img src="../assets/img/overview/overview_welcome_tablet.png" alt="" class="w-full">
+				<img src="img/overview/overview_welcome_tablet.png" alt="" class="w-full">
 			</div>
 			<div class="overview_welcome_tablet">
 				<div class="overview_welcome_tablet_content">
@@ -87,8 +95,8 @@
 								Вкл.
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="../assets/img/icons/lamp.svg" alt="" width="36px">	
-								<img src="../assets/img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/lamp.svg" alt="" width="36px">	
+								<img src="img/power-on.svg" alt="" width="40px">
 							</div>
 						</div>
 						<div class="overview_welcome_tablet_box mx-4">
@@ -99,8 +107,8 @@
 								Вкл.
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="../assets/img/icons/security.svg" alt="" width="36px">	
-								<img src="../assets/img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/security.svg" alt="" width="36px">	
+								<img src="img/power-on.svg" alt="" width="40px">
 							</div>
 						</div>
 						<div class="overview_welcome_tablet_box">
@@ -111,8 +119,8 @@
 								558 кВТ
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="../assets/img/icons/flash.svg" alt="" width="36px">	
-								<img src="../assets/img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/flash.svg" alt="" width="36px">	
+								<img src="img/power-on.svg" alt="" width="40px">
 							</div>
 						</div>
 					</div>
@@ -122,13 +130,14 @@
 				</div>
 			</div>
 		</div>
+		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
 		<div class="wrapper mx-auto overview_bottom">
 			<div class="flex justify-between items-center">
 				<div class="overview_bottom_logo">
-					<img src="../assets/img/overview_bottom_logo.svg" alt="" width="103">
+					<img src="img/overview_bottom_logo.svg" alt="" width="103">
 				</div>
 				<div class="overview_bottom_down flex items-center">
-					<img src="../assets/img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
+					<img src="img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
 					<span>Прокрутить вниз</span>
 				</div>
 				<div class="overview_bottom_numbers">
@@ -139,414 +148,425 @@
 		</div>
 	</div>
 </section>
-			<!-- <div class="overview_01_shape">
-				<div class="overview_01_shape_01 overview_01_shape_item">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
+
+		<!-- Overview OVERVIEW MORNING :: components/overview/sections/overview-morning.html -->
+		<section class="overview smart-slide" data-slide-id="2">
+	<div class="overview_morning overview_screen">
+		<div class="wrapper mx-auto">
+			<div class="overview_content">
+				<div class="overview_content_title">
+					Сделает ваше утро лучше	
 				</div>
-				<div class="overview_01_shape_02 overview_01_shape_item">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
+				<div class="overview_content_text">
+					Открывает жалюзи и выпускает солнечный свет. Устанавливает комфортную температуру и влажность. Включите свою любимую музыку. Информируем вас о погоде.
 				</div>
-				<div class="overview_01_shape_03 overview_01_shape_item">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
+				<a href="constructor.html" class="order-btn">
+					<span>Сделать заказ</span>
+				</a>	
+			</div>
+		</div>
+		<div class="wrapper relative h-full mx-auto">
+			<div class="overview_morning_notices">
+				<div class="overview_morning_notice">
+					<div class="overview_morning_notice_title">
+						Good Morning
+					</div>
+					<div class="flex justify-between items-center">
+						<div class="flex justify-between items-center mr-8">
+							<div class="overview_morning_notice_temp mr-2">
+								+25&deg;C
+							</div>
+							<div>
+								<div class="overview_morning_notice_small">Sun / 18.02.2020</div>
+								<div class="overview_morning_notice_text">The weather is fine</div>
+							</div>
+						</div>
+						<div class="overview_morning_notice_icon">
+							<img src="img/icons/sun.svg" alt="" width="36px">
+						</div>
+					</div>
+				</div>
+				<div class="overview_morning_notice">
+					<div class="overview_morning_notice_title">
+						Curtains
+					</div>
+					<div class="flex justify-between items-center">
+						<div class="flex items-center">
+							<div class="overview_morning_notice_icon mr-4">
+								<img src="img/icons/curtains.svg" alt="" width="36px">
+							</div>
+							<div class="overview_morning_notice_text">
+								Curtains was opened.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="overview_morning_notice">
+					<div class="overview_morning_notice_title">
+						Conditioner
+					</div>
+					<div class="flex justify-between items-center">
+						<div class="flex items-center">
+							<div class="overview_morning_notice_icon mr-4">
+								<img src="img/icons/snowflake.svg" alt="" width="36px">
+							</div>
+							<div class="overview_morning_notice_text">
+								Changed temperature to 22.5&deg;C
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="overview_morning_notice">
+					<div class="overview_morning_notice_title">
+						Music
+					</div>
+					<div class="flex justify-between items-center">
+						<div class="flex items-center">
+							<div class="overview_morning_music_ava mr-4">
+								<img src="img/overview/music_ava.jpg" alt="" width="36px">
+							</div>
+							<div>
+								<div class="overview_morning_notice_text">Memories</div>
+								<div class="overview_morning_notice_small">Maroon 5</div>
+							</div>
+						</div>
+						<div class="player_btns flex items-center">
+							<div class="player-prev-js player_prev mr-8">
+								<img src="img/overview/player-previous-btn.svg" alt="">
+							</div>
+					    <div class="player-play-pause-js player_play">
+					    	<img src="img/overview/player-pause-btn.svg" alt="">
+					    </div>
+					    <div class="player-next-js player_next ml-8">
+					    	<img src="img/overview/player-next-btn.svg" alt="">
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="overview_02_notice animate-smart">
+				<div class="overview_02_notice_item justify-end items-end">
+					<img src="img/sun.svg" alt="" width="32px">
+				</div>
+				<div class="overview_02_notice_item justify-start items-end">
+					<img src="img/curtains.svg" alt="" width="32px">
+				</div>
+				<div class="overview_02_notice_item justify-start items-end">
+					<img src="img/snowflake.svg" alt="" width="32px">
+				</div>
+				<div class="overview_02_notice_item justify-between items-end">
+					<div>
+						<img src="img/music_ava.jpg" alt="" width="36px">
+					</div>
+					<div>
+						<audio src="http://talkerscode.com/webtricks/demo/images/sample_music.mp3" ></audio>
+						<audio src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"></audio>
+						<div class="player_btns">
+							<div class="player-prev-js player_prev">
+								<img src="../assets/img/previous.svg" alt="" width="24px">
+							</div>
+					    <div class="player-play-pause-js player_play">
+					    	<img src="../assets/img/play.svg" alt="" width="24px">
+					    </div>
+					    <div class="player-next-js player_next">
+					    	<img src="../assets/img/next.svg" alt="" width="24px">
+					    </div>
+					  </div>
+					</div>
 				</div>
 			</div> -->
-			
-<!-- 
-			<div class="overview_01_light_top">
-				<img src="../assets/img/light_top.png" alt="">
-			</div>
-			<div class="overview_01_light_side">
-				<img src="../assets/img/light_side.png" alt="">
-			</div>
-			<div class="overview_01_light_oval">
-				<img src="../assets/img/oval-full.svg" alt="" width="50px">
-			</div>
-			<div class="container mx-auto">
-				<div class="overview_content">
-					<div class="overview_01_title">
-						Безопасность, комфорт и ресурсосбережение
-					</div>
-					<div class="flex overview_01_list">
-						<div class="overview_01_item flex justify-between items-end p-2">
-							<div>
-								<img src="../assets/img/lamp.svg" alt="" width="36px">
-							</div>
-							<div class="power-btn light-toggle-js">
-								<img src="../assets/img/power.svg" alt="" width="24px">
-							</div>
-						</div>
-						<div class="overview_01_item flex justify-between items-end p-2">
-							<div>
-								<img src="../assets/img/safe.svg" alt="" width="36px">
-							</div>
-							<div>
-								<img src="../assets/img/power-on.svg" alt="" width="40px">
-							</div>
-						</div>
-						<div class="overview_01_item flex justify-between items-end p-2">
-							<div>
-								<img src="../assets/img/flash.svg" alt="" width="36px">
-							</div>
-							<div>
-								-
-							</div>
-						</div>						
-					</div>
-					<div class="overview_01_btn">
-						<div class="smart-btn">
-							Сделать заказ
-						</div>
-					</div>
+		</div>
+		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+		<div class="wrapper mx-auto overview_bottom">
+			<div class="flex justify-between items-center">
+				<div class="overview_bottom_logo">
+					<img src="img/overview_bottom_logo.svg" alt="" width="103">
+				</div>
+				<div class="overview_bottom_down flex items-center">
+					<img src="img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
+					<span>Прокрутить вниз</span>
+				</div>
+				<div class="overview_bottom_numbers">
+					<span>02</span>
+					<span>/07</span>
 				</div>
 			</div>
-			<div class="container mx-auto overview_bottom">
-				<div class="flex justify-between items-center">
-					<div class="overview_bottom_logo">
-						<img src="../assets/img/overview_bottom_logo.svg" alt="" width="103">
-					</div>
-					<div class="overview_bottom_down flex items-center">
-						<img src="../assets/img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
-						<span>Прокрутить вниз</span>
-					</div>
-					<div class="overview_bottom_numbers">
-						<span>01</span>
-						<span>/07</span>
-					</div>
+		</div>
+	</div>
+</section>
+		
+		<!-- Overview OVERVIEW SECURITY :: components/overview/sections/overview-security.html -->
+		<section class="overview smart-slide" data-slide-id="3">
+	<div class="overview_security overview_screen">
+		<div class="wrapper">
+			<div class="overview_content">
+				<div class="overview_content_title">
+					Безопасность
+				</div>
+				<div class="overview_content_text">
+					Датчик движения фиксирует движение и активирует освещение в доме (при установке сценария). 
+					<br>Максимальная дальность обнаружения не менее 18 метров.
+					<br>Диапазон скоростей движения от 0,3 до 3 м/с.
+				</div>
+				<a href="constructor.html" class="order-btn">
+					<span>Сделать заказ</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+	<div class="wrapper mx-auto overview_bottom">
+			<div class="flex justify-between items-center">
+				<div class="overview_bottom_logo">
+					<img src="img/overview_bottom_logo.svg" alt="" width="103">
+				</div>
+				<div class="overview_bottom_down flex items-center">
+					<img src="img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
+					<span>Прокрутить вниз</span>
+				</div>
+				<div class="overview_bottom_numbers">
+					<span>03</span>
+					<span>/07</span>
 				</div>
 			</div>
-		</section>
+		</div>
+</section>
 
-		-->
-		<!-- SECTION TWO -->
-		<section class="overview overview_02 smart-slide" data-slide-id="2">
-			<div class="container mx-auto">
-				<div class="overview_content">
-					<div class="overview_content_title">
-						Сделает ваше утро лучше	
-					</div>
-					<div class="overview_content_text">
-						Открывает жалюзи и выпускает солнечный свет. Устанавливает комфортную температуру и влажность. Включите свою любимую музыку. Информируем вас о погоде.
-					</div>
-					<div class="smart-btn">
-						Сделать заказ
-					</div>	
-				</div>
-			</div>
-			<div class="container relative h-full mx-auto">
-				<div class="overview_02_notice animate-smart">
-					<div class="overview_02_notice_item justify-end items-end">
-						<img src="../assets/img/sun.svg" alt="" width="32px">
-					</div>
-					<div class="overview_02_notice_item justify-start items-end">
-						<img src="../assets/img/curtains.svg" alt="" width="32px">
-					</div>
-					<div class="overview_02_notice_item justify-start items-end">
-						<img src="../assets/img/snowflake.svg" alt="" width="32px">
-					</div>
-					<div class="overview_02_notice_item justify-between items-end">
-						<div>
-							<img src="../assets/img/music_ava.jpg" alt="" width="36px">
-						</div>
-						<!-- <div>
-							<audio src="http://talkerscode.com/webtricks/demo/images/sample_music.mp3" ></audio>
-							<audio src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"></audio>
-							<div class="player_btns">
-								<div class="player-prev-js player_prev">
-									<img src="../assets/img/previous.svg" alt="" width="24px">
-								</div>
-						    <div class="player-play-pause-js player_play">
-						    	<img src="../assets/img/play.svg" alt="" width="24px">
-						    </div>
-						    <div class="player-next-js player_next">
-						    	<img src="../assets/img/next.svg" alt="" width="24px">
-						    </div>
-						  </div>
-						</div> -->
-					</div>
-				</div>
-			</div>
-			<div class="container mx-auto overview_bottom">
-				<div class="flex justify-between items-center">
-					<div class="overview_bottom_logo">
-						<img src="../assets/img/overview_bottom_logo.svg" alt="" width="103">
-					</div>
-					<div class="overview_bottom_down flex items-center">
-						<img src="../assets/img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
-						<span>Прокрутить вниз</span>
-					</div>
-					<div class="overview_bottom_numbers">
-						<span>02</span>
-						<span>/07</span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- SECTION THREE -->
-		<section class="overview overview_03 smart-slide" data-slide-id="3">
-			<div class="container mx-auto">
-				<div class="overview_content">
-					<div class="overview_content_title">
-						Безопасность
-					</div>
-					<div class="overview_content_text">
-						Датчик движения фиксирует движение и активирует освещение в доме (при установке сценария). 
-						<br>Максимальная дальность обнаружения не менее 18 метров.
-						<br>Диапазон скоростей движения от 0,3 до 3 м/с.
-					</div>
-					<div class="smart-btn">
-						Сделать заказ
-					</div>	
-				</div>
-			</div>
-			<div class="container mx-auto overview_bottom">
-				<div class="flex justify-between items-center">
-					<div class="overview_bottom_logo">
-						<img src="../assets/img/overview_bottom_logo.svg" alt="" width="103">
-					</div>
-					<div class="overview_bottom_down flex items-center">
-						<img src="../assets/img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
-						<span>Прокрутить вниз</span>
-					</div>
-					<div class="overview_bottom_numbers">
-						<span>03</span>
-						<span>/07</span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- SECTION FOUR -->
+		<!-- Overview OVERVIEW KIDS :: components/overview/sections/overview-kids.html -->
 		<section class="overview overview_04 smart-slide" data-slide-id="4">
-			<div class="swipe-photos" data-swipe="4">
-				<div class="swipe-photo active" data-swipe-id="4-01">
-					<img src="../assets/img/slide-4-01.jpg" alt="">
-				</div>
-				<div class="swipe-photo" data-swipe-id="4-02">
-					<img src="../assets/img/slide-4-02.jpg" alt="">
-				</div>
-				<div class="swipe-photo" data-swipe-id="4-03">
-					<img src="../assets/img/slide-4-03.jpg" alt="">
-				</div>
+	<div class="overview_kids overview_screen">
+		<div class="swipe-photos" data-swipe="4">
+			<div class="swipe-photo active" data-swipe-id="4-01">
+				<img src="img/slide-4-01.jpg" alt="">
 			</div>
-			<div class="container mx-auto">
-				<div class="overview_content smart-swipe" data-smart-swipe="4">
-					<div class="swipe" data-swipe="4" data-swipe-id="4-01">
-						<div class="overview_content_title">
-							Датчик открытия окон
-						</div>
-						<div class="overview_content_text">
-							Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
-						</div>
-					</div>
-					<div class="swipe" data-swipe="4" data-swipe-id="4-02">
-						<div class="overview_content_title">
-							Датчик открытия двери
-						</div>
-						<div class="overview_content_text">
-							Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
-						</div>
-					</div>
-					<div class="swipe" data-swipe="4" data-swipe-id="4-03">
-						<div class="overview_content_title">
-							Датчик пожара
-						</div>
-						<div class="overview_content_text">
-							необходим для защиты от возгорания жилища, и срабатывает при повышении температуры в помещении свыше 75С.
-						</div>
-					</div>
-					<div class="flex items-center">
-						<div class="smart-btn">
-							Сделать заказ
-						</div>
-						<div class="overview_line"></div>
-						<div class="overview_navigation flex items-center">
-							<div class="overview_prev flex items-center mr-2" data-swipe="4">
-								<img src="../assets/img/arrow.svg" alt="" width="18px" class="arrow_back mr-2">
-								<span>Назад</span>
-							</div>
-							<div class="overview_pagination flex items-center" data-pagi="4"></div>
-							<div class="overview_next flex items-center ml-2" data-swipe="4">
-								<span>Далее</span>
-								<img src="../assets/img/arrow.svg" alt="" width="18px" class="arrow_next ml-2">
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="swipe-photo" data-swipe-id="4-02">
+				<img src="img/slide-4-02.jpg" alt="">
 			</div>
-			<div class="container mx-auto overview_bottom">
-				<div class="flex justify-between items-center">
-					<div class="overview_bottom_logo">
-						<img src="../assets/img/overview_bottom_logo.svg" alt="" width="103">
-					</div>
-					<div class="overview_bottom_down flex items-center">
-						<img src="../assets/img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
-						<span>Прокрутить вниз</span>
-					</div>
-					<div class="overview_bottom_numbers">
-						<span>04</span>
-						<span>/07</span>
-					</div>
-				</div>
+			<div class="swipe-photo" data-swipe-id="4-03">
+				<img src="img/slide-4-03.jpg" alt="">
 			</div>
-		</section>
-		<!-- SECTION FIVE -->
-		<section class="overview overview_05 smart-slide" data-slide-id="5">
-			<div class="container mx-auto">
-				<div class="overview_content">
+		</div>
+		<div class="wrapper mx-auto">
+			<div class="overview_content z-10 smart-swipe" data-smart-swipe="4">
+				<div class="swipe" data-swipe="4" data-swipe-id="4-01">
 					<div class="overview_content_title">
-						Датчик протечки
+						Датчик открытия окон
 					</div>
 					<div class="overview_content_text">
-						Под раковиной на кухне и в санузле будут установлены датчики протечки. В случае течи из труб, пользователю придет уведомление о протечке. При установке специальных клапан, вода перекрывается автоматически после попадания жидкости на датчик.
-					</div>
-					<div class="smart-btn">
-						Сделать заказ
-					</div>	
-				</div>
-			</div>
-			<div class="container mx-auto overview_bottom">
-				<div class="flex justify-between items-center">
-					<div class="overview_bottom_logo">
-						<img src="../assets/img/overview_bottom_logo.svg" alt="" width="103">
-					</div>
-					<div class="overview_bottom_down flex items-center">
-						<img src="../assets/img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
-						<span>Прокрутить вниз</span>
-					</div>
-					<div class="overview_bottom_numbers">
-						<span>05</span>
-						<span>/07</span>
+						Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-- SECTION SIX -->
-		<section class="overview overview_06 smart-slide" data-slide-id="6">
-			<div class="swipe-photos" data-swipe="6">
-				<div class="swipe-photo active" data-swipe-id="6-01">
-					<img src="../assets/img/slide-6-01.jpg" alt="">
-				</div>
-				<div class="swipe-photo" data-swipe-id="6-02">
-					<img src="../assets/img/slide-6-02.jpg" alt="">
-				</div>
-				<div class="swipe-photo" data-swipe-id="6-03">
-					<img src="../assets/img/slide-6-03.jpg" alt="">
-				</div>
-			</div>
-			<div class="container mx-auto">
-				<div class="overview_content smart-swipe" data-smart-swipe="6">
-					<div class="swipe" data-swipe="6" data-swipe-id="6-01">
-						<div class="overview_content_title">
-							Умный замок
-						</div>
-						<div class="overview_content_text">
-							Не нужно беспокоиться о детях если они вернуться пораньше или друзья стоят на пороге дома, когда вы задержались на работе. Вы контролируете кто и когда заходит к вам домой. К примеру, можете установить до 20 разных ПИН кодов. 
-						</div>
-					</div>
-					<div class="swipe" data-swipe="6" data-swipe-id="6-02">
-						<div class="overview_content_title">
-							Прост в использовании
-						</div>
-						<div class="overview_content_text">
-							Вы выбираете каким образом открыть дверь. ПИН код, пульт ДУ, отпечаток пальца или даже со своего телефона. 
-						</div>
-					</div>
-					<div class="swipe" data-swipe="6" data-swipe-id="6-03">
-						<div class="overview_content_title">
-							Безопасность как стандарт
-						</div>
-						<div class="overview_content_text">
-							Чувство безопасности и защищенности должно быть у каждого домовладельца. Защищенное беспроводное соединение между элементами системы происходит по стандарту шифрования АЭС128.
-						</div>
-					</div>
-					<div class="flex items-center">
-						<div class="smart-btn">
-							Сделать заказ
-						</div>
-						<div class="overview_line"></div>
-						<div class="overview_navigation flex items-center">
-							<div class="overview_prev flex items-center mr-2" data-swipe="6">
-								<img src="../assets/img/arrow.svg" alt="" width="18px" class="arrow_back mr-2">
-								<span>Назад</span>
-							</div>
-							<div class="overview_pagination flex items-center" data-pagi="6"></div>
-							<div class="overview_next flex items-center ml-2" data-swipe="6">
-								<span>Далее</span>
-								<img src="../assets/img/arrow.svg" alt="" width="18px" class="arrow_next ml-2">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container mx-auto overview_bottom">
-				<div class="flex justify-between items-center">
-					<div class="overview_bottom_logo">
-						<img src="../assets/img/overview_bottom_logo.svg" alt="" width="103">
-					</div>
-					<div class="overview_bottom_down flex items-center">
-						<img src="../assets/img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
-						<span>Прокрутить вниз</span>
-					</div>
-					<div class="overview_bottom_numbers">
-						<span>06</span>
-						<span>/07</span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- SECTION SEVEN -->
-		<section class="overview overview_07 smart-slide" data-slide-id="7">
-			<div class="container mx-auto">
-				<div class="overview_content">
-					<div class="overview_content_subtitle">
-						Connected Home
-					</div>
+				<div class="swipe" data-swipe="4" data-swipe-id="4-02">
 					<div class="overview_content_title">
-						Искусство Умной Жизни
+						Датчик открытия двери
 					</div>
-					<div class="smart-btn">
-						Сделать заказ
-					</div>	
+					<div class="overview_content_text">
+						Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
+					</div>
 				</div>
-			</div>
-			<div class="container mx-auto overview_bottom">
-				<div class="flex justify-between items-center">
-					<div class="overview_bottom_logo">
-						<img src="../assets/img/overview_bottom_logo.svg" alt="" width="103">
+				<div class="swipe" data-swipe="4" data-swipe-id="4-03">
+					<div class="overview_content_title">
+						Датчик пожара
 					</div>
-					<div class="overview_bottom_down flex items-center">
-						<img src="../assets/img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
-						<span>Прокрутить вниз</span>
-					</div>
-					<div class="overview_bottom_numbers">
-						<span>07</span>
-						<span>/07</span>
+					<div class="overview_content_text">
+						необходим для защиты от возгорания жилища, и срабатывает при повышении температуры в помещении свыше 75С.
 					</div>
 				</div>
 			</div>
-		</section>
+			<div class="smartslider-bottom flex items-center z-10">
+				<a href="constructor.html" class="order-btn">
+					<span>Сделать заказ</span>
+				</a>
+				<div class="overview_line"></div>
+				<div class="overview_navigation flex items-center">
+					<div class="overview_prev flex items-center mr-2" data-swipe="4">
+						<img src="img/arrow.svg" alt="" width="18px" class="arrow_back mr-2">
+						<span>Назад</span>
+					</div>
+					<div class="overview_pagination flex items-center" data-pagi="4"></div>
+					<div class="overview_next flex items-center ml-2" data-swipe="4">
+						<span>Далее</span>
+						<img src="img/arrow.svg" alt="" width="18px" class="arrow_next ml-2">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+	<div class="wrapper mx-auto overview_bottom">
+			<div class="flex justify-between items-center">
+				<div class="overview_bottom_logo">
+					<img src="img/overview_bottom_logo.svg" alt="" width="103">
+				</div>
+				<div class="overview_bottom_down flex items-center">
+					<img src="img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
+					<span>Прокрутить вниз</span>
+				</div>
+				<div class="overview_bottom_numbers">
+					<span>04</span>
+					<span>/07</span>
+				</div>
+			</div>
+		</div>
+</section>
+		
+		<!-- Overview OVERVIEW LEAK :: components/overview/sections/overview-leak.html -->
+		<section class="overview smart-slide" data-slide-id="5">
+	<div class="overview_leak overview_screen">
+		<div class="wrapper mx-auto">
+			<div class="overview_content">
+				<div class="overview_content_title">
+					Датчик протечки
+				</div>
+				<div class="overview_content_text">
+					Под раковиной на кухне и в санузле будут установлены датчики протечки. В случае течи из труб, пользователю придет уведомление о протечке. При установке специальных клапан, вода перекрывается автоматически после попадания жидкости на датчик.
+				</div>
+				<a href="constructor.html" class="order-btn">
+					<span>Сделать заказ</span>
+				</a>
+			</div>
+		</div>
+		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+		<div class="wrapper mx-auto overview_bottom">
+			<div class="flex justify-between items-center">
+				<div class="overview_bottom_logo">
+					<img src="img/overview_bottom_logo.svg" alt="" width="103">
+				</div>
+				<div class="overview_bottom_down flex items-center">
+					<img src="img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
+					<span>Прокрутить вниз</span>
+				</div>
+				<div class="overview_bottom_numbers">
+					<span>05</span>
+					<span>/07</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</section>
+		
+		<!-- Overview OVERVIEW LOCK :: components/overview/sections/overview-lock.html -->
+		<section class="overview overview_06 smart-slide" data-slide-id="6">
+	<div class="overview_lock overview_screen">
+		<div class="swipe-photos" data-swipe="6">
+			<div class="swipe-photo active" data-swipe-id="6-01">
+				<img src="img/slide-6-01.jpg" alt="">
+			</div>
+			<div class="swipe-photo" data-swipe-id="6-02">
+				<img src="img/slide-6-02.jpg" alt="">
+			</div>
+			<div class="swipe-photo" data-swipe-id="6-03">
+				<img src="img/slide-6-03.jpg" alt="">
+			</div>
+		</div>
+		<div class="wrapper mx-auto">
+			<div class="overview_content z-10 smart-swipe" data-smart-swipe="6">
+				<div class="swipe" data-swipe="6" data-swipe-id="6-01">
+					<div class="overview_content_title">
+						Умный замок
+					</div>
+					<div class="overview_content_text">
+						Не нужно беспокоиться о детях если они вернуться пораньше или друзья стоят на пороге дома, когда вы задержались на работе. Вы контролируете кто и когда заходит к вам домой. К примеру, можете установить до 20 разных ПИН кодов. 
+					</div>
+				</div>
+				<div class="swipe" data-swipe="6" data-swipe-id="6-02">
+					<div class="overview_content_title">
+						Прост в использовании
+					</div>
+					<div class="overview_content_text">
+						Вы выбираете каким образом открыть дверь. ПИН код, пульт ДУ, отпечаток пальца или даже со своего телефона. 
+					</div>
+				</div>
+				<div class="swipe" data-swipe="6" data-swipe-id="6-03">
+					<div class="overview_content_title">
+						Безопасность как стандарт
+					</div>
+					<div class="overview_content_text">
+						Чувство безопасности и защищенности должно быть у каждого домовладельца. Защищенное беспроводное соединение между элементами системы происходит по стандарту шифрования АЭС128.
+					</div>
+				</div>
+				
+			</div>
+			<div class="smartslider-bottom flex items-center z-10">
+				<a href="constructor.html" class="order-btn">
+					<span>Сделать заказ</span>
+				</a>
+				<div class="overview_line"></div>
+				<div class="overview_navigation flex items-center">
+					<div class="overview_prev flex items-center mr-2" data-swipe="6">
+						<img src="img/arrow.svg" alt="" width="18px" class="arrow_back mr-2">
+						<span>Назад</span>
+					</div>
+					<div class="overview_pagination flex items-center" data-pagi="6"></div>
+					<div class="overview_next flex items-center ml-2" data-swipe="6">
+						<span>Далее</span>
+						<img src="img/arrow.svg" alt="" width="18px" class="arrow_next ml-2">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+	<div class="wrapper mx-auto overview_bottom">
+			<div class="flex justify-between items-center">
+				<div class="overview_bottom_logo">
+					<img src="img/overview_bottom_logo.svg" alt="" width="103">
+				</div>
+				<div class="overview_bottom_down flex items-center">
+					<img src="img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
+					<span>Прокрутить вниз</span>
+				</div>
+				<div class="overview_bottom_numbers">
+					<span>06</span>
+					<span>/07</span>
+				</div>
+			</div>
+		</div>
+</section>
+
+		<!-- Overview OVERVIEW FAMILY :: components/overview/sections/overview-family.html -->
+		<section class="overview smart-slide" data-slide-id="7">
+	<div class="overview_family overview_screen">
+		<div class="wrapper mx-auto">
+			<div class="overview_content">
+				<div class="overview_content_subtitle">
+					Connected Home
+				</div>
+				<div class="overview_content_title">
+					Искусство Умной Жизни
+				</div>
+				<a href="constructor.html" class="order-btn">
+					<span>Сделать заказ</span>
+				</a>	
+			</div>
+		</div>
+		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+		<div class="wrapper mx-auto overview_bottom">
+			<div class="flex justify-between items-center">
+				<div class="overview_bottom_logo">
+					<img src="img/overview_bottom_logo.svg" alt="" width="103">
+				</div>
+				<div class="overview_bottom_down flex items-center">
+					<img src="img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
+					<span>Прокрутить вниз</span>
+				</div>
+				<div class="overview_bottom_numbers">
+					<span>07</span>
+					<span>/07</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
 	</main>
 	<footer>
 		Footer
 	</footer>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="../assets/js/jquery.scrollify.js"></script>
-	<script type="text/javascript" src="../assets/js/scripts.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
 </body>
 </html>

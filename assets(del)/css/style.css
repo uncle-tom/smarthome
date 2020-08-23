@@ -63409,7 +63409,7 @@ input.input-with-icon {
   width: 100%;
   position: fixed;
   z-index: 9;
-  padding-top: 5.2%; }
+  /**/ }
   .header_menu li {
     margin-right: 16px; }
     .header_menu li:last-of-type {
@@ -63796,7 +63796,7 @@ input.input-with-icon {
     position: relative;
     background: url("../img/overview/overview_welcome_bg.jpg");
     background-position: 50%;
-    background-size: cover; }
+    background-size: auto 100%; }
     .overview_welcome_border-tablet {
       width: 39.4%;
       height: auto;
@@ -63927,6 +63927,29 @@ input.input-with-icon {
         -webkit-transform: translate(-100%, 0);
         -ms-transform: translate(-100%, 0);
         transform: translate(-100%, 0); }
+      .overview_welcome_lamp_circle {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        background-color: #ffffff;
+        border-radius: 50%;
+        -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+        transform: translateY(-2px); }
+    .overview_welcome_torchere {
+      position: absolute;
+      top: 53.518%;
+      left: auto;
+      background-color: #FF6600; }
+      .overview_welcome_torchere_line {
+        height: 1px;
+        right: 0;
+        left: auto;
+        top: 50%;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0); }
   .overview_bottom {
     width: 100%;
     position: absolute;

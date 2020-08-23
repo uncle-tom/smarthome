@@ -37,7 +37,7 @@ p {
 	-ms-flex-align: center;
 	align-items: center;
 	background-color: #000000;
-	z-index: 10;
+	z-index: 11;
 	opacity: 1;
 	-webkit-transition: all 0.55s;
 	-o-transition: all 0.55s;
@@ -47,6 +47,7 @@ p {
 		z-index: -10;
 	}
 	&_logo {
+		width: 222px;
 		position: absolute;
 		left: 0; right: 0;
 		margin: auto;
@@ -63,6 +64,12 @@ p {
 		opacity: 0;
 		-webkit-animation: preloader_text_move 3.5s forwards;
 		animation: preloader_text_move 3.5s forwards;
+	}
+}
+
+.smartslider {
+	&-bottom {
+		position: absolute;
 	}
 }
 
@@ -88,13 +95,14 @@ p {
   font-weight: bold;
   font-stretch: condensed;
   font-style: normal;
+  text-transform: uppercase;
   line-height: 1.14;
   letter-spacing: 1.25px;
   text-align: center;
   border-radius: 8px;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
-  padding: 15px 24px;
+  padding: 15px 30px;
   @include for-pc {
 		font-size: 14px;
 	}
@@ -222,6 +230,18 @@ p {
 	mix-blend-mode: normal;
 	opacity: 0.54;
 	margin: 0 10px;
+}
+
+.player_btns {
+	img {
+		width: 24px;
+		@include for-pc {
+			width: 20px;
+		}
+		@include for-desktop {
+			width: 18px;
+		}
+	}
 }
 
 .arrow_next {

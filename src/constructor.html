@@ -3,15 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Constructor</title>
-	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="constructor-page">
-	<div class="preloader">
-		<div class="flex items-center">
-			<img src="../assets/img/logo_small.svg" alt="" width="222px" class="preloader_logo">
-			<span class="preloader_text">The Art of Living SmArt</span>	
-		</div>
-	</div>
+	<!-- PRELOADER :: components/blocks/preloader.html -->
+	@@include('components/blocks/preloader.html')
 	<!-- Constructor HEADER :: components/header/header.html -->
 	@@include('components/header/header.html')
 	<main>
@@ -64,7 +60,7 @@
 					Send a request
 				</div>
 				<div class="modal_close">
-					<img src="../assets/img/close.svg" alt="" width="24px">
+					<img src="img/close.svg" alt="" width="24px">
 				</div>
 			</div>
 			<div>
@@ -72,11 +68,11 @@
 					<div class="flex justify-between items-center mb-6">
 						<div class="w-full relative mr-2">
 							<input type="text" placeholder="Name" class="input-with-icon">
-							<img src="../assets/img/name-icon.svg" alt="" class="input-icon-name">	
+							<img src="img/name-icon.svg" alt="" class="input-icon-name">	
 						</div>
 						<div class="w-full relative mr-2">
 							<input type="number" placeholder="Phone" class="input-with-icon">	
-							<img src="../assets/img/phone-icon.svg" alt="" class="input-icon-phone">
+							<img src="img/phone-icon.svg" alt="" class="input-icon-phone">
 						</div>
 					</div>
 					<div class="mb-6">
@@ -91,7 +87,6 @@
 	</div>
 	<div class="modal-bg"></div>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="../assets/js/jquery.scrollify.js"></script>
-	<script type="text/javascript" src="../assets/js/scripts.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
 </body>
 </html>

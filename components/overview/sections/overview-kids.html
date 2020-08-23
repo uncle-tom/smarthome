@@ -1,0 +1,64 @@
+<section class="overview overview_04 smart-slide" data-slide-id="4">
+	<div class="overview_kids overview_screen">
+		<div class="swipe-photos" data-swipe="4">
+			<div class="swipe-photo active" data-swipe-id="4-01">
+				<img src="img/slide-4-01.jpg" alt="">
+			</div>
+			<div class="swipe-photo" data-swipe-id="4-02">
+				<img src="img/slide-4-02.jpg" alt="">
+			</div>
+			<div class="swipe-photo" data-swipe-id="4-03">
+				<img src="img/slide-4-03.jpg" alt="">
+			</div>
+		</div>
+		<div class="wrapper mx-auto">
+			<div class="overview_content z-10 smart-swipe" data-smart-swipe="4">
+				<div class="swipe" data-swipe="4" data-swipe-id="4-01">
+					<div class="overview_content_title">
+						Датчик открытия окон
+					</div>
+					<div class="overview_content_text">
+						Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
+					</div>
+				</div>
+				<div class="swipe" data-swipe="4" data-swipe-id="4-02">
+					<div class="overview_content_title">
+						Датчик открытия двери
+					</div>
+					<div class="overview_content_text">
+						Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
+					</div>
+				</div>
+				<div class="swipe" data-swipe="4" data-swipe-id="4-03">
+					<div class="overview_content_title">
+						Датчик пожара
+					</div>
+					<div class="overview_content_text">
+						необходим для защиты от возгорания жилища, и срабатывает при повышении температуры в помещении свыше 75С.
+					</div>
+				</div>
+			</div>
+			<div class="smartslider-bottom flex items-center z-10">
+				<a href="constructor.html" class="order-btn">
+					<span>Сделать заказ</span>
+				</a>
+				<div class="overview_line"></div>
+				<div class="overview_navigation flex items-center">
+					<div class="overview_prev flex items-center mr-2" data-swipe="4">
+						<img src="img/arrow.svg" alt="" width="18px" class="arrow_back mr-2">
+						<span>Назад</span>
+					</div>
+					<div class="overview_pagination flex items-center" data-pagi="4"></div>
+					<div class="overview_next flex items-center ml-2" data-swipe="4">
+						<span>Далее</span>
+						<img src="img/arrow.svg" alt="" width="18px" class="arrow_next ml-2">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+	@@include('components/blocks/overview-bottom.html', {
+		'overview-number': '04'
+	})
+</section>
