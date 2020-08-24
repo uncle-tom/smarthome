@@ -23,7 +23,7 @@
 			<img src="img/icons/lamp.svg" alt="" width="18px" class="mr-1">
 			<span>Torchere</span>
 		</div>
-		<div class="wrapper relative h-full mx-auto">
+		<div class="wrapper overview_welcome_mobile_wrapper relative h-full mx-auto">
 			<div class="overview_welcome_border-tablet">
 				<img src="img/overview/overview_welcome_tablet.png" alt="" class="w-full">
 			</div>
@@ -41,8 +41,8 @@
 								Вкл.
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="img/icons/lamp.svg" alt="" width="36px">	
-								<img src="img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/lamp.svg" alt="" class="overview_welcome_tablet_box_icon">	
+								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
 							</div>
 						</div>
 						<div class="overview_welcome_tablet_box mx-4">
@@ -53,8 +53,8 @@
 								Вкл.
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="img/icons/security.svg" alt="" width="36px">	
-								<img src="img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/security.svg" alt="" class="overview_welcome_tablet_box_icon">	
+								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
 							</div>
 						</div>
 						<div class="overview_welcome_tablet_box">
@@ -65,16 +65,19 @@
 								558 кВТ
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="img/icons/flash.svg" alt="" width="36px">	
-								<img src="img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/flash.svg" alt="" class="overview_welcome_tablet_box_icon">	
+								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
 							</div>
 						</div>
 					</div>
-					<a href="constructor.html" class="order-btn">
+					<a href="constructor.html" class="order-btn pc-show">
 						<span>Сделать заказ</span>
 					</a>
 				</div>
 			</div>
+			<a href="constructor.html" class="order-btn mobile-show">
+				<span>Сделать заказ</span>
+			</a>
 		</div>
 		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
 		@@include('components/blocks/overview-bottom.html', {

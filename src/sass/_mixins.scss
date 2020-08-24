@@ -1,14 +1,15 @@
 $phone_size: 320px; 
-$tablet_size: 767px;
+$tablet_size: 768px;
 $desktop_size: 1280px;
 $pc_size: 1440px;
 $full_size: 1920px;
+
 @mixin for-phone {
   @media (max-width: $tablet_size) { @content; }
 }
 
 @mixin for-tablet {
-  @media (min-width: $tablet_size) and (max-width: $desktop_size) { @content; }
+  @media (min-width: 769px) and (max-width: $desktop_size) { @content; }
 }
 
 @mixin for-desktop {

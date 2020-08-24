@@ -50,8 +50,13 @@ if (modalCloseBtns) {
   }
 }
 
-var headerPaddingTop = $( window ).height() * 0.0925925;
-$('.header').css({'padding-top': headerPaddingTop})
+
+//Отступ для HEADER
+if ($(window).outerWidth() > 998) {
+	var headerPaddingTop = $( window ).height() * 0.0925925;
+	$('.header').css({'padding-top': headerPaddingTop});	
+}
+
 
 let overviewBottomAll = document.querySelectorAll('.overview_bottom');
 

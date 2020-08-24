@@ -3,7 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home Page</title>
-	<link rel="stylesheet" href="css/style.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <link rel="apple-touch-icon" href="/example.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<!-- PRELOADER :: components/blocks/preloader.html -->
@@ -18,9 +23,9 @@
 		<div class="wrapper mx-auto">
 			<div class="flex justify-between items-center">
 				<div class="header_logo">
-					<img src="img/logo.svg" alt="" width="222px">
+					<img src="img/logo.svg" alt="">
 				</div>
-				<nav class="header_menu">
+				<nav class="header_menu hidden lg:block">
 					<ul class="flex justify-between">
 						<li>
 							<a href="#" class="header_menu_link active">Обзор</a>
@@ -39,13 +44,20 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="header_lang lang-toggle">
+				<div class="header_lang lang-toggle hidden lg:block">
 					<div class="select">
 						<select>
 						  <option>RU</option>
 						  <option>ENG</option>
 						</select>	
 					</div>
+				</div>
+				<!-- MOBILE TOGGLE -->
+				<div class="header_mobile_toggle">
+					<div class="header_mobile_toggle_circle"></div>
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
 			</div>
 		</div>
@@ -77,7 +89,7 @@
 			<img src="img/icons/lamp.svg" alt="" width="18px" class="mr-1">
 			<span>Torchere</span>
 		</div>
-		<div class="wrapper relative h-full mx-auto">
+		<div class="wrapper overview_welcome_mobile_wrapper relative h-full mx-auto">
 			<div class="overview_welcome_border-tablet">
 				<img src="img/overview/overview_welcome_tablet.png" alt="" class="w-full">
 			</div>
@@ -95,8 +107,8 @@
 								Вкл.
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="img/icons/lamp.svg" alt="" width="36px">	
-								<img src="img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/lamp.svg" alt="" class="overview_welcome_tablet_box_icon">	
+								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
 							</div>
 						</div>
 						<div class="overview_welcome_tablet_box mx-4">
@@ -107,8 +119,8 @@
 								Вкл.
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="img/icons/security.svg" alt="" width="36px">	
-								<img src="img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/security.svg" alt="" class="overview_welcome_tablet_box_icon">	
+								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
 							</div>
 						</div>
 						<div class="overview_welcome_tablet_box">
@@ -119,16 +131,19 @@
 								558 кВТ
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="img/icons/flash.svg" alt="" width="36px">	
-								<img src="img/power-on.svg" alt="" width="40px">
+								<img src="img/icons/flash.svg" alt="" class="overview_welcome_tablet_box_icon">	
+								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
 							</div>
 						</div>
 					</div>
-					<a href="constructor.html" class="order-btn">
+					<a href="constructor.html" class="order-btn pc-show">
 						<span>Сделать заказ</span>
 					</a>
 				</div>
 			</div>
+			<a href="constructor.html" class="order-btn mobile-show">
+				<span>Сделать заказ</span>
+			</a>
 		</div>
 		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
 		<div class="wrapper mx-auto overview_bottom">
@@ -152,7 +167,7 @@
 		<!-- Overview OVERVIEW MORNING :: components/overview/sections/overview-morning.html -->
 		<section class="overview smart-slide" data-slide-id="2">
 	<div class="overview_morning overview_screen">
-		<div class="wrapper mx-auto">
+		<div class="wrapper">
 			<div class="overview_content">
 				<div class="overview_content_title">
 					Сделает ваше утро лучше	
@@ -165,7 +180,7 @@
 				</a>	
 			</div>
 		</div>
-		<div class="wrapper relative h-full mx-auto">
+		<div class="wrapper relative lg:h-full">
 			<div class="overview_morning_notices">
 				<div class="overview_morning_notice">
 					<div class="overview_morning_notice_title">
@@ -221,7 +236,7 @@
 						Music
 					</div>
 					<div class="flex justify-between items-center">
-						<div class="flex items-center">
+						<div class="flex items-center mr-8 lg:mr-0">
 							<div class="overview_morning_music_ava mr-4">
 								<img src="img/overview/music_ava.jpg" alt="" width="36px">
 							</div>
@@ -563,9 +578,6 @@
 </section>
 
 	</main>
-	<footer>
-		Footer
-	</footer>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/all.js"></script>
 </body>

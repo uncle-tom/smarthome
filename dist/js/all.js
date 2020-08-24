@@ -900,8 +900,13 @@ if (modalCloseBtns) {
   }
 }
 
-var headerPaddingTop = $( window ).height() * 0.0925925;
-$('.header').css({'padding-top': headerPaddingTop})
+
+//Отступ для HEADER
+if ($(window).outerWidth() > 998) {
+	var headerPaddingTop = $( window ).height() * 0.0925925;
+	$('.header').css({'padding-top': headerPaddingTop});	
+}
+
 
 let overviewBottomAll = document.querySelectorAll('.overview_bottom');
 
@@ -1334,14 +1339,22 @@ var smartSliderBottom = $(window).height() * 0.2814814;
 $('.smartslider-bottom').css({'bottom':smartSliderBottom});
 var bottomMorningNotices = $(window).height() * 0.1611111;
 var rightMorningNotices = $(window).outerWidth() * 0.078125;
-$('.overview_morning_notices').css({'bottom':bottomMorningNotices});
-$('.overview_morning_notices').css({'right':rightMorningNotices});
-var overviewScreenHeight = $( window ).height();
-var overviewScreenWidth = $( window ).outerWidth();
-$('.overview_screen').css("background-size", overviewScreenWidth+"px " + overviewScreenHeight + "px");
 
-var overviewContentWidth = $(window).outerWidth() * 0.377604167;
-$('.overview_content').css({'width':overviewContentWidth});
+if ($(window).outerWidth() > 998) {
+	$('.overview_morning_notices').css({'bottom':bottomMorningNotices});
+	$('.overview_morning_notices').css({'right':rightMorningNotices});	
+}
+if ($(window).outerWidth() > 998) {
+	var overviewScreenHeight = $( window ).height();
+	var overviewScreenWidth = $( window ).outerWidth();
+	$('.overview_screen').css("background-size", overviewScreenWidth+"px " + overviewScreenHeight + "px");
+}
+
+if ($(window).outerWidth() > 998) {
+	var overviewContentWidth = $(window).outerWidth() * 0.377604167;
+	$('.overview_content').css({'width':overviewContentWidth});	
+}
+
 //Размеры и отступы на первом экране
 let welcomeLightToggle = document.querySelector('.light-toggle-js');
 let welcomeLightTop = document.querySelector('.overview_01_light_top');

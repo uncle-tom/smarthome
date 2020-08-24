@@ -17,9 +17,9 @@
 		<div class="wrapper mx-auto">
 			<div class="flex justify-between items-center">
 				<div class="header_logo">
-					<img src="img/logo.svg" alt="" width="222px">
+					<img src="img/logo.svg" alt="">
 				</div>
-				<nav class="header_menu">
+				<nav class="header_menu hidden lg:block">
 					<ul class="flex justify-between">
 						<li>
 							<a href="#" class="header_menu_link active">Обзор</a>
@@ -38,13 +38,20 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="header_lang lang-toggle">
+				<div class="header_lang lang-toggle hidden lg:block">
 					<div class="select">
 						<select>
 						  <option>RU</option>
 						  <option>ENG</option>
 						</select>	
 					</div>
+				</div>
+				<!-- MOBILE TOGGLE -->
+				<div class="header_mobile_toggle">
+					<div class="header_mobile_toggle_circle"></div>
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
 			</div>
 		</div>
