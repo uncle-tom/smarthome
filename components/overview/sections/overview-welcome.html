@@ -1,4 +1,13 @@
 <section class="overview smart-slide" data-slide-id="1">
+	<div class="light-on"></div>
+	<div class="light-lamp-circle"></div>
+	<div class="light-lamp-ray"></div>
+	<div class="torchere-path-up"></div>
+	<div class="torchere-path-up"></div>
+	<div class="torchere-path-up"></div>
+	<div class="torchere-path-down"></div>
+	<div class="torchere-path-down"></div>
+	<div class="torchere-path-down"></div>
 	<div class="overview_welcome overview_screen">
 		<!-- WELCOME NOTICES -->
 		<div class="overview_welcome_condit overview_welcome_notice flex items-center">
@@ -24,39 +33,55 @@
 			<span>Torchere</span>
 		</div>
 		<div class="wrapper overview_welcome_mobile_wrapper relative h-full mx-auto">
+			<!-- ФОТО ПЛАНШЕТА -->
 			<div class="overview_welcome_border-tablet">
 				<img src="img/overview/overview_welcome_tablet.png" alt="" class="w-full">
 			</div>
+			<!-- КОНТЕНТ НА ПЛАНШЕТЕ -->
 			<div class="overview_welcome_tablet">
 				<div class="overview_welcome_tablet_content">
+					<!-- ЗАГОЛОВОК НА ПЛАНШЕТЕ -->
 					<div class="overview_welcome_tablet_title">
 						Безопасность, комфорт и ресурсосбережение
 					</div>
+					<!-- ВИДЖЕТЫ НА ПЛАНШЕТЕ -->
 					<div class="overview_welcome_tablet_info flex">
-						<div class="overview_welcome_tablet_box">
+						<!-- ВИДЖЕТЫ НА ПЛАНШЕТЕ::Освещение -->
+						<div class="overview_welcome_tablet_box lighting-widget">
 							<div class="overview_welcome_tablet_box_title">
 								Освещение
 							</div>
-							<div class="overview_welcome_tablet_box_subtitle mb-5">
-								Вкл.
+							<div class="overview_welcome_tablet_box_subtitle notice mb-5">
+								<span class="notice-off">Выкл.</span>
+								<span class="notice-on">Вкл.</span>
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="img/icons/lamp.svg" alt="" class="overview_welcome_tablet_box_icon">	
-								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
+								<img src="img/icons/lamp.svg" alt="" class="overview_welcome_tablet_box_icon">
+								<div class="light-toggle-js power cursor-pointer">
+									<img src="img/power-off.svg" alt="" class="overview_welcome_tablet_box_icon power-off">	
+									<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon power-on">	
+								</div>
+								
 							</div>
 						</div>
-						<div class="overview_welcome_tablet_box mx-4">
+						<!-- ВИДЖЕТЫ НА ПЛАНШЕТЕ::Охрана -->
+						<div class="overview_welcome_tablet_box security-widget mx-4">
 							<div class="overview_welcome_tablet_box_title">
 								Охрана
 							</div>
-							<div class="overview_welcome_tablet_box_subtitle mb-5">
-								Вкл.
+							<div class="overview_welcome_tablet_box_subtitle notice mb-5">
+								<span class="notice-off">Выкл.</span>
+								<span class="notice-on">Вкл.</span>
 							</div>
 							<div class="flex justify-between items-center">
 								<img src="img/icons/security.svg" alt="" class="overview_welcome_tablet_box_icon">	
-								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
+								<div class="security-toggle-js power cursor-pointer">
+									<img src="img/power-off.svg" alt="" class="overview_welcome_tablet_box_icon power-off">	
+									<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon power-on">	
+								</div>
 							</div>
 						</div>
+						<!-- ВИДЖЕТЫ НА ПЛАНШЕТЕ::Электричество -->
 						<div class="overview_welcome_tablet_box">
 							<div class="overview_welcome_tablet_box_title">
 								Электричество

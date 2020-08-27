@@ -861,6 +861,30 @@ $.scrollify({
   passive: false,
 });
 
+//Элемент виден при скролле
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('show-smart');
+    }
+  });
+}
+
+let scrollOptions = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, scrollOptions);
+let elements = document.querySelectorAll('.animate-smart');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+
+//HEADER MENU TOGGLE
+$('.header_mobile_toggle').on('click', function(){
+	$(this).toggleClass('open');
+	$('.header_mobile_menu').toggleClass('open');
+});
+
 //Modal Open
 let bgModal = document.querySelector('.modal-bg');
 let modalsClickId = document.querySelectorAll('.modal_click_js');
@@ -1163,40 +1187,40 @@ if (constrMetaSticky) {
 	constrMetaSticky.style.top = window.innerHeight/4.736 + 'px';
 }
 
-//Анимация при скроле
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('show-smart');
+// //Анимация при скроле
+// function onEntry(entry) {
+//   entry.forEach(change => {
+//     if (change.isIntersecting) {
+//       change.target.classList.add('show-smart');
 
-      //Для Morning блока
-      morningTimeout = 2000;
-      function addClassFunc(classname) {
-      	classname.classList.add('show');
-      	classname.style.opacity = 1;
-      }
-      for (morningNoticeItem of morningNoticeItems) {
-    		if (morningNoticeItem) {
-    			morningTimeout = morningTimeout + 2000;
-    			(function(morningNoticeItem){
-		        setTimeout(function(){
-		          addClassFunc(morningNoticeItem);
-		        }, morningTimeout);
-			    })(morningNoticeItem);
-    		}
-    	}
-    }
-  });
-}
+//       //Для Morning блока
+//       morningTimeout = 2000;
+//       function addClassFunc(classname) {
+//       	classname.classList.add('show');
+//       	classname.style.opacity = 1;
+//       }
+//       for (morningNoticeItem of morningNoticeItems) {
+//     		if (morningNoticeItem) {
+//     			morningTimeout = morningTimeout + 2000;
+//     			(function(morningNoticeItem){
+// 		        setTimeout(function(){
+// 		          addClassFunc(morningNoticeItem);
+// 		        }, morningTimeout);
+// 			    })(morningNoticeItem);
+//     		}
+//     	}
+//     }
+//   });
+// }
 
-let options = {
-  threshold: [0.1] };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.animate-smart');
+// let options = {
+//   threshold: [0.1] };
+// let observer = new IntersectionObserver(onEntry, options);
+// let elements = document.querySelectorAll('.animate-smart');
 
-for (let elm of elements) {
-  observer.observe(elm);
-}
+// for (let elm of elements) {
+//   observer.observe(elm);
+// }
 
 
 //Audio
@@ -1348,6 +1372,7 @@ if ($(window).outerWidth() > 998) {
 	var overviewScreenHeight = $( window ).height();
 	var overviewScreenWidth = $( window ).outerWidth();
 	$('.overview_screen').css("background-size", overviewScreenWidth+"px " + overviewScreenHeight + "px");
+	$('.light-on').css("background-size", overviewScreenWidth+"px " + overviewScreenHeight + "px");
 }
 
 if ($(window).outerWidth() > 998) {
@@ -1356,13 +1381,6 @@ if ($(window).outerWidth() > 998) {
 }
 
 //Размеры и отступы на первом экране
-let welcomeLightToggle = document.querySelector('.light-toggle-js');
-let welcomeLightTop = document.querySelector('.overview_01_light_top');
-let welcomeLightSide = document.querySelector('.overview_01_light_side');
-let welcomeShapeOne = document.querySelector('.overview_01_shape_01');
-let welcomeShapeTwo = document.querySelector('.overview_01_shape_02');
-let welcomeShapeThree = document.querySelector('.overview_01_shape_03');
-
 var heightConditLine = $( window ).height() * 0.3842;
 $('.overview_welcome_condit_line').css({'height':heightConditLine});
 var heightMusicLine = $( window ).height() * 0.3842;
@@ -1375,32 +1393,71 @@ var widthTorchereLine = $( window ).outerWidth() * 0.0341145;
 $('.overview_welcome_torchere_line').css({'width':widthTorchereLine});
 var rightTorchere = $( window ).outerWidth() * 0.1473958;
 $('.overview_welcome_torchere').css({'right':rightTorchere});
+var rightTorchereCircle = widthTorchereLine + 4;
+$('.overview_welcome_torchere_circle').css({'right':-rightTorchereCircle});
 
-if (welcomeLightTop) {
-	welcomeLightTop.style.height = window.innerHeight/1.24 + 'px';	
-}
+var overviewLightLampCircle = $( window ).outerWidth() * 0.1734375;
+var overviewLightLampCircleLeft = $( window ).outerWidth() * 0.6671875;
+var overviewLightLampCircleTop = $( window ).height() * 0.153703704;
 
-if (welcomeShapeOne) {
-	welcomeShapeOne.style.top = (window.innerHeight/5.2) - 34 + 'px';
-	welcomeShapeOne.style.right = (window.screen.width/3.75) - 34 + 'px';	
-}
+$('.light-lamp-circle').css({
+	'width': overviewLightLampCircle,
+	'height': overviewLightLampCircle,
+	'left': overviewLightLampCircleLeft,
+	'top': overviewLightLampCircleTop
+});
 
-if (welcomeShapeTwo) {
-	welcomeShapeTwo.style.top = (window.innerHeight/3.3) - 25 + 'px';
-	welcomeShapeTwo.style.right = (window.screen.width/4.1) - 25 + 'px';	
-}
+var overviewLightLampRayWidth = $( window ).outerWidth() * 0.388541667;
+var overviewLightLampRayHeight = $( window ).height() * 0.641666667;
+var overviewLightLampRayLeft = $( window ).outerWidth() * 0.561979167;
+var overviewLightLampRayTop = $( window ).height() * 0.316666667;
 
-if (welcomeShapeThree) {
-	welcomeShapeThree.style.top = (window.innerHeight/3.8) - 34 + 'px';
-	welcomeShapeThree.style.right = (window.screen.width/4.5) - 34 + 'px';	
-}
+$('.light-lamp-ray').css({
+	'width': overviewLightLampRayWidth,
+	'height': overviewLightLampRayHeight,
+	'left': overviewLightLampRayLeft,
+	'top': overviewLightLampRayTop
+});
 
+var overviewTorcherePathUpWidth = $( window ).outerWidth() * 0.105729167;
+var overviewTorcherePathUpHeight = $( window ).height() * 0.00740740741;
+var overviewTorcherePathUpLeft = $( window ).outerWidth() * 0.8765625;
+var overviewTorcherePathUpTop = $( window ).height() * 0.422222222;
 
-//Включаем свет на первом экране
-if (welcomeLightToggle) {
-	welcomeLightToggle.addEventListener('click', function(){
-		welcomeLightToggle.classList.toggle('on');
-		welcomeLightTop.classList.toggle('show');
-		welcomeLightSide.classList.toggle('show');
-	})
-}
+$('.torchere-path-up').css({
+	"background-size": overviewTorcherePathUpWidth+"px " + overviewTorcherePathUpHeight + "px",
+	"width": overviewTorcherePathUpWidth,
+	"height": overviewTorcherePathUpHeight,
+	"left": overviewTorcherePathUpLeft,
+	"top": overviewTorcherePathUpTop
+});
+
+var overviewTorcherePathDownWidth = $( window ).outerWidth() * 0.0953125;
+var overviewTorcherePathDownHeight = $( window ).height() * 0.00277777778;
+var overviewTorcherePathDownLeft = $( window ).outerWidth() * 0.877083333;
+var overviewTorcherePathDownTop = $( window ).height() * 0.638888889;
+
+$('.torchere-path-down').css({
+	"background-size": overviewTorcherePathDownWidth+"px " + overviewTorcherePathDownHeight + "px",
+	"width": overviewTorcherePathDownWidth,
+	"height": overviewTorcherePathDownHeight,
+	"left": overviewTorcherePathDownLeft,
+	"top": overviewTorcherePathDownTop
+});
+
+//Включаем/выключаем свет на планшете
+$('.light-toggle-js').on('click', function(){
+	$(this).toggleClass('on');
+	$(this).closest('.lighting-widget').find('.notice').toggleClass('on');
+	$('.overview_welcome').toggleClass('on');
+	$('.light-lamp-circle').toggleClass('on');
+	$('.light-lamp-ray').toggleClass('on');
+	$('.torchere-path-up').toggleClass('animate');
+	$('.torchere-path-down').toggleClass('animate');
+});
+
+//Включаем/выключаем охрану на планшете
+$('.security-toggle-js').on('click', function(){
+	$(this).toggleClass('on');
+	$(this).closest('.security-widget').find('.notice').toggleClass('on');
+});

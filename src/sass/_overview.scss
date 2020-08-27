@@ -36,6 +36,10 @@
 				font-size: 72px;
 				line-height: 84px;
 			}
+			@include for-tablet {
+				font-size: 48px;
+				line-height: 56px;
+			}
 			@include for-phone {
 				font-size: 30px;
 				line-height: 41px;
@@ -64,6 +68,10 @@
 				font-size: 20px;
 				line-height: 26px;
 			}
+			@include for-tablet {
+				font-size: 18px;
+				line-height: 23.5px;
+			}
 			@include for-phone {
 				font-size: 14px;
 				line-height: 18px;
@@ -84,13 +92,83 @@
 		-ms-transform: matrix(-1, 0, 0, 1, 0, 0);
 		transform: matrix(-1, 0, 0, 1, 0, 0);
 	}
+	.light-on {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0; left: 0;
+		background: url('../img/overview/overview_welcome_bg_on.jpg');
+	}
+	.light-lamp-circle {
+		display: none;
+		position: absolute;
+		background: url('../img/overview/light_lamp_circle.svg');
+		background-size: contain;
+		z-index: 1;
+		&.on {
+			display: block;
+		}
+	}
+	.light-lamp-ray {
+		display: none;
+		position: absolute;
+		background: url('../img/overview/light_lamp_ray.svg');
+		background-size: contain;
+		z-index: 1;
+		&.on {
+			display: block;
+		}
+	}
+	.torchere-path-up {
+		position: absolute;
+		background: url('../img/overview/torchere-path-up.svg');
+		z-index: 1;
+		opacity: 0;
+		margin-left: -10px;
+		margin-top: 4%;
+		&.animate {
+			-webkit-animation: torchere_path_move_up 3s infinite;
+			animation: torchere_path_move_up 3s infinite;	
+		}
+		&:nth-child(2n) {
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+		&:nth-child(3n) {
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+		}
+	}
+	.torchere-path-down {
+		position: absolute;
+		background: url('../img/overview/torchere-path-down.svg');
+		z-index: 1;
+		opacity: 0;
+		margin-top: -4%;
+		&.animate {
+			-webkit-animation: torchere_path_move_down 3s infinite;
+			animation: torchere_path_move_down 3s infinite;
+		}
+		&:nth-child(2n) {
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+		&:nth-child(3n) {
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+		}
+	}
+	
 	&_welcome {
 		width: 100%;
 		height: 100%;
 		position: relative;
-		background: url('../img/overview/overview_welcome_bg.jpg');
+		background: url('../img/overview/overview_welcome_bg_off.jpg');
 		background-position: 50%;
 		background-size: auto 100%;
+		&.on {
+			background: transparent;
+		}
 		&_border-tablet {
 			width: 39.4%;
 			height: auto;
@@ -132,11 +210,11 @@
 			margin-left: 2.2%;
 			@include for-phone {
 				width: 100%;
-				top: 0;
+				top: 0; left: 0;
 				-webkit-transform: translateY(0);
 				-ms-transform: translateY(0);
 				transform: translateY(0);
-				padding: 0 35px;
+				padding: 0 50px;
 				margin-left: 0;
 			}
 			&_title {
@@ -158,6 +236,10 @@
 					font-size: 28px;
 					margin-bottom: 16px;
 				}
+				@include for-tablet {
+					font-size: 22px;
+					margin-bottom: 12px;
+				}
 				@include for-phone {
 					font-size: 18.78px;
 					line-height: 21.13px;
@@ -166,12 +248,15 @@
 			}
 			&_info {
 				margin-bottom: 52px;
-				padding-right: 20px;
 				@include for-pc {
 					margin-bottom: 38px;
+					padding-right: 20px;
 				}
 				@include for-desktop {
 					margin-bottom: 20px;
+				}
+				@include for-tablet {
+					margin-bottom: 16px;
 				}
 				@include for-phone {
 					margin-bottom: 0;
@@ -200,6 +285,9 @@
 					@include for-pc {
 						font-size: 16px;
 					}
+					@include for-tablet {
+						font-size: 14px;
+					}
 					@include for-phone {
 						font-size: 14px;
 					}
@@ -216,12 +304,18 @@
 					@include for-pc {
 						font-size: 14px;
 					}
+					@include for-tablet {
+						font-size: 14px;
+					}
 					@include for-phone {
 						font-size: 14px;
 					}
 				}
 				&_icon {
 					width: 36px;
+					@include for-tablet {
+						width: 24px;
+					}
 					@include for-phone {
 						width: 24px;
 					}
@@ -289,9 +383,9 @@
 				top: 50%;
 				background-color: #ffffff;
 				border-radius: 50%;
-				-webkit-transform: translateY(-2px);
-				-ms-transform: translateY(-2px);
-				transform: translateY(-2px);
+				-webkit-transform: translateY(-3px);
+				-ms-transform: translateY(-3px);
+				transform: translateY(-3px);
 			}
 		}
 		&_torchere {
@@ -308,6 +402,17 @@
 				-ms-transform: translate(100%, 0);
 				transform: translate(100%, 0);
 			}
+			&_circle {
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				top: 50%;
+				background-color: #ffffff;
+				border-radius: 50%;
+				-webkit-transform: translateY(-3px);
+				-ms-transform: translateY(-3px);
+				transform: translateY(-3px);
+			}
 		}
 		&_mobile {
 			&_wrapper {
@@ -318,6 +423,40 @@
 				-webkit-transform: translateY(-50%);
 				-ms-transform: translateY(-50%);
 				transform: translateY(-50%);
+			}
+		}
+		.lighting-widget, .security-widget {
+			.power {
+				&-on {
+					display: none;
+				}
+				&-off {
+					display: block;
+				}
+				&.on {
+					.power-on {
+						display: block;
+					}
+					.power-off {
+						display: none;
+					}	
+				}
+			}
+			.notice {
+				&-on {
+					display: none;
+				}
+				&-off {
+					display: block;
+				}
+				&.on {
+					.notice-on {
+						display: block;
+					}
+					.notice-off {
+						display: none;
+					}	
+				}
 			}
 		}
 		.order-btn {
@@ -406,6 +545,9 @@
 				letter-spacing: 0.57px;
 				line-height: 22px;
 				margin-bottom: 14px;
+				@include for-tablet {
+					font-size: 12px;
+				}
 				@include for-phone {
 					font-size: 7.84px;
 					letter-spacing: 0.28px;
@@ -418,6 +560,9 @@
 				color: #FFFFFF;
 				letter-spacing: 0.57px;
 				line-height: 20px;
+				@include for-tablet {
+					font-size: 12px;
+				}
 				@include for-phone {
 					font-size: 7.84px;
 					letter-spacing: 0.28px;
@@ -430,6 +575,9 @@
 				letter-spacing: 0.43px;
 				line-height: 16px;
 				opacity: 0.7;
+				@include for-tablet {
+					font-size: 9px;
+				}
 				@include for-phone {
 					font-size: 5.88px;
 					letter-spacing: 0.21px;
@@ -442,6 +590,9 @@
 				color: #FFFFFF;
 				letter-spacing: 1.21px;
 				line-height: 30px;
+				@include for-tablet {
+					font-size: 25px;
+				}
 				@include for-phone {
 					font-size: 16.66px;
 					letter-spacing: 0.6px;
@@ -450,6 +601,9 @@
 			}
 			&_icon {
 				img {
+					@include for-tablet {
+						width: 21px;
+					}
 					@include for-phone {
 						width: 18px;
 					}
@@ -467,6 +621,7 @@
 		background: url(../img/overview/overview_security_bg.jpg);
 		background-position: 50%;
 		background-size: auto 100%;
+		overflow: hidden;
 		@include for-phone {
 			display: -webkit-box;
 			display: -webkit-flex;
@@ -477,6 +632,13 @@
 			-ms-flex-align: center;
 			align-items: center;
 		}
+		&.show-smart {
+			&:before {
+				-webkit-transform: scale(1.5);
+				-ms-transform: scale(1.5);
+				transform: scale(1.5);
+			}
+		}
 		&:before {
 			content: '';
 			width: 100%;
@@ -485,6 +647,11 @@
 			top: 0; left: 0;
 			background: -o-radial-gradient(50% 35.93%, 26.97% 50.87%, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.0001) 53.71%, #000000 100%);
 			background: radial-gradient(26.97% 50.87% at 50% 35.93%, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.0001) 53.71%, #000000 100%);
+			-webkit-transition: -webkit-transform 0.75s 0.9s;
+			transition: -webkit-transform 0.75s 0.9s;
+			-o-transition: transform 0.75s 0.9s;
+			transition: transform 0.75s 0.9s;
+			transition: transform 0.75s 0.9s, -webkit-transform 0.75s 0.9s;
 			@include for-phone {
 				background: -o-radial-gradient(50% 35.93%, 43.97% 50.87%, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.0001) 53.71%, #000000 100%);
 				background: radial-gradient(43.97% 50.87% at 50% 35.93%, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.0001) 53.71%, #000000 100%);
@@ -641,6 +808,9 @@
 				line-height: 24px;
 				letter-spacing: 0.15px;
 				color: rgba(255, 255, 255, 0.6);
+				@include for-tablet {
+					font-size: 14px;
+				}
 				@include for-phone {
 					font-size: 12px;
 					line-height: 24px;
@@ -649,6 +819,9 @@
 					font-size: 48px;
 					line-height: 1;
 					color: #ffffff;
+					@include for-tablet {
+						font-size: 32px;
+					}
 					@include for-phone {
 						font-size: 28px;
 					}
@@ -672,6 +845,10 @@
 		color: $main_color;
 		cursor: pointer;
 		@include for-pc {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		@include for-tablet {
 			font-size: 14px;
 			line-height: 16px;
 		}

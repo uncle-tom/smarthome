@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Home Page</title>
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
   <link rel="apple-touch-icon" href="/example.png">
@@ -59,12 +59,51 @@
 					<span></span>
 					<span></span>
 				</div>
+				<!-- MOBILE MENU -->
+				<div class="header_mobile_menu">
+					<nav class="header_menu">
+						<ul class="flex justify-between flex-col">
+							<li>
+								<a href="#" class="header_menu_link active">Обзор</a>
+							</li>
+							<li>
+								<a href="#" class="header_menu_link">Продукт</a>
+							</li>
+							<li>
+								<a href="#" class="header_menu_link">Блог</a>
+							</li>
+							<li>
+								<a href="#" class="header_menu_link">Портфолио</a>
+							</li>
+							<li>
+								<a href="#" class="header_menu_link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header_lang lang-toggle">
+						<div class="select">
+							<select>
+							  <option>RU</option>
+							  <option>ENG</option>
+							</select>	
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
 	<main>
 		<!-- Overview OVERVIEW WELCOME :: components/overview/sections/overview-welcome.html -->
 		<section class="overview smart-slide" data-slide-id="1">
+	<div class="light-on"></div>
+	<div class="light-lamp-circle"></div>
+	<div class="light-lamp-ray"></div>
+	<div class="torchere-path-up"></div>
+	<div class="torchere-path-up"></div>
+	<div class="torchere-path-up"></div>
+	<div class="torchere-path-down"></div>
+	<div class="torchere-path-down"></div>
+	<div class="torchere-path-down"></div>
 	<div class="overview_welcome overview_screen">
 		<!-- WELCOME NOTICES -->
 		<div class="overview_welcome_condit overview_welcome_notice flex items-center">
@@ -90,39 +129,55 @@
 			<span>Torchere</span>
 		</div>
 		<div class="wrapper overview_welcome_mobile_wrapper relative h-full mx-auto">
+			<!-- ФОТО ПЛАНШЕТА -->
 			<div class="overview_welcome_border-tablet">
 				<img src="img/overview/overview_welcome_tablet.png" alt="" class="w-full">
 			</div>
+			<!-- КОНТЕНТ НА ПЛАНШЕТЕ -->
 			<div class="overview_welcome_tablet">
 				<div class="overview_welcome_tablet_content">
+					<!-- ЗАГОЛОВОК НА ПЛАНШЕТЕ -->
 					<div class="overview_welcome_tablet_title">
 						Безопасность, комфорт и ресурсосбережение
 					</div>
+					<!-- ВИДЖЕТЫ НА ПЛАНШЕТЕ -->
 					<div class="overview_welcome_tablet_info flex">
-						<div class="overview_welcome_tablet_box">
+						<!-- ВИДЖЕТЫ НА ПЛАНШЕТЕ::Освещение -->
+						<div class="overview_welcome_tablet_box lighting-widget">
 							<div class="overview_welcome_tablet_box_title">
 								Освещение
 							</div>
-							<div class="overview_welcome_tablet_box_subtitle mb-5">
-								Вкл.
+							<div class="overview_welcome_tablet_box_subtitle notice mb-5">
+								<span class="notice-off">Выкл.</span>
+								<span class="notice-on">Вкл.</span>
 							</div>
 							<div class="flex justify-between items-center">
-								<img src="img/icons/lamp.svg" alt="" class="overview_welcome_tablet_box_icon">	
-								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
+								<img src="img/icons/lamp.svg" alt="" class="overview_welcome_tablet_box_icon">
+								<div class="light-toggle-js power cursor-pointer">
+									<img src="img/power-off.svg" alt="" class="overview_welcome_tablet_box_icon power-off">	
+									<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon power-on">	
+								</div>
+								
 							</div>
 						</div>
-						<div class="overview_welcome_tablet_box mx-4">
+						<!-- ВИДЖЕТЫ НА ПЛАНШЕТЕ::Охрана -->
+						<div class="overview_welcome_tablet_box security-widget mx-4">
 							<div class="overview_welcome_tablet_box_title">
 								Охрана
 							</div>
-							<div class="overview_welcome_tablet_box_subtitle mb-5">
-								Вкл.
+							<div class="overview_welcome_tablet_box_subtitle notice mb-5">
+								<span class="notice-off">Выкл.</span>
+								<span class="notice-on">Вкл.</span>
 							</div>
 							<div class="flex justify-between items-center">
 								<img src="img/icons/security.svg" alt="" class="overview_welcome_tablet_box_icon">	
-								<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon">
+								<div class="security-toggle-js power cursor-pointer">
+									<img src="img/power-off.svg" alt="" class="overview_welcome_tablet_box_icon power-off">	
+									<img src="img/power-on.svg" alt="" class="overview_welcome_tablet_box_icon power-on">	
+								</div>
 							</div>
 						</div>
+						<!-- ВИДЖЕТЫ НА ПЛАНШЕТЕ::Электричество -->
 						<div class="overview_welcome_tablet_box">
 							<div class="overview_welcome_tablet_box_title">
 								Электричество
@@ -312,7 +367,7 @@
 		
 		<!-- Overview OVERVIEW SECURITY :: components/overview/sections/overview-security.html -->
 		<section class="overview smart-slide" data-slide-id="3">
-	<div class="overview_security overview_screen">
+	<div class="overview_security overview_screen animate-smart">
 		<div class="wrapper">
 			<div class="overview_content">
 				<div class="overview_content_title">

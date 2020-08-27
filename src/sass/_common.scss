@@ -119,6 +119,9 @@ p {
   @include for-pc {
 		font-size: 14px;
 	}
+	@include for-tablet {
+		font-size: 14px;
+	}
 	@include for-phone {
 		font-size: 14px;
 	}
@@ -305,6 +308,10 @@ select::-ms-expand {
 		box-sizing: border-box;
 		padding: 10px 32px 10px 16px;
 		@include for-pc {
+			font-size: 14px;
+			padding: 8px 32px 8px 16px;
+		}
+		@include for-tablet {
 			font-size: 14px;
 			padding: 8px 32px 8px 16px;
 		}

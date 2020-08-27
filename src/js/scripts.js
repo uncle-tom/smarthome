@@ -11,6 +11,30 @@ $.scrollify({
   passive: false,
 });
 
+//Элемент виден при скролле
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('show-smart');
+    }
+  });
+}
+
+let scrollOptions = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, scrollOptions);
+let elements = document.querySelectorAll('.animate-smart');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+
+//HEADER MENU TOGGLE
+$('.header_mobile_toggle').on('click', function(){
+	$(this).toggleClass('open');
+	$('.header_mobile_menu').toggleClass('open');
+});
+
 //Modal Open
 let bgModal = document.querySelector('.modal-bg');
 let modalsClickId = document.querySelectorAll('.modal_click_js');
@@ -313,40 +337,40 @@ if (constrMetaSticky) {
 	constrMetaSticky.style.top = window.innerHeight/4.736 + 'px';
 }
 
-//Анимация при скроле
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('show-smart');
+// //Анимация при скроле
+// function onEntry(entry) {
+//   entry.forEach(change => {
+//     if (change.isIntersecting) {
+//       change.target.classList.add('show-smart');
 
-      //Для Morning блока
-      morningTimeout = 2000;
-      function addClassFunc(classname) {
-      	classname.classList.add('show');
-      	classname.style.opacity = 1;
-      }
-      for (morningNoticeItem of morningNoticeItems) {
-    		if (morningNoticeItem) {
-    			morningTimeout = morningTimeout + 2000;
-    			(function(morningNoticeItem){
-		        setTimeout(function(){
-		          addClassFunc(morningNoticeItem);
-		        }, morningTimeout);
-			    })(morningNoticeItem);
-    		}
-    	}
-    }
-  });
-}
+//       //Для Morning блока
+//       morningTimeout = 2000;
+//       function addClassFunc(classname) {
+//       	classname.classList.add('show');
+//       	classname.style.opacity = 1;
+//       }
+//       for (morningNoticeItem of morningNoticeItems) {
+//     		if (morningNoticeItem) {
+//     			morningTimeout = morningTimeout + 2000;
+//     			(function(morningNoticeItem){
+// 		        setTimeout(function(){
+// 		          addClassFunc(morningNoticeItem);
+// 		        }, morningTimeout);
+// 			    })(morningNoticeItem);
+//     		}
+//     	}
+//     }
+//   });
+// }
 
-let options = {
-  threshold: [0.1] };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.animate-smart');
+// let options = {
+//   threshold: [0.1] };
+// let observer = new IntersectionObserver(onEntry, options);
+// let elements = document.querySelectorAll('.animate-smart');
 
-for (let elm of elements) {
-  observer.observe(elm);
-}
+// for (let elm of elements) {
+//   observer.observe(elm);
+// }
 
 
 //Audio
