@@ -823,8 +823,17 @@
 			-ms-transform: matrix(-1, 0, 0, 1, 0, 0);
 			transform: matrix(-1, 0, 0, 1, 0, 0);
 		}
+		.overview_content {
+			width: 45%;
+			@include for-phone {
+				width: 100%;
+			}
+		}
 		.overview_content_title {
 			margin-bottom: 72px;
+			@include for-desktop {
+				margin-bottom: 20px;
+			}
 			@include for-phone {
 				margin-bottom: 20px;
 			}
@@ -834,6 +843,7 @@
 			@include for-phone {
 				font-size: 16px;
 				letter-spacing: 0.12px;
+				margin-bottom: 0;
 			}
 		}
 	}
