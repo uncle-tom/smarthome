@@ -63278,7 +63278,7 @@ select::-ms-expand {
     border-radius: 16px; }
     @media (max-width: 768px) {
       .modal_block {
-        height: 100%;
+        height: auto;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -63291,6 +63291,11 @@ select::-ms-expand {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         margin: 0;
         border-right: 0; } }
   .modal_title {
@@ -63302,6 +63307,10 @@ select::-ms-expand {
     line-height: 40px;
     letter-spacing: 0.25px;
     text-transform: uppercase; }
+    @media (max-width: 768px) {
+      .modal_title {
+        font-size: 26px;
+        line-height: 30px; } }
   .modal_constr_info {
     padding: 14px 16px; }
     .modal_constr_info_icon {
@@ -63376,9 +63385,44 @@ select::-ms-expand {
       -o-transition: opacity 0.35s, z-index 0.35s step-start;
       transition: opacity 0.35s, z-index 0.35s step-start; }
   .modal form input, .modal form textarea {
+    width: 100%;
+    color: #ffffff;
     background-color: rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     padding: 16px; }
+
+.send_success {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  color: #ffffff;
+  font-size: 24px;
+  background-color: #313442;
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  padding: 15px 30px;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s; }
+  @media (max-width: 768px) {
+    .send_success {
+      right: 10px;
+      bottom: 10px; } }
+  .send_success.show {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    z-index: 10; }
+  .send_success_close {
+    color: #b99b4f; }
 
 input.input-with-icon {
   padding-left: 52px !important; }

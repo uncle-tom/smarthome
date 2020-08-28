@@ -1,8 +1,10 @@
-setTimeout(function(){
-	//Preloader
-	let preloader = document.querySelector('.preloader');
-	preloader.classList.add('hide');
-}, 3500);
+$( document ).ready(function() {
+	setTimeout(function(){
+		//Preloader
+		let preloader = document.querySelector('.preloader');
+		preloader.classList.add('hide');
+	}, 3500);
+});
 
 $.scrollify({
   section : ".smart-slide",
@@ -18,7 +20,7 @@ function onEntry(entry) {
       change.target.classList.add('show-smart');
     }
   });
-}
+};
 
 let scrollOptions = {
   threshold: [0.5] };
@@ -34,6 +36,12 @@ $('.header_mobile_toggle').on('click', function(){
 	$(this).toggleClass('open');
 	$('.header_mobile_menu').toggleClass('open');
 });
+
+//Modal Width
+if ($(window).outerWidth() > 998) {
+	var modalWidth = $( window ).outerWidth() * 0.379166667;
+	$('.modal').css({'width':modalWidth});
+}
 
 //Modal Open
 let bgModal = document.querySelector('.modal-bg');
@@ -74,6 +82,31 @@ if (modalCloseBtns) {
   }
 }
 
+//SEND FORM
+
+
+let contactSuccess = document.querySelector('.send_success');
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxCEvyzzib-ySwcQ1MDNvR-R24vU4WsgJIsvtuhSnTXNOxMr5PC/exec'
+const contact_form = document.forms['contact']
+if (contact_form) {
+	contact_form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  let this_form = contact_form
+	  let data = new FormData(contact_form)
+	  fetch(scriptURL, { method: 'POST', mode: 'cors', body: data})
+	    .then(response => showSuccessMessage(data, this_form))
+	    .catch(error => console.error('Error!', error.message))
+	})	
+}
+
+function showSuccessMessage(data, this_form){
+	this_form.reset();
+	contactSuccess.classList.add('show');
+}
+
+$('.send_success_close').on('click', function(){
+	$('.send_success').removeClass('show');
+});
 
 //Отступ для HEADER
 if ($(window).outerWidth() > 998) {
@@ -81,22 +114,6 @@ if ($(window).outerWidth() > 998) {
 	$('.header').css({'padding-top': headerPaddingTop});	
 }
 
-
-let overviewBottomAll = document.querySelectorAll('.overview_bottom');
-
-
-//Размеры и отступы на втором экране (Morning)
-let morningNotice = document.querySelector('.overview_02_notice');
-let morningNoticeItems = document.querySelectorAll('.overview_02_notice_item');
-
-if (morningNotice) {
-	morningNotice.style.bottom = 100 + windowPadding/1.5 + 'px';
-}
-for (morningNoticeItem of morningNoticeItems) {
-	if (morningNoticeItem) {
-		morningNoticeItem.style.height = window.innerHeight/11.73 + 'px';	
-	}
-}
 
 //Размеры и отступы в Конструкторе
 let constrWrapper = document.querySelectorAll('.constr_wrapper');

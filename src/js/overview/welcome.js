@@ -70,15 +70,24 @@ $('.torchere-path-down').css({
 });
 
 //Включаем/выключаем свет на планшете
-$('.light-toggle-js').on('click', function(){
-	$(this).toggleClass('on');
-	$(this).closest('.lighting-widget').find('.notice').toggleClass('on');
+function welcomeLightOn() {
+	$('.light-toggle-js').toggleClass('on');
+	$('.light-toggle-js').closest('.lighting-widget').find('.notice').toggleClass('on');
 	$('.overview_welcome').toggleClass('on');
 	$('.light-lamp-circle').toggleClass('on');
 	$('.light-lamp-ray').toggleClass('on');
 	$('.torchere-path-up').toggleClass('animate');
-	$('.torchere-path-down').toggleClass('animate');
+	$('.torchere-path-down').toggleClass('animate');	
+}
+$('.light-toggle-js').on('click', function(){
+	welcomeLightOn();
 });
+
+//Свет включается после загрузки сайта
+$( document ).ready(function() {
+  setTimeout(welcomeLightOn, 5000);
+});
+
 
 //Включаем/выключаем охрану на планшете
 $('.security-toggle-js').on('click', function(){

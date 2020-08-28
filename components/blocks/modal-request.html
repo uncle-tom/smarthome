@@ -1,0 +1,42 @@
+<div class="modal" data-modal-id="send_request">
+	<!-- Modal Main Block -->
+	<div class="modal_block p-6">
+		<div class="w-full flex justify-between items-center mb-10">
+			<div class="modal_title">
+				Сделать заказ
+			</div>
+			<div class="modal_close">
+				<img src="img/close.svg" alt="" width="24px">
+			</div>
+		</div>
+		<div class="w-full">
+			<form name="contact">
+				<div class="flex flex-col lg:flex-row justify-between items-center mb-6">
+					<div class="w-full relative mr-0 mb-4 lg:mb-0 lg:mr-1">
+						<input type="text" name="Имя" placeholder="Имя" class="input-with-icon" required>
+						<img src="img/name-icon.svg" alt="" class="input-icon-name">	
+					</div>
+					<div class="w-full relative ml-0 lg:ml-1">
+						<input type="number" name="Телефон" placeholder="Телефон" class="input-with-icon" required>	
+						<img src="img/phone-icon.svg" alt="" class="input-icon-phone">
+					</div>
+				</div>
+				<div class="mb-6">
+					<textarea name="Сообщение" id="" rows="3" placeholder="Сообщение" class="w-full"></textarea>
+				</div>
+				<div class="flex justify-end">
+					<button type="submit" class="bg-main text-white uppercase rounded-full px-6 py-2">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="send_success flex">
+	<div class="mr-10">
+		<span>Сообщение успешно отправлено</span>
+	</div>
+	<div>
+		<span class="send_success_close cursor-pointer">Хорошо</span>
+	</div>
+</div>
+<div class="modal-bg"></div>
