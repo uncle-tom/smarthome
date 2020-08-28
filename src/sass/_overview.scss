@@ -652,6 +652,7 @@
 			}
 		}
 		.overview_content {
+			z-index: 1;
 			margin-bottom: 42px;
 			@include for-phone {
 				margin-bottom: 18px;

@@ -64499,6 +64499,7 @@ input.input-with-icon {
         .overview_morning_music_ava img {
           width: 18px; } }
     .overview_morning .overview_content {
+      z-index: 1;
       margin-bottom: 42px; }
       @media (max-width: 768px) {
         .overview_morning .overview_content {
