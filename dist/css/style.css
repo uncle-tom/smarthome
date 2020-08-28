@@ -64659,7 +64659,7 @@ input.input-with-icon {
       -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
       transform: matrix(-1, 0, 0, 1, 0, 0); }
     .overview_family .overview_content {
-      width: 45%; }
+      width: 45% !important; }
       @media (max-width: 768px) {
         .overview_family .overview_content {
           width: 100%; } }

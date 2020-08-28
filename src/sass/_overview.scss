@@ -824,7 +824,7 @@
 			transform: matrix(-1, 0, 0, 1, 0, 0);
 		}
 		.overview_content {
-			width: 45%;
+			width: 45% !important;
 			@include for-phone {
 				width: 100%;
 			}
