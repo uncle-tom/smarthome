@@ -1,19 +1,21 @@
-<section class="overview overview_04 smart-slide" data-slide-id="4">
+<section class="overview smart-slide smartslider" data-smartslider="kids" data-slide-id="4">
 	<div class="overview_kids overview_screen">
-		<div class="swipe-photos" data-swipe="4">
-			<div class="swipe-photo active" data-swipe-id="4-01">
+		<div class="smartslider-photos">
+			<input type="hidden" value="0" class="smartslider-photos-transform">
+			<div class="smartslider-photo active">
 				<img src="img/slide-4-01.jpg" alt="">
 			</div>
-			<div class="swipe-photo" data-swipe-id="4-02">
+			<div class="smartslider-photo">
 				<img src="img/slide-4-02.jpg" alt="">
 			</div>
-			<div class="swipe-photo" data-swipe-id="4-03">
+			<div class="smartslider-photo">
 				<img src="img/slide-4-03.jpg" alt="">
 			</div>
 		</div>
 		<div class="wrapper mx-auto">
-			<div class="overview_content z-10 smart-swipe" data-smart-swipe="4">
-				<div class="swipe" data-swipe="4" data-swipe-id="4-01">
+			<div class="overview_content z-10 smartslider-slides">
+				<input type="hidden" value="1" class="smartslider-photos-iteral">
+				<div class="smartslider-slide active">
 					<div class="overview_content_title">
 						Датчик открытия окон
 					</div>
@@ -21,7 +23,7 @@
 						Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
 					</div>
 				</div>
-				<div class="swipe" data-swipe="4" data-swipe-id="4-02">
+				<div class="smartslider-slide">
 					<div class="overview_content_title">
 						Датчик открытия двери
 					</div>
@@ -29,7 +31,7 @@
 						Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
 					</div>
 				</div>
-				<div class="swipe" data-swipe="4" data-swipe-id="4-03">
+				<div class="smartslider-slide">
 					<div class="overview_content_title">
 						Датчик пожара
 					</div>
@@ -44,12 +46,16 @@
 				</a>
 				<div class="overview_line"></div>
 				<div class="overview_navigation flex items-center">
-					<div class="overview_prev flex items-center mr-2" data-swipe="4">
+					<div class="overview_prev smartslider-prev flex items-center mr-3" data-smartslider-name="kids">
 						<img src="img/arrow.svg" alt="" width="18px" class="arrow_back mr-2">
 						<span>Назад</span>
 					</div>
-					<div class="overview_pagination flex items-center" data-pagi="4"></div>
-					<div class="overview_next flex items-center ml-2" data-swipe="4">
+					<div class="smartslider-pagination flex">
+						<div class="smartslider-bullet active"></div>
+						<div class="smartslider-bullet"></div>
+						<div class="smartslider-bullet"></div>
+					</div>
+					<div class="overview_next smartslider-next flex items-center ml-3" data-smartslider-name="kids">
 						<span>Далее</span>
 						<img src="img/arrow.svg" alt="" width="18px" class="arrow_next ml-2">
 					</div>

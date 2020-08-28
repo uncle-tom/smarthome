@@ -30,12 +30,18 @@ var overviewLightLampRayHeight = $( window ).height() * 0.641666667;
 var overviewLightLampRayLeft = $( window ).outerWidth() * 0.561979167;
 var overviewLightLampRayTop = $( window ).height() * 0.316666667;
 
-$('.light-lamp-ray').css({
-	'width': overviewLightLampRayWidth,
-	'height': overviewLightLampRayHeight,
-	'left': overviewLightLampRayLeft,
-	'top': overviewLightLampRayTop
-});
+if ($(window).outerWidth() > 998) {
+	$('.light-lamp-ray').css({
+		'width': overviewLightLampRayWidth,
+		'height': overviewLightLampRayHeight,
+		'left': overviewLightLampRayLeft,
+		'top': overviewLightLampRayTop
+	});
+} else {
+	$('.light-lamp-ray').css({
+		'height': overviewLightLampRayHeight,
+	});
+}
 
 var overviewTorcherePathUpWidth = $( window ).outerWidth() * 0.105729167;
 var overviewTorcherePathUpHeight = $( window ).height() * 0.00740740741;

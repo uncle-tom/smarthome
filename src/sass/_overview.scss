@@ -33,8 +33,8 @@
 				line-height: 112px;
 			}
 			@include for-desktop {
-				font-size: 72px;
-				line-height: 84px;
+				font-size: 68px;
+				line-height: 80px;
 			}
 			@include for-tablet {
 				font-size: 48px;
@@ -43,6 +43,7 @@
 			@include for-phone {
 				font-size: 30px;
 				line-height: 41px;
+				margin-bottom: 16px;
 			}
 		}
 		&_subtitle {
@@ -56,7 +57,7 @@
 			color: #FFFFFF;
 		}
 		&_text {
-			font-family: 'Roboto Light';
+			font-family: 'Roboto Regular';
 			font-style: normal;
 			font-weight: normal;
 			font-size: 36px;
@@ -68,9 +69,13 @@
 				font-size: 20px;
 				line-height: 26px;
 			}
-			@include for-tablet {
+			@include for-desktop {
 				font-size: 18px;
 				line-height: 23.5px;
+			}
+			@include for-tablet {
+				font-size: 16px;
+				line-height: 20.8px;
 			}
 			@include for-phone {
 				font-size: 14px;
@@ -98,6 +103,10 @@
 		position: absolute;
 		top: 0; left: 0;
 		background: url('../img/overview/overview_welcome_bg_on.jpg');
+		@include for-phone {
+			background-size: cover;
+			background-position: 60%;
+		}
 	}
 	.light-lamp-circle {
 		display: none;
@@ -107,6 +116,9 @@
 		z-index: 1;
 		&.on {
 			display: block;
+			@include for-phone {
+				display: none;
+			}
 		}
 	}
 	.light-lamp-ray {
@@ -117,6 +129,14 @@
 		z-index: 1;
 		&.on {
 			display: block;
+		}
+		@include for-phone {
+			width: 100%;
+			top: auto; bottom: 0; left: 0;
+			background-size: cover;
+			background-position: -60%;
+			background-repeat: no-repeat;
+			z-index: 0;
 		}
 	}
 	.torchere-path-up {
@@ -138,6 +158,9 @@
 			-webkit-animation-delay: 2s;
 			animation-delay: 2s;
 		}
+		@include for-phone {
+			display: none;
+		}
 	}
 	.torchere-path-down {
 		position: absolute;
@@ -157,6 +180,9 @@
 			-webkit-animation-delay: 2s;
 			animation-delay: 2s;
 		}
+		@include for-phone {
+			display: none;
+		}
 	}
 	
 	&_welcome {
@@ -166,6 +192,10 @@
 		background: url('../img/overview/overview_welcome_bg_off.jpg');
 		background-position: 50%;
 		background-size: auto 100%;
+		@include for-phone {
+			background-size: cover;
+			background-position: 60%;
+		}
 		&.on {
 			background: transparent;
 		}
@@ -179,9 +209,10 @@
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
 			@include for-phone {
-				width: 100%;
+				width: -webkit-calc(100% + 20px);
+				width: calc(100% + 20px);
 				position: relative;
-		    top: 0; left: 0;
+		    top: -10px; left: -10px;
 		    -webkit-transform: translateY(0);
 		    -ms-transform: translateY(0);
 		    transform: translateY(0);
@@ -214,7 +245,7 @@
 				-webkit-transform: translateY(0);
 				-ms-transform: translateY(0);
 				transform: translateY(0);
-				padding: 0 50px;
+				padding: 0 40px;
 				margin-left: 0;
 			}
 			&_title {
@@ -271,6 +302,7 @@
 				padding: 8px 12px;
 				@include for-phone {
 					width: 33.333%;
+					overflow: hidden;
 					padding: 4px 6px;
 				}
 				&_title {
@@ -289,7 +321,7 @@
 						font-size: 14px;
 					}
 					@include for-phone {
-						font-size: 14px;
+						font-size: 12px;
 					}
 				}
 				&_subtitle {
@@ -308,7 +340,7 @@
 						font-size: 14px;
 					}
 					@include for-phone {
-						font-size: 14px;
+						font-size: 12px;
 					}
 				}
 				&_icon {
@@ -471,7 +503,6 @@
 				@include for-phone {
 					display: inline-block;
 					font-size: 14px;
-					margin: 0 12px;
 				}
 			}
 		}
@@ -610,8 +641,21 @@
 				}
 			}
 		}
+		&_music {
+			&_ava {
+				img {
+					width: 36px;
+					@include for-phone {
+						width: 18px;
+					}
+				}
+			}
+		}
 		.overview_content {
 			margin-bottom: 42px;
+			@include for-phone {
+				margin-bottom: 18px;
+			}
 		}
 	}
 	&_security {
@@ -668,6 +712,7 @@
 		width: 100%;
 		height: 100%;
 		position: relative;
+		background-color: #121212;
 		overflow: hidden;
 		&:before {
 			content: '';
@@ -720,7 +765,18 @@
 		width: 100%;
 		height: 100%;
 		position: relative;
+		background-color: #121212;
 		overflow: hidden;
+		@include for-phone {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
 		&:before {
 			content: '';
 			width: 100%;
@@ -849,6 +905,10 @@
 			line-height: 16px;
 		}
 		@include for-tablet {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		@include for-phone {
 			font-size: 14px;
 			line-height: 16px;
 		}

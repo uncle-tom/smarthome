@@ -293,7 +293,7 @@
 					<div class="flex justify-between items-center">
 						<div class="flex items-center mr-8 lg:mr-0">
 							<div class="overview_morning_music_ava mr-4">
-								<img src="img/overview/music_ava.jpg" alt="" width="36px">
+								<img src="img/overview/music_ava.jpg" alt="">
 							</div>
 							<div>
 								<div class="overview_morning_notice_text">Memories</div>
@@ -404,22 +404,24 @@
 </section>
 
 		<!-- Overview OVERVIEW KIDS :: components/overview/sections/overview-kids.html -->
-		<section class="overview overview_04 smart-slide" data-slide-id="4">
+		<section class="overview smart-slide smartslider" data-smartslider="kids" data-slide-id="4">
 	<div class="overview_kids overview_screen">
-		<div class="swipe-photos" data-swipe="4">
-			<div class="swipe-photo active" data-swipe-id="4-01">
+		<div class="smartslider-photos">
+			<input type="hidden" value="0" class="smartslider-photos-transform">
+			<div class="smartslider-photo active">
 				<img src="img/slide-4-01.jpg" alt="">
 			</div>
-			<div class="swipe-photo" data-swipe-id="4-02">
+			<div class="smartslider-photo">
 				<img src="img/slide-4-02.jpg" alt="">
 			</div>
-			<div class="swipe-photo" data-swipe-id="4-03">
+			<div class="smartslider-photo">
 				<img src="img/slide-4-03.jpg" alt="">
 			</div>
 		</div>
 		<div class="wrapper mx-auto">
-			<div class="overview_content z-10 smart-swipe" data-smart-swipe="4">
-				<div class="swipe" data-swipe="4" data-swipe-id="4-01">
+			<div class="overview_content z-10 smartslider-slides">
+				<input type="hidden" value="1" class="smartslider-photos-iteral">
+				<div class="smartslider-slide active">
 					<div class="overview_content_title">
 						Датчик открытия окон
 					</div>
@@ -427,7 +429,7 @@
 						Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
 					</div>
 				</div>
-				<div class="swipe" data-swipe="4" data-swipe-id="4-02">
+				<div class="smartslider-slide">
 					<div class="overview_content_title">
 						Датчик открытия двери
 					</div>
@@ -435,7 +437,7 @@
 						Необходим для отслеживания открытия входной двери, что поможет распознать проникновение в дом при отсутствии хозяина. Также в приложении Connected Home можно просматривать историю открытия и закрытия двери.
 					</div>
 				</div>
-				<div class="swipe" data-swipe="4" data-swipe-id="4-03">
+				<div class="smartslider-slide">
 					<div class="overview_content_title">
 						Датчик пожара
 					</div>
@@ -450,12 +452,16 @@
 				</a>
 				<div class="overview_line"></div>
 				<div class="overview_navigation flex items-center">
-					<div class="overview_prev flex items-center mr-2" data-swipe="4">
+					<div class="overview_prev smartslider-prev flex items-center mr-3" data-smartslider-name="kids">
 						<img src="img/arrow.svg" alt="" width="18px" class="arrow_back mr-2">
 						<span>Назад</span>
 					</div>
-					<div class="overview_pagination flex items-center" data-pagi="4"></div>
-					<div class="overview_next flex items-center ml-2" data-swipe="4">
+					<div class="smartslider-pagination flex">
+						<div class="smartslider-bullet active"></div>
+						<div class="smartslider-bullet"></div>
+						<div class="smartslider-bullet"></div>
+					</div>
+					<div class="overview_next smartslider-next flex items-center ml-3" data-smartslider-name="kids">
 						<span>Далее</span>
 						<img src="img/arrow.svg" alt="" width="18px" class="arrow_next ml-2">
 					</div>
@@ -518,22 +524,24 @@
 </section>
 		
 		<!-- Overview OVERVIEW LOCK :: components/overview/sections/overview-lock.html -->
-		<section class="overview overview_06 smart-slide" data-slide-id="6">
+		<section class="overview smart-slide smartslider" data-smartslider="lock" data-slide-id="6">
 	<div class="overview_lock overview_screen">
-		<div class="swipe-photos" data-swipe="6">
-			<div class="swipe-photo active" data-swipe-id="6-01">
+		<div class="smartslider-photos">
+			<input type="hidden" value="0" class="smartslider-photos-transform">
+			<div class="smartslider-photo active">
 				<img src="img/slide-6-01.jpg" alt="">
 			</div>
-			<div class="swipe-photo" data-swipe-id="6-02">
+			<div class="smartslider-photo">
 				<img src="img/slide-6-02.jpg" alt="">
 			</div>
-			<div class="swipe-photo" data-swipe-id="6-03">
+			<div class="smartslider-photo">
 				<img src="img/slide-6-03.jpg" alt="">
 			</div>
 		</div>
 		<div class="wrapper mx-auto">
-			<div class="overview_content z-10 smart-swipe" data-smart-swipe="6">
-				<div class="swipe" data-swipe="6" data-swipe-id="6-01">
+			<div class="overview_content z-10 smartslider-slides">
+				<input type="hidden" value="1" class="smartslider-photos-iteral">
+				<div class="swipe smartslider-slide active">
 					<div class="overview_content_title">
 						Умный замок
 					</div>
@@ -541,7 +549,7 @@
 						Не нужно беспокоиться о детях если они вернуться пораньше или друзья стоят на пороге дома, когда вы задержались на работе. Вы контролируете кто и когда заходит к вам домой. К примеру, можете установить до 20 разных ПИН кодов. 
 					</div>
 				</div>
-				<div class="swipe" data-swipe="6" data-swipe-id="6-02">
+				<div class="swipe smartslider-slide">
 					<div class="overview_content_title">
 						Прост в использовании
 					</div>
@@ -549,7 +557,7 @@
 						Вы выбираете каким образом открыть дверь. ПИН код, пульт ДУ, отпечаток пальца или даже со своего телефона. 
 					</div>
 				</div>
-				<div class="swipe" data-swipe="6" data-swipe-id="6-03">
+				<div class="swipe smartslider-slide">
 					<div class="overview_content_title">
 						Безопасность как стандарт
 					</div>
@@ -557,7 +565,6 @@
 						Чувство безопасности и защищенности должно быть у каждого домовладельца. Защищенное беспроводное соединение между элементами системы происходит по стандарту шифрования АЭС128.
 					</div>
 				</div>
-				
 			</div>
 			<div class="smartslider-bottom flex items-center z-10">
 				<a href="constructor.html" class="order-btn">
@@ -565,12 +572,16 @@
 				</a>
 				<div class="overview_line"></div>
 				<div class="overview_navigation flex items-center">
-					<div class="overview_prev flex items-center mr-2" data-swipe="6">
+					<div class="overview_prev smartslider-prev flex items-center mr-3" data-smartslider-name="lock">
 						<img src="img/arrow.svg" alt="" width="18px" class="arrow_back mr-2">
 						<span>Назад</span>
 					</div>
-					<div class="overview_pagination flex items-center" data-pagi="6"></div>
-					<div class="overview_next flex items-center ml-2" data-swipe="6">
+					<div class="smartslider-pagination flex">
+						<div class="smartslider-bullet active"></div>
+						<div class="smartslider-bullet"></div>
+						<div class="smartslider-bullet"></div>
+					</div>
+					<div class="overview_next smartslider-next flex items-center ml-3" data-smartslider-name="lock">
 						<span>Далее</span>
 						<img src="img/arrow.svg" alt="" width="18px" class="arrow_next ml-2">
 					</div>

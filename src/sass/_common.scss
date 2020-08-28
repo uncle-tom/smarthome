@@ -80,12 +80,6 @@ p {
 	}
 }
 
-.smartslider {
-	&-bottom {
-		position: absolute;
-	}
-}
-
 .main-btn {
 	font-family: 'Roboto Bold';
 	font-style: normal;
@@ -103,7 +97,7 @@ p {
 	display: inline-block;
 	color: #ffffff;
 	background-color: $main_color;
-	font-family: Roboto;
+	font-family: 'Roboto Regular';
   font-size: 18px;
   font-weight: bold;
   font-stretch: condensed;
@@ -123,7 +117,8 @@ p {
 		font-size: 14px;
 	}
 	@include for-phone {
-		font-size: 14px;
+		font-size: 12px;
+		padding: 12px 24px;
 	}
 }
 
@@ -188,67 +183,6 @@ p {
 	border-radius: 18px;
 	cursor: pointer;
 	padding: 12px 20px;
-}
-
-.swipe {
-	opacity: 0;
-	visibility: hidden;
-	display: none;
-	-webkit-transition: all 0.55s;
-	-o-transition: all 0.55s;
-	transition: all 0.55s;
-	&.active {
-		display: block;
-		opacity: 1;
-		visibility: visible;
-	}
-	&-photos {
-		height: 100%;
-		position: relative;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-transition: all 0.3s;
-		-o-transition: all 0.3s;
-		transition: all 0.3s;
-	}
-	&-photo {
-		position: absolute;
-		top: 0;
-		width: -webkit-calc(150%/3);
-		width: calc(150%/3);
-		height: 100%;
-		img {
-			width: 100%;
-			height: 100%;
-			-o-object-fit: cover;
-			object-fit: cover;
-			-webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
-			clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
-			-webkit-filter: brightness(0.3);
-			filter: brightness(0.3);
-			-webkit-transition: all 0.3s;
-			-o-transition: all 0.3s;
-			transition: all 0.3s;
-		}
-		&.active {
-			img {
-				-webkit-filter: brightness(1);
-				filter: brightness(1);	
-			}
-		}
-	}
-}
-
-.pagi {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: #FFFFFF;
-	mix-blend-mode: normal;
-	opacity: 0.54;
-	margin: 0 10px;
 }
 
 .player_btns {
