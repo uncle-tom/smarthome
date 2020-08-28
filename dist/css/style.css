@@ -63412,6 +63412,7 @@ select::-ms-expand {
   transition: all 0.35s; }
   @media (max-width: 768px) {
     .send_success {
+      font-size: 14px;
       right: 10px;
       bottom: 10px; } }
   .send_success.show {
@@ -63420,7 +63421,7 @@ select::-ms-expand {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
-    z-index: 11; }
+    z-index: 99; }
   .send_success_close {
     color: #b99b4f; }
 
