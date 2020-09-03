@@ -544,6 +544,7 @@
 		}
 		&_notices {
 			position: absolute;
+			overflow: hidden;
 			@include for-phone {
 				position: relative;
 				display: -webkit-inline-box;
@@ -555,6 +556,12 @@
 				-webkit-flex-direction: column;
 				-ms-flex-direction: column;
 				flex-direction: column;
+			}
+			&_wrapper {
+				overflow: hidden;
+				-webkit-transform: translateY(-webkit-calc(75% + 2px));
+				-ms-transform: translateY(calc(75% + 2px));
+				transform: translateY(calc(75% + 2px));
 			}
 		}
 		&_notice {

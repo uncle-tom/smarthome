@@ -43,14 +43,24 @@
 .constr {
 	min-height: 100vh;
 	position: relative;
+	@include for-phone {
+		padding-top: 74px;
+	}
 	&_meta {
 		padding-right: 6rem;
 		@include for-desktop {
 			padding-right: 3rem;
 		}
+		@include for-phone {
+			padding-right: 0;
+			margin-bottom: 2rem;
+		}
 		&_sticky {
 			position: -webkit-sticky;
 			position: sticky;
+			@include for-phone {
+				position: relative;
+			}
 		}
 		&_price {
 			color: #FF8700;
@@ -103,6 +113,11 @@
 				line-height: 32px;
 			}
 		}
+		@include for-phone {
+			font-size: 30px;
+			line-height: 35px;
+			letter-spacing: -0.47px
+		}
 	}
 	&_subtitle {
 		color: #FFFFFF;
@@ -138,6 +153,12 @@
 			opacity: 1;
 		}
 	}
+	&_grid {
+		@include for-phone {
+			padding: 0 10px;
+			margin-bottom: 60px;
+		}
+	}
 	&_block {
 		width: 100%;
 		color: #ffffff;
@@ -149,6 +170,15 @@
 		-webkit-transition: all 0.3s;
 		-o-transition: all 0.3s;
 		transition: all 0.3s;
+		@include for-phone {
+			margin-bottom: 20px;
+			padding: 27px 20px;
+		}
+		&.slide-options {
+			@include for-phone {
+				padding: 27px 20px 46px 20px;
+			}
+		}
 		&_title {
 			font-family: 'Roboto Bold';
 			font-style: normal;
@@ -161,6 +191,18 @@
 				font-size: 46px;
 				line-height: 53px;
 			}
+			@include for-phone {
+				font-size: 30px;
+				line-height: 35px;
+		    letter-spacing: -0.47px;
+			}
+			&.slide-options {
+				@include for-phone {
+					font-size: 40px;
+					line-height: 46px;
+					letter-spacing: -0.62px;
+				}
+			}
 		}
 		&_subtitle {
 			font-family: 'Roboto Bold';
@@ -170,6 +212,16 @@
 			line-height: 23px;
 			letter-spacing: 0.25px;
 			text-transform: uppercase;
+			@include for-phone {
+				font-size: 14px;
+				letter-spacing: 0.17px;
+				line-height: 16px;
+			}
+			&.slide-options {
+				@include for-phone {
+					margin-bottom: 20px;
+				}
+			}
 		}
 		&_text {
 			font-size: 16px;
@@ -186,6 +238,16 @@
 			margin-top: 24px;	
 			@include for-desktop {
 				margin-top: 16px;	
+			}
+			@include for-phone {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				margin-bottom: 30px;
 			}
 		}
 		&_item {
@@ -204,10 +266,18 @@
 				margin-bottom: 12px;
 				padding-left: 6px;
 			}
+			@include for-phone {
+				width: 100%;
+				padding-left: 5px;
+				margin-bottom: 5px;
+			}
 			img {
 				width: 24px;
 				@include for-desktop {
 					width: 16px;
+				}
+				@include for-phone {
+					width: 13px;
 				}
 			}
 			span {
@@ -220,6 +290,13 @@
 				margin-left: 20px;
 				@include for-desktop {
 					margin-left: 16px;
+				}
+				@include for-phone {
+					font-family: 'Roboto-Regular';
+					font-size: 12px;
+					letter-spacing: 0.21px;
+					line-height: 20px;
+					margin-left: 15px;
 				}
 			}
 			&:after {
@@ -237,6 +314,11 @@
 					width: calc(100% - 40px);
 					bottom: -6px;
 				}
+				@include for-phone {
+					width: -webkit-calc(100% - 32px);
+					width: calc(100% - 32px);
+					bottom: -5px;
+				}
 			}
 			&:before {
 				content: '';
@@ -252,6 +334,10 @@
 				@include for-desktop {
 					width: 26px;
 					height: 26px;
+				}
+				@include for-phone {
+					width: 23px;
+					height: 23px;
 				}
 			}
 		}
@@ -272,6 +358,9 @@
 				filter: drop-shadow(0px 36px 56px rgba(240, 128, 25, 0.24));
 			}
 		}
+		@include for-phone {
+			width: 100%;
+		}
 	}
 	&_box {
 		position: relative;
@@ -279,6 +368,15 @@
 		-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 		border-radius: 16px;
+		-webkit-transition: all 0.35s;
+		-o-transition: all 0.35s;
+		transition: all 0.35s;
+		&:hover {
+			background: #424144;
+		}
+		@include for-phone {
+			height: 341px;
+		}
 		&_add {
 			display: -webkit-box;
 			display: -webkit-flex;
@@ -306,6 +404,15 @@
 					display: flex;
 				}
 			}
+			@include for-phone {
+				position: relative;
+				top: 0; right: 0;
+				-webkit-box-pack: end;
+				-webkit-justify-content: flex-end;
+				-ms-flex-pack: end;
+				justify-content: flex-end;
+				padding: 14px 16px;
+			}
 			.constr-add-btn {
 				width: 48px;
 				height: 48px;
@@ -327,6 +434,10 @@
 				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 				border-radius: 24px;
 				cursor: pointer;
+				@include for-phone {
+					width: 45px;
+					height: 45px;
+				}
 			}
 		}
 		&_img {
@@ -382,19 +493,23 @@
 		}
 	}
 	&_count {
-		border: 1px solid #747376;
+		background-color: #747376;
 		border-radius: 16px;
 		&_input {
 			width: 48px;
 			height: 48px;
 			background: transparent;
-			border-right: 1px solid #000000;
-			border-left: 1px solid #000000;
+			border-right: 1px solid #68676a;
+			border-left: 1px solid #68676a;
 			color: #ffffff;
 			text-align: center;
 			@include for-desktop {
 				width: 42px;
 				height: 42px;
+			}
+			@include for-phone {
+				width: 38px;
+				height: 48px;
 			}
 		}
 		&_plus {
@@ -413,9 +528,14 @@
 			-ms-flex-align: center;
 			align-items: center;
 			color: $main_color;
+			cursor: pointer;
 			@include for-desktop {
 				width: 42px;
 				height: 42px;
+			}
+			@include for-phone {
+				width: 38px;
+				height: 48px;
 			}
 		}
 		&_minus {
@@ -433,9 +553,14 @@
 			-webkit-align-items: center;
 			-ms-flex-align: center;
 			align-items: center;
+			cursor: pointer;
 			@include for-desktop {
 				width: 42px;
 				height: 42px;
+			}
+			@include for-phone {
+				width: 38px;
+				height: 48px;
 			}
 		}
 	}
@@ -453,9 +578,56 @@
 		}
 	}
 	&_selected {
-		overflow: scroll;
+		display: none;
+		/*overflow-y: scroll;*/
 		margin-top: 24px;
-		padding: 8px 0;
+		padding: 8px 10px 8px 0;
+		&::-webkit-scrollbar {
+			width: 4px;
+		  background: rgba(255, 255, 255, 0.38);
+		  border-radius: 16px;
+		}
+		&.show {
+			display: block;
+		}
+		&_title {			
+			display: none;
+			@include for-phone {
+				-webkit-box-pack: justify;
+				-webkit-justify-content: space-between;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				color: #ffffff;
+				font-family: 'Roboto Regular';
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: 0.15px;
+				line-height: 24px;
+				border-top: 1px solid #3c3c40;
+				border-bottom: 1px solid #3c3c40;
+				padding: 13px 0;
+				&.show {
+					display: -webkit-box;
+					display: -webkit-flex;
+					display: -ms-flexbox;
+					display: -webkit-box;
+					display: flex;
+				}
+				img {
+					-webkit-transition: -webkit-transform 0.35s;
+					transition: -webkit-transform 0.35s;
+					-o-transition: transform 0.35s;
+					transition: transform 0.35s;
+					transition: transform 0.35s, -webkit-transform 0.35s;
+					&.up {
+						-webkit-transform: rotate(180deg);
+						-ms-transform: rotate(180deg);
+						transform: rotate(180deg);	
+					}
+					
+				}
+			}
+		}
 		&_item {
 			display: none;
 			border-bottom: 1px solid rgba(255,255,255,0.12);

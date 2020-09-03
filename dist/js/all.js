@@ -864,6 +864,12 @@ $.scrollify({
   passive: false,
 });
 
+function scrollToTop() {
+	$('body,html').animate({
+    scrollTop: 0
+  }, 400);
+}
+
 //Элемент виден при скролле
 function onEntry(entry) {
   entry.forEach(change => {
@@ -874,7 +880,7 @@ function onEntry(entry) {
 };
 
 let scrollOptions = {
-  threshold: [0.5] };
+  threshold: [0.1] };
 let observer = new IntersectionObserver(onEntry, scrollOptions);
 let elements = document.querySelectorAll('.animate-smart');
 
@@ -889,14 +895,15 @@ $('.header_mobile_toggle').on('click', function(){
 });
 
 //Modal Width
-if ($(window).outerWidth() > 998) {
-	var modalWidth = $( window ).outerWidth() * 0.379166667;
-	$('.modal').css({'width':modalWidth});
-}
+// if ($(window).outerWidth() > 998) {
+// 	var modalWidth = $( window ).outerWidth() * 0.379166667;
+// 	$('.modal').css({'width':modalWidth});
+// }
 
 //Modal Open
-let bgModal = document.querySelector('.modal-bg');
+let bgModal = document.querySelectorAll('.modal-bg');
 let modalsClickId = document.querySelectorAll('.modal_click_js');
+let modalsPreviewClickId = document.querySelectorAll('.constr_preview');
 
 for (modalClickId of modalsClickId) {
   if (modalClickId) {
@@ -904,18 +911,36 @@ for (modalClickId of modalsClickId) {
       modalThisId = this.dataset.modalId;
       let modal = document.querySelector(".modal[data-modal-id='" + modalThisId + "'");
       modal.classList.add('open');
-      bgModal.classList.add('open');
-      console.log(modalClickId);
+      $('.modal-bg').addClass('open');
     });
   }
 }
+
+//Открываем модальное окно Preview
+for (modalPreviewClickId of modalsPreviewClickId) {
+	if (modalPreviewClickId) {
+	  modalPreviewClickId.addEventListener('click', function(){
+	    modalThisId = this.dataset.modalId;
+	    let modal = document.querySelector(".modal_preview[data-modal-id='" + modalThisId + "'");
+	    modal.classList.add('open');
+	    $('.modal-bg_preview').addClass('open');
+	  });
+	}
+}
+//Закрываем модальное окно Preview
+$('.modal_preview_close').on('click', function(){
+	$('.modal-bg_preview').removeClass('open');
+	$('.modal_preview').removeClass('open');
+});
 
 //Modal Close
 let modalCloseBtns = document.querySelectorAll('.modal .modal_close');
 let allModals = document.querySelectorAll('.modal');
 document.addEventListener('click', function(e){
   if(e.target.classList.value === 'modal-bg open') {
-    bgModal.classList.remove('open');
+  	for (bM of bgModal) {
+  		bM.classList.remove('open');	
+  	}
     for (allModal of allModals) {
       allModal.classList.remove('open');  
     }
@@ -925,7 +950,9 @@ document.addEventListener('click', function(e){
 if (modalCloseBtns) {
   for (modalCloseBtn of modalCloseBtns) {
     modalCloseBtn.addEventListener('click', function(){
-      bgModal.classList.remove('open');
+    	for (bM of bgModal) {
+    		bM.classList.remove('open');	
+    	}
       for (allModal of allModals) {
         allModal.classList.remove('open');  
       }
@@ -934,8 +961,6 @@ if (modalCloseBtns) {
 }
 
 //SEND FORM
-
-
 let contactSuccess = document.querySelector('.send_success');
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxCEvyzzib-ySwcQ1MDNvR-R24vU4WsgJIsvtuhSnTXNOxMr5PC/exec'
 const contact_form = document.forms['contact']
@@ -974,25 +999,30 @@ let constrBoxes = document.querySelectorAll('.constr_box');
 let constrBlocksHeight = window.innerHeight*0.644;
 let constrBoxHeight = window.innerHeight/2.35;
 
-for (constrBlock of constrBlocks) {
-	if (constrBlock) {
-		constrBlock.style.minHeight = constrBlocksHeight + 'px';
-	}
-}
 
-for (constrBox of constrBoxes) {
-	if (constrBox) {
-		constrBox.style.height = constrBoxHeight + 'px';
+if ($(window).outerWidth() > 768) {
+	for (constrBlock of constrBlocks) {
+		if (constrBlock) {
+			constrBlock.style.minHeight = constrBlocksHeight + 'px';
+		}
 	}
-}
 
-for (cW of constrWrapper) {
-	if (cW) {
-		cW.style.top = window.innerHeight/4.736 + 'px';
+	for (constrBox of constrBoxes) {
+		if (constrBox) {
+			constrBox.style.height = constrBoxHeight + 'px';
+		}
 	}
-}
-if (constrMetaSticky) {
-	constrMetaSticky.style.top = window.innerHeight/4.736 + 'px';
+
+
+	for (cW of constrWrapper) {
+		if (cW) {
+			cW.style.top = window.innerHeight/4.736 + 'px';
+		}
+	}
+
+	if (constrMetaSticky) {
+		constrMetaSticky.style.top = window.innerHeight/4.736 + 'px';
+	}
 }
 
 // //Анимация при скроле
@@ -1110,22 +1140,39 @@ if (nextSongBtn) {
 	});
 }
 
+
 //Added Box
 $('.constr-add-js').each(function() {
   var $this = $(this);
   $this.on('click', function () {
   	var addBtnDataId = $(this).data('box-id');
 
+  	//Делаем видимым область
+  	$('.constr_selected').addClass('show');
+
   	//Уменьшаем размер тайтла
-		$('.constr_title').addClass('added');
+  	if ($(window).outerWidth() > 768) {
+			$('.constr_title.advanced').addClass('added');
+		}
 
 		//Делаем видимым элемент в "корзине"
+		$('.constr_selected_title').addClass('show');
 		$('.constr_selected_item[data-box-id='+addBtnDataId+']').addClass('added');
 
 		//Меняем кнопку -- add to qty
     $('.constr-add-js[data-box-id='+addBtnDataId+']').addClass('added');
   });
 });
+
+$('.constr_selected_title').on('click', function(){
+	$('.constr_selected_grid').toggleClass('hidden');
+	$('.constr_selected_title img').toggleClass('up');
+});
+
+if ($(window).outerWidth() > 768) {
+	let previewPhotoWidth = $(window).outerWidth() * 0.723958333;
+	$('.modal_preview_photo').css({'width': previewPhotoWidth});
+}
 
 //Click Constr Count Minus
 $('.constr_count_minus').click(function () {
@@ -1157,6 +1204,9 @@ $('.constr_next_slide_js').on('click', function(){
 	
 	ConstrSlideNumber = currentConstrSlideId + 1;
 	$('.constructor-slide[data-constr-slide='+ConstrSlideNumber+']').addClass('active');
+
+	//Поднимаемся вверх
+	scrollToTop();
 });
 
 //Constr Slider Back
@@ -1166,6 +1216,9 @@ $('.constr_back_slide_js').on('click', function(){
 	
 	ConstrSlideNumber = currentConstrSlideId - 1;
 	$('.constructor-slide[data-constr-slide='+ConstrSlideNumber+']').addClass('active');
+
+	//Поднимаемся вверх
+	scrollToTop();
 })
 $( document ).ready(function() {
   $('.smartslider').each(function(){
