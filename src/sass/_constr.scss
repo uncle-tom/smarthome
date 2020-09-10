@@ -1,6 +1,7 @@
 .constructor-page {
 	position: relative;
 	.header {
+		position: absolute;
 		background: -o-linear-gradient(top, #000000, transparent);
 		background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(transparent));
 		background: linear-gradient(180deg, #000000, transparent);
@@ -368,6 +369,7 @@
 		-webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 		border-radius: 16px;
+		overflow: hidden;
 		-webkit-transition: all 0.35s;
 		-o-transition: all 0.35s;
 		transition: all 0.35s;
@@ -393,6 +395,8 @@
 			position: absolute;
 			top: 16px; right: 16px;
 			cursor: pointer;
+			z-index: 1;
+			
 			&.added {
 				.constr-add-btn {
 					display: none;
@@ -434,6 +438,10 @@
 				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 				border-radius: 24px;
 				cursor: pointer;
+				@include for-desktop {
+					width: 42px;
+					height: 42px;
+				}
 				@include for-phone {
 					width: 45px;
 					height: 45px;
@@ -444,9 +452,9 @@
 			width: 100%;
 			position: absolute;
 			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
+			-webkit-transform: translateY(-55%);
+			-ms-transform: translateY(-55%);
+			transform: translateY(-55%);
 			img {
 				width: 100%;
 			}
@@ -455,6 +463,9 @@
 			position: absolute;
 			bottom: 0; left: 0; right: 0;
 			padding: 14px 16px;
+			@include for-desktop {
+				padding: 14px;
+			}
 		}
 	}
 	&_about-item {
@@ -484,12 +495,19 @@
 			font-size: 16px;
 			line-height: 24px;
 			letter-spacing: 0.15px;
+			@include for-desktop {
+				font-size: 12px;
+				line-height: 18px;
+			}
 		}
 		&_price {
 			color: rgba(255, 255, 255, 0.6);
 			font-size: 14px;
 			line-height: 20px;
 			letter-spacing: 0.25px;
+			@include for-desktop {
+				font-size: 12px;
+			}
 		}
 	}
 	&_count {

@@ -1,0 +1,118 @@
+<svg id="router" width="320" height="290" viewBox="0 0 320 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+
+.router-wave, .router-wave-2, .router-wave-3, .router-wave-4 {
+	opacity: 0;
+}
+
+#router:hover .router-wave {
+	transform-origin: center;
+	animation: router_wave 4s infinite;
+}
+
+#router:hover .router-wave-2 {
+	transform-origin: center;
+	animation: router_wave 4s infinite;
+	animation-delay: 1s;
+}
+
+#router:hover .router-wave-3 {
+	transform-origin: center;
+	animation: router_wave 4s infinite;
+	animation-delay: 2s;
+}
+
+#router:hover .router-wave-4 {
+	transform-origin: center;
+	animation: router_wave 4s infinite;
+	animation-delay: 3s;
+}
+
+#router:hover .router-lamp-1 {
+	animation: router_lamp 3s infinite;
+}
+#router:hover .router-lamp-2 {
+	animation: router_lamp 3s infinite;
+	animation-delay: 1s;
+}
+#router:hover .router-lamp-3 {
+	animation: router_lamp 3s infinite;
+	animation-delay: 2s;
+}
+
+@keyframes router_wave {
+	0% {
+		opacity: 0;
+		transform: translateY(5px) scale(1);
+	}
+	25% {
+		opacity: 0.7;
+	}
+	100% {
+		opacity: 0.02;
+		transform: translateY(-80px) scale(1.2);
+	}
+}
+
+@keyframes router_lamp {
+	0% {
+		fill: #313033;
+	}
+	50% {
+		fill: #F08019;
+	}
+	100% {
+		fill: #313033;
+	}
+}
+</style>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="290">
+<rect width="320" height="290" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path d="M69 179C69 179 115 148 161 148C207 148 253 179 253 179" stroke="url(#paint0_linear)" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" class="router-wave"/>
+<path d="M69 179C69 179 115 148 161 148C207 148 253 179 253 179" stroke="url(#paint0_linear)" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" class="router-wave-2"/>
+<path d="M69 179C69 179 115 148 161 148C207 148 253 179 253 179" stroke="url(#paint0_linear)" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" class="router-wave-3"/>
+<path d="M69 179C69 179 115 148 161 148C207 148 253 179 253 179" stroke="url(#paint0_linear)" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel" class="router-wave-4"/>
+<!-- <path opacity="0.2" d="M45 153C45 153 103.5 115 162 115C220.5 115 279 153 279 153" stroke="url(#paint1_linear)" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+<path opacity="0.04" d="M20 127C20 127 90 82 160 82C230 82 300 127 300 127" stroke="url(#paint2_linear)" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+<path opacity="0.02" d="M20 93C20 93 90 48 160 48C230 48 300 93 300 93" stroke="url(#paint3_linear)" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"/>
+ --><rect x="85.2673" y="136.3" width="6" height="72" transform="rotate(-14 85.2673 136.3)" stroke="white"/>
+<rect x="102.686" y="206.161" width="6" height="34" transform="rotate(-14 102.686 206.161)" stroke="white"/>
+<rect x="132.476" y="129.604" width="6" height="72" transform="rotate(-6 132.476 129.604)" stroke="white"/>
+<rect x="140.002" y="201.209" width="6" height="34" transform="rotate(-6 140.002 201.209)" stroke="white"/>
+<rect x="181.556" y="128.977" width="6" height="72" transform="rotate(6 181.556 128.977)" stroke="white"/>
+<rect x="174.03" y="200.582" width="6" height="34" transform="rotate(6 174.03 200.582)" stroke="white"/>
+<rect width="6" height="72" transform="matrix(-0.970296 -0.241922 -0.241922 0.970296 234.466 136.3)" stroke="white"/>
+<rect width="6" height="34" transform="matrix(-0.970296 -0.241922 -0.241922 0.970296 217.047 206.161)" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M103 217C96.3726 217 91 222.373 91 229V233V235C91 238.314 93.6863 241 97 241H229C232.314 241 235 238.314 235 235V233V229C235 222.373 229.627 217 223 217H103Z" fill="#313033"/>
+<path d="M92 229C92 222.925 96.9249 218 103 218V216C95.8203 216 90 221.82 90 229H92ZM92 233V229H90V233H92ZM90 233V235H92V233H90ZM90 235C90 238.866 93.134 242 97 242V240C94.2386 240 92 237.761 92 235H90ZM97 242H229V240H97V242ZM229 242C232.866 242 236 238.866 236 235H234C234 237.761 231.761 240 229 240V242ZM236 235V233H234V235H236ZM234 229V233H236V229H234ZM223 218C229.075 218 234 222.925 234 229H236C236 221.82 230.18 216 223 216V218ZM103 218H223V216H103V218Z" fill="white"/>
+<path d="M91 229C91 222.373 96.3726 217 103 217H223C229.627 217 235 222.373 235 229V233H91V229Z" fill="#313033" stroke="white"/>
+<path d="M91 235C91 238.314 93.6863 241 97 241H229C232.314 241 235 238.314 235 235V233H91V235Z" fill="#313033" stroke="white"/>
+<rect x="217" y="227" width="4" height="8" rx="2" fill="#313033" stroke="white" class="router-lamp-1"/>
+<rect x="210" y="227" width="4" height="8" rx="2" fill="#313033" stroke="white" class="router-lamp-2"/>
+<rect x="203" y="227" width="4" height="8" rx="2" fill="#313033" stroke="white" class="router-lamp-3"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="253" y1="148" x2="69" y2="148" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.01"/>
+<stop offset="0.476193" stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="279" y1="115" x2="45" y2="115" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.01"/>
+<stop offset="0.476193" stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="300" y1="82" x2="20" y2="82" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.01"/>
+<stop offset="0.476193" stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="300" y1="48" x2="20" y2="48" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.01"/>
+<stop offset="0.476193" stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.01"/>
+</linearGradient>
+</defs>
+</svg>

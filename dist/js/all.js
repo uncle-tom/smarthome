@@ -1,3 +1,66 @@
+//Функции анимации GSAP
+
+//Меняем фон у Overview Morning
+function overviewMorningBgChange() {
+	TweenMax.to('.overview[data-slide-id="2"] .animate-bg', 4, {
+		backgroundImage:"linear-gradient(90deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.0) 100%)"
+	}).delay(1);
+	TweenMax.to('.overview[data-slide-id="2"] .animate-bg', 0.1, {
+		zIndex:"-1"
+	}).delay(5);
+}
+
+function overviewMorningNoticeShow(morningNoticeTransform) {
+	TweenMax.to('.overview_morning_notices_wrapper', 1, {
+		transform:"translateY("+ morningNoticeTransform +"%)"
+	}).delay(0.25);
+}
+
+
+//Элемент виден при скролле
+let scrollOptions = { threshold: [0.1] };
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('show-smart');
+    }
+  });
+};
+
+function overviewMorningShow(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      overviewMorningBgChange();
+      var x = 0;
+      let morningNoticeTransform = 100;
+			var intervalID = setInterval(function () {
+				
+				morningNoticeTransform = morningNoticeTransform - 25;
+				overviewMorningNoticeShow(morningNoticeTransform);
+			  if (++x === 4) {
+					window.clearInterval(intervalID);
+			  }
+			}, 3000);
+      overviewMorningNoticeShow();
+    }
+  });
+};
+
+let elements = document.querySelectorAll('.animate-smart');
+let overviewMorningClass = document.querySelector('.overview_morning');
+
+let observer = new IntersectionObserver(onEntry, scrollOptions);
+let observerMorningShow = new IntersectionObserver(overviewMorningShow, scrollOptions);
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+
+if(overviewMorningClass) {
+	observerMorningShow.observe(overviewMorningClass);	
+}
+
 /*!
  * jQuery Scrollify
  * Version 1.0.20
@@ -870,24 +933,6 @@ function scrollToTop() {
   }, 400);
 }
 
-//Элемент виден при скролле
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('show-smart');
-    }
-  });
-};
-
-let scrollOptions = {
-  threshold: [0.1] };
-let observer = new IntersectionObserver(onEntry, scrollOptions);
-let elements = document.querySelectorAll('.animate-smart');
-
-for (let elm of elements) {
-  observer.observe(elm);
-}
-
 //HEADER MENU TOGGLE
 $('.header_mobile_toggle').on('click', function(){
 	$(this).toggleClass('open');
@@ -985,7 +1030,7 @@ $('.send_success_close').on('click', function(){
 });
 
 //Отступ для HEADER
-if ($(window).outerWidth() > 998) {
+if ($(window).outerWidth() > 768) {
 	var headerPaddingTop = $( window ).height() * 0.0925925;
 	$('.header').css({'padding-top': headerPaddingTop});	
 }
@@ -997,7 +1042,7 @@ let constrBlocks = document.querySelectorAll('.constr_block');
 let constrMetaSticky = document.querySelector('.constr_meta_sticky');
 let constrBoxes = document.querySelectorAll('.constr_box');
 let constrBlocksHeight = window.innerHeight*0.644;
-let constrBoxHeight = window.innerHeight/2.35;
+let constrBoxHeight = window.innerHeight*0.337962963;
 
 
 if ($(window).outerWidth() > 768) {
@@ -1347,18 +1392,18 @@ if ($(window).outerWidth() > 768) {
 var bottomMorningNotices = $(window).height() * 0.1611111;
 var rightMorningNotices = $(window).outerWidth() * 0.078125;
 
-if ($(window).outerWidth() > 998) {
+if ($(window).outerWidth() > 768) {
 	$('.overview_morning_notices').css({'bottom':bottomMorningNotices});
 	$('.overview_morning_notices').css({'right':rightMorningNotices});	
 }
-if ($(window).outerWidth() > 998) {
+if ($(window).outerWidth() > 768) {
 	var overviewScreenHeight = $( window ).height();
 	var overviewScreenWidth = $( window ).outerWidth();
 	$('.overview_screen').css("background-size", overviewScreenWidth+"px " + overviewScreenHeight + "px");
 	$('.light-on').css("background-size", overviewScreenWidth+"px " + overviewScreenHeight + "px");
 }
 
-if ($(window).outerWidth() > 998) {
+if ($(window).outerWidth() > 768) {
 	var overviewContentWidth = $(window).outerWidth() * 0.377604167;
 	$('.overview_content').css({'width':overviewContentWidth});	
 }
@@ -1400,7 +1445,7 @@ var overviewLightLampRayHeight = $( window ).height() * 0.641666667;
 var overviewLightLampRayLeft = $( window ).outerWidth() * 0.561979167;
 var overviewLightLampRayTop = $( window ).height() * 0.316666667;
 
-if ($(window).outerWidth() > 998) {
+if ($(window).outerWidth() > 768) {
 	$('.light-lamp-ray').css({
 		'width': overviewLightLampRayWidth,
 		'height': overviewLightLampRayHeight,

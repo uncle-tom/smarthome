@@ -46,7 +46,10 @@
 									<!-- SELECTED ITEMS -->
 									<div class="constr_selected_item flex justify-between items-center" data-box-id="1">
 										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-										@@include('components/constructor/constructor-about-item.html')	
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Automatic shut off valve",
+											"img": "water"
+										})	
 
 										<!-- Constructor Item Count -->
 										<div class="constr-add-count flex items-center" data-box-id="1">
@@ -63,7 +66,10 @@
 									</div>
 									<div class="constr_selected_item flex justify-between items-center" data-box-id="2">
 										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-										@@include('components/constructor/constructor-about-item.html')	
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Security Camera",
+											"img": "camera"
+										})	
 
 										<!-- Constructor Item Count -->
 										<div class="constr-add-count flex items-center" data-box-id="2">
@@ -80,8 +86,11 @@
 									</div>
 									<div class="constr_selected_item flex justify-between items-center" data-box-id="3">
 										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-										@@include('components/constructor/constructor-about-item.html')	
-
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Heating control",
+											"img": "heating"
+										})	
+										
 										<!-- Constructor Item Count -->
 										<div class="constr-add-count flex items-center" data-box-id="3">
 											<div class="constr_count flex">
@@ -97,7 +106,10 @@
 									</div>
 									<div class="constr_selected_item flex justify-between items-center" data-box-id="4">
 										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-										@@include('components/constructor/constructor-about-item.html')	
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Dimmer",
+											"img": "dimmer"
+										})	
 
 										<!-- Constructor Item Count -->
 										<div class="constr-add-count flex items-center" data-box-id="4">
@@ -110,11 +122,14 @@
 													<img src="img/icons/plus.svg" alt="" width="15px">
 												</span>	
 											</div>
-										</div>
+										</div>									
 									</div>
 									<div class="constr_selected_item flex justify-between items-center" data-box-id="5">
 										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-										@@include('components/constructor/constructor-about-item.html')	
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Multiroom system",
+											"img": "micro"
+										})	
 
 										<!-- Constructor Item Count -->
 										<div class="constr-add-count flex items-center" data-box-id="5">
@@ -127,12 +142,15 @@
 													<img src="img/icons/plus.svg" alt="" width="15px">
 												</span>	
 											</div>
-										</div>
+										</div>									
 									</div>
 									<div class="constr_selected_item flex justify-between items-center" data-box-id="6">
 										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-										@@include('components/constructor/constructor-about-item.html')	
-										
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Voice assistant",
+											"img": "voice"
+										})	
+
 										<!-- Constructor Item Count -->
 										<div class="constr-add-count flex items-center" data-box-id="6">
 											<div class="constr_count flex">
@@ -146,8 +164,67 @@
 											</div>
 										</div>									
 									</div>
+									<div class="constr_selected_item flex justify-between items-center" data-box-id="7">
+										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Electro curtains",
+											"img": "shtora"
+										})	
+
+										<!-- Constructor Item Count -->
+										<div class="constr-add-count flex items-center" data-box-id="7">
+											<div class="constr_count flex">
+												<span class="constr_count_minus">
+													<img src="img/icons/minus.svg" alt="" width="15px">
+												</span>
+												<input type="text" value="1" class="constr_count_input">
+												<span class="constr_count_plus plus">
+													<img src="img/icons/plus.svg" alt="" width="15px">
+												</span>	
+											</div>
+										</div>
+									</div>
+									<div class="constr_selected_item flex justify-between items-center" data-box-id="8">
+										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Remote control system",
+											"img": "remote"
+										})	
+
+										<!-- Constructor Item Count -->
+										<div class="constr-add-count flex items-center" data-box-id="8">
+											<div class="constr_count flex">
+												<span class="constr_count_minus">
+													<img src="img/icons/minus.svg" alt="" width="15px">
+												</span>
+												<input type="text" value="1" class="constr_count_input">
+												<span class="constr_count_plus plus">
+													<img src="img/icons/plus.svg" alt="" width="15px">
+												</span>	
+											</div>
+										</div>									
+									</div>
+									<div class="constr_selected_item flex justify-between items-center" data-box-id="9">
+										<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
+										@@include('components/constructor/constructor-about-item.html', {
+											"name": "Full Wi-Fi Coverage",
+											"img": "router"
+										})	
+
+										<!-- Constructor Item Count -->
+										<div class="constr-add-count flex items-center" data-box-id="9">
+											<div class="constr_count flex">
+												<span class="constr_count_minus">
+													<img src="img/icons/minus.svg" alt="" width="15px">
+												</span>
+												<input type="text" value="1" class="constr_count_input">
+												<span class="constr_count_plus plus">
+													<img src="img/icons/plus.svg" alt="" width="15px">
+												</span>	
+											</div>
+										</div>
+									</div>
 								</div>
-								
 							</div>
 						</div>
 					</div>
@@ -158,15 +235,17 @@
 						<div class="constr_grid flex flex-wrap -mx-2 mb-4">
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							@@include('components/constructor/constructor-box.html', {
-								'box-id': 1
+								"box-id": 1,
+								"product": "water",
+								"name": "Automatic shut off valve",
+								"img": "water"
 							})
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							@@include('components/constructor/constructor-box.html', {
-								'box-id': 2
-							})
-							<!-- Constructor Box :: components/constructor/constructor-box.html -->
-							@@include('components/constructor/constructor-box.html', {
-								'box-id': 3
+								"box-id": 2,
+								"product": "camera",
+								"name": "Security Camera",
+								"img": "camera"
 							})
 						</div>
 						<div class="constr_subtitle mb-5">
@@ -175,15 +254,52 @@
 						<div class="constr_grid flex flex-wrap -mx-2 mb-4">
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							@@include('components/constructor/constructor-box.html', {
-								'box-id': 4
+								"box-id": 3,
+								"product": "heating",
+								"name": "Heating control",
+								"img": "heating"
 							})
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							@@include('components/constructor/constructor-box.html', {
-								'box-id': 5
+								"box-id": 4,
+								"product": "dimmer",
+								"name": "Dimmer",
+								"img": "dimmer"
 							})
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							@@include('components/constructor/constructor-box.html', {
-								'box-id': 6
+								"box-id": 5,
+								"product": "micro",
+								"name": "Multiroom system",
+								"img": "micro"
+							})
+							<!-- Constructor Box :: components/constructor/constructor-box.html -->
+							@@include('components/constructor/constructor-box.html', {
+								"box-id": 6,
+								"product": "voice",
+								"name": "Voice assistant",
+								"img": "voice"
+							})
+							<!-- Constructor Box :: components/constructor/constructor-box.html -->
+							@@include('components/constructor/constructor-box.html', {
+								"box-id": 7,
+								"product": "shtora",
+								"name": "Electro curtains",
+								"img": "shtora"
+							})
+							<!-- Constructor Box :: components/constructor/constructor-box.html -->
+							@@include('components/constructor/constructor-box.html', {
+								"box-id": 8,
+								"product": "remote",
+								"name": "Remote control system",
+								"img": "remote"
+							})
+							<!-- Constructor Box :: components/constructor/constructor-box.html -->
+							@@include('components/constructor/constructor-box.html', {
+								"box-id": 9,
+								"product": "router",
+								"name": "Full Wi-Fi Coverage",
+								"img": "router"
 							})
 						</div>
 					</div>

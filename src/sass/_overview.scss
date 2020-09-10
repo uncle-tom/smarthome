@@ -239,6 +239,9 @@
 			padding: 0 2%;
 			margin-top: 24px;
 			margin-left: 2.2%;
+			@include for-tablet {
+				margin-top: 32px;
+			}
 			@include for-phone {
 				width: 100%;
 				top: 0; left: 0;
@@ -268,8 +271,8 @@
 					margin-bottom: 16px;
 				}
 				@include for-tablet {
-					font-size: 22px;
-					margin-bottom: 12px;
+					font-size: 18px;
+					margin-bottom: 8px;
 				}
 				@include for-phone {
 					font-size: 18.78px;
@@ -559,9 +562,9 @@
 			}
 			&_wrapper {
 				overflow: hidden;
-				-webkit-transform: translateY(-webkit-calc(75% + 2px));
+				/*-webkit-transform: translateY(-webkit-calc(75% + 2px));
 				-ms-transform: translateY(calc(75% + 2px));
-				transform: translateY(calc(75% + 2px));
+				transform: translateY(calc(75% + 2px));*/
 			}
 		}
 		&_notice {

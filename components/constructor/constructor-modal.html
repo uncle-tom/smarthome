@@ -11,7 +11,10 @@
 			<div class="modal_constr_info flex items-center justify-between">
 				<div class="flex justify-center items-center">
 					<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-					@@include('components/constructor/constructor-about-item.html')
+					@@include('components/constructor/constructor-about-item.html', {
+						"name": "@@name",
+						"img": "@@img"
+					})
 				</div>
 				<!-- Modal Close  -->
 				<div class="modal_close">

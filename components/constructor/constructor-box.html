@@ -21,14 +21,44 @@
 		</div>
 		<!-- Constructor BOX -- Box img -->
 		<div class="constr_box_img">
-			<img src="img/constr/shut-off.svg" alt="">
+			<!-- Constructor PRODUCT :: components/constructor/product-name.html -->
+			@@if (context.product === 'router') {
+				@@include('components/constructor/products/router.html')
+			}
+			@@if (context.product === 'micro') {
+				@@include('components/constructor/products/micro.html')
+			}
+			@@if (context.product === 'shtora') {
+				@@include('components/constructor/products/shtora.html')
+			}
+			@@if (context.product === 'camera') {
+				@@include('components/constructor/products/camera.html')
+			}
+			@@if (context.product === 'water') {
+				@@include('components/constructor/products/water.html')
+			}
+			@@if (context.product === 'heating') {
+				@@include('components/constructor/products/heating.html')
+			}
+			@@if (context.product === 'dimmer') {
+				@@include('components/constructor/products/dimmer.html')
+			}
+			@@if (context.product === 'voice') {
+				@@include('components/constructor/products/voice.html')
+			}
+			@@if (context.product === 'remote') {
+				@@include('components/constructor/products/remote.html')
+			}
 		</div>
 		<!-- Constructor BOX -- Box Bottom info -->
 		<div class="constr_box_info flex items-center justify-between">
 			<!-- Constructor BOX -- Box Bottom info LEFT PART -->
 			
 			<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-			@@include('components/constructor/constructor-about-item.html')
+			@@include('components/constructor/constructor-about-item.html', {
+				"name": "@@name",
+				"img": "@@img"
+			})
 			
 			<!-- Constructor BOX -- Box Bottom info RIGHT PART/Info -->
 			<div class="modal_click_js cursor-pointer" data-modal-id="constr_box_item_@@box-id">

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg-control" width="100%" height="290px" viewBox="0 0 320 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        body {
+            background-color: #000;
+        }
+        #svg-control:hover .conder-wave {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: conder_wave 3s infinite;
+        }
+        .remote-wave {
+            opacity: 0;
+            transform: translate(48px, -5px) rotate(90deg) scale(0.9);
+        }
+        .remote-wave:first-of-type {
+            opacity: 1;
+        }
+        .svg-tv-text {
+            opacity: 0;
+            transition: opacity 0.25s 0.25s;
+        }
+        #svg-control:hover .remote-wave-hide {
+            opacity: 0;
+        }
+        #svg-control:hover .svg-tv-text {
+            opacity: 1;
+        }
+        #svg-control:hover .remote-wave {
+            animation: remote_wave 3s infinite;
+        }
+        #svg-control:hover .remote-wave:nth-of-type(2) {
+            animation-delay: 1s;
+        }
+        #svg-control:hover .remote-wave:nth-of-type(3) {
+            animation-delay: 2s;
+        }
+        @keyframes conder_wave {
+            0% {
+                stroke-dashoffset: 100;
+                opacity: 1;
+            }
+            100% {
+                stroke-dashoffset: 30;
+                opacity: 0;
+            }
+        }
+        @keyframes remote_wave {
+            0% {
+                opacity: 0;
+                transform: translate(48px, 0px) rotate(90deg) scale(0.9);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translate(53px, -25px) rotate(90deg) scale(1.2);
+            }
+
+        }
+    </style>
+    <defs>
+        <rect id="tvpath-1" x="0" y="0" width="320" height="290"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="tvlinearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="tvlinearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M15,7.5 L15,2 L9,2 L9,7.5 L12,10.5 L15,7.5 Z M7.5,9 L2,9 L2,15 L7.5,15 L10.5,12 L7.5,9 Z M9,16.5 L9,22 L15,22 L15,16.5 L12,13.5 L9,16.5 Z M16.5,9 L13.5,12 L16.5,15 L22,15 L22,9 L16.5,9 Z" id="tvpath-5"></path>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="tvlinearGradient-7">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="35.406989%"></stop>
+            <stop stop-color="#FFFFFF" offset="68.1587838%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="tvlinearGradient-8">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="35.406989%"></stop>
+            <stop stop-color="#FFFFFF" offset="68.1587838%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="tvlinearGradient-9">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="35.406989%"></stop>
+            <stop stop-color="#FFFFFF" offset="68.1587838%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="tvConstructor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tvConstructor_Select-advanced-options" transform="translate(-1450.000000, -1090.000000)">
+            <g id="Group-46" transform="translate(778.000000, 222.000000)">
+                <g id="Group-6-Copy" transform="translate(0.000000, 868.000000)">
+                    <g id="tvRectangle-2" transform="translate(672.000000, 0.000000)">
+                        <mask id="tvmask-2" fill="white">
+                            <use xlink:href="#tvpath-1"></use>
+                        </mask>
+                        <g id="tvRectangle"></g>
+                        <g id="Group-36" mask="url(#tvmask-2)" stroke="#FFFFFF">
+                            <g transform="translate(72.000000, 50.000000)">
+                                <rect id="tvRectangle" stroke-width="2" x="0" y="0" width="176" height="52" rx="9"></rect>
+                                <rect id="tvRectangle" stroke-width="1" x="10" y="47" width="156" height="5"></rect>
+                                <rect id="tvRectangle-Copy-23" stroke-width="1" x="0" y="0" width="176" height="43" rx="9"></rect>
+                            </g>
+                        </g>
+                        <g id="Group-35" mask="url(#tvmask-2)" stroke="#FFFFFF">
+                            <g transform="translate(72.000000, 130.000000)">
+                                <path d="M94.0005627,100 L93.9996879,101.555127 L144.392478,107.673314 C144.932863,107.771194 145.350344,108.042192 145.631464,108.388696 C145.941574,108.770931 146.092129,109.252398 146.047979,109.75201 C145.923467,110.413189 145.681377,110.82103 145.390206,111.105394 C144.995774,111.490606 144.495504,111.673064 143.965253,111.654054 L143.965253,111.654054 L89.0987721,105 L87.0046711,105 L32.3067756,111.640743 C31.79041,111.703429 31.2931285,111.562952 30.8986232,111.279456 C30.5041179,110.995959 30.2123888,110.569442 30.1071278,110.060047 C29.990799,109.497091 30.0997141,108.985223 30.3381384,108.584087 C30.6156794,108.11714 31.0741685,107.787674 31.6350388,107.685895 L31.6350388,107.685895 L81.9996831,101.56806 L82.0005574,100 L94.0005627,100 Z M177,-1 L177,100 L-1,100 L-1,-1 L177,-1 Z" id="Combined-Shape" stroke-width="2" fill="#313033" fill-rule="evenodd"></path>
+                                <text class="svg-tv-text" font-family="Helvetica" font-size="14" font-weight="normal" line-spacing="16" letter-spacing="1.25" fill="#FFFFFF">
+                                    <tspan x="12.5" y="22">TV</tspan>
+                                </text>
+                                <rect id="tvRectangle" stroke-width="1" fill="none" x="-0.5" y="-0.5" width="177" height="100"></rect>
+                                <rect id="tvRectangle" stroke-width="1" fill="none" x="2.5" y="2.5" width="171" height="94"></rect>
+                            </g>
+                        </g>
+                        <g id="Group-39" mask="url(#tvmask-2)" opacity="0.449999988" stroke-width="3">
+                            <g transform="translate(82.000000, 107.000000)">
+                                <path d="M14,0 C14,19.3740514 14,31.9713815 14,37.7919905 C14,43.6125994 9.33333333,50.0152693 0,57" id="tvpath-8" stroke="url(#tvlinearGradient-3)" class="conder-wave"></path>
+                                <path d="M39,0 C39,22.4783761 39,36.6278687 39,42.4484776 C39,48.2690866 34.3333333,53.119594 25,57" id="tvpath-8-Copy-3" stroke="url(#tvlinearGradient-3)" class="conder-wave"></path>
+                                <path d="M64,0 C64,22.4618381 64,36.6009204 64,42.4172469 C64,48.2335734 62.6666667,53.0944911 60,57" id="tvpath-8-Copy-4" stroke="url(#tvlinearGradient-4)" class="conder-wave"></path>
+                            </g>
+                        </g>
+                        <g id="Group-39-Copy" mask="url(#tvmask-2)" opacity="0.449999988" stroke-width="3">
+                            <g transform="translate(206.000000, 135.500000) scale(-1, 1) translate(-206.000000, -135.500000) translate(174.000000, 107.000000)">
+                                <path d="M14,0 C14,19.3740514 14,31.9713815 14,37.7919905 C14,43.6125994 9.33333333,50.0152693 0,57" id="tvpath-8" stroke="url(#tvlinearGradient-3)" class="conder-wave"></path>
+                                <path d="M39,0 C39,22.4783761 39,36.6278687 39,42.4484776 C39,48.2690866 34.3333333,53.119594 25,57" id="tvpath-8-Copy-3" stroke="url(#tvlinearGradient-3)" class="conder-wave"></path>
+                                <path d="M64,0 C64,22.4618381 64,36.6009204 64,42.4172469 C64,48.2335734 62.6666667,53.0944911 60,57" id="tvpath-8-Copy-4" stroke="url(#tvlinearGradient-4)" class="conder-wave"></path>
+                            </g>
+                        </g>
+                        <g id="Group-38" mask="url(#tvmask-2)">
+                            <g transform="translate(86.000000, 163.000000)">
+                                <g id="Group-37" stroke="none" fill-rule="evenodd" transform="translate(14.000000, 31.000000)">
+                                    <rect id="tvRectangle" stroke="#FFFFFF" stroke-width="2" fill="#313033" x="0" y="0" width="32" height="68" rx="8"></rect>
+                                    <g id="gamepad-24px" transform="translate(4.000000, 16.000000)">
+                                        <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                        <mask id="tvmask-6" fill="white">
+                                            <use xlink:href="#tvpath-5"></use>
+                                        </mask>
+                                        <g id="Shape" fill-rule="nonzero"></g>
+                                        <g id="Group" mask="url(#tvmask-6)" fill="#FFFFFF">
+                                            <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                                <rect id="tvRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <rect id="tvRectangle" fill="#FFFFFF" x="6" y="45" width="6" height="13" rx="3"></rect>
+                                    <rect id="tvRectangle-Copy-24" fill="#FFFFFF" x="20" y="45" width="6" height="13" rx="3"></rect>
+                                    <rect id="tvRectangle-Copy-25" fill="#FFFFFF" x="20" y="5" width="6" height="6" rx="3"></rect>
+                                </g>
+                                <path d="M34,-3 C29.3333333,-1.3404663 27,0.899904206 27,3.7211115 C27,7.95292245 27,31.788134 27,35.6183005 C27,38.1717448 29.3333333,40.298978 34,42" id="tvpath-7" stroke="url(#tvlinearGradient-7)" class="remote-wave"></path>
+                                <path d="M34,-3 C29.3333333,-1.3404663 27,0.899904206 27,3.7211115 C27,7.95292245 27,31.788134 27,35.6183005 C27,38.1717448 29.3333333,40.298978 34,42" id="tvpath-7" stroke="url(#tvlinearGradient-7)"  class="remote-wave"></path>
+                                <path d="M34,-3 C29.3333333,-1.3404663 27,0.899904206 27,3.7211115 C27,7.95292245 27,31.788134 27,35.6183005 C27,38.1717448 29.3333333,40.298978 34,42" id="tvpath-7" stroke="url(#tvlinearGradient-7)" class="remote-wave"></path>
+                                <path d="M34,-16 C29.3333333,-13.971681 27,-11.2334504 27,-7.78530816 C27,-2.61309478 27,26.5188305 27,31.200145 C27,34.3210214 29.3333333,36.9209731 34,39" id="tvpath-7-Copy" stroke="url(#tvlinearGradient-8)" opacity="0.539999962" transform="translate(30.500000, 11.500000) rotate(-270.000000) translate(-30.500000, -11.500000) " class="remote-wave-hide"></path>
+                                <path d="M34,-27 C29.3333333,-24.7504099 27,-21.7134632 27,-17.88916 C27,-12.1527051 27,20.1572483 27,25.3492517 C27,28.8105874 29.3333333,31.6941701 34,34" id="tvpath-7-Copy-2" stroke="url(#tvlinearGradient-9)" opacity="0.359999985" transform="translate(30.500000, 3.500000) rotate(-270.000000) translate(-30.500000, -3.500000) " class="remote-wave-hide"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

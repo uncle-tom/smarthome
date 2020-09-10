@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="leak" width="100%" height="182px" viewBox="0 0 486 182" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+    		#leak {
+    			width: 145%;
+    			transform: translate(-20%, 0%);
+    		}
+        #leak:hover .leak-on {
+            animation: leak_on 12s infinite;
+        }
+        .leak-on-move {
+            transform: translate(60px, 4px);
+        }
+        #leak:hover .leak-on-move {
+            animation: leak_on_move 12s infinite;
+        }
+        #leak:hover .leak-arrow {
+            animation: leak_arrow 12s infinite linear;
+        }
+        #leak:hover .leak-arrow-hide, #leak:hover .leak-arrow {
+            opacity: 0;
+        }
+        #leak:hover .leak-arrow-two {
+            animation: leak_arrow 12s infinite linear;
+            animation-delay: 1s;
+        }
+        #leak:hover .leak-arrow-three {
+            animation: leak_arrow 12s infinite linear;
+            animation-delay: 2s;
+        }
+        #leak:hover .leak-arrow-four {
+            animation: leak_arrow 12s infinite linear;
+            animation-delay: 3s;
+        }
+        #leak:hover .leak-arrow-five {
+            animation: leak_arrow 12s infinite linear;
+            animation-delay: 4s;
+        }
+        #leak:hover .leak-arrow-six {
+            animation: leak_arrow 12s infinite linear;
+            animation-delay: 5s;
+        }
+
+        .leak-text-icon {
+            opacity: 0;
+            transform: translate(224px, 92px);
+        }
+        .leak-text {
+            opacity: 0;
+        }
+        #leak:hover .leak-text-icon, #leak:hover .leak-text {
+            animation: leak_text 12s infinite;
+        }
+
+        #leak:hover .leak-stop {
+            animation: leak_stop 12s infinite;
+        }
+
+        #leak-closed {
+            opacity: 0;
+        }
+        .leak-water-one, .leak-water-two, .leak-water-three, .leak-water-four, .leak-water-two-one, .leak-water-two-two, .leak-water-two-three, .leak-water-two-four, .leak-water-three-one, .leak-water-three-two, .leak-water-three-three, .leak-water-three-four {
+            stroke-dasharray: 120;
+            stroke-dashoffset: 2;
+        }
+
+        #leak:hover #leak-closed {
+            animation: leak_close 12s infinite;
+        }
+        #leak:hover #leak-open {
+            animation: leak_open 12s infinite;
+        }
+
+        #leak:hover .leak-water-one {
+            animation: leak_water_one 12s infinite linear;
+        }
+        #leak:hover .leak-water-two {
+            animation: leak_water_two 12s infinite linear;
+        }
+        #leak:hover .leak-water-three {
+            animation: leak_water_three 12s infinite linear;
+        }
+        #leak:hover .leak-water-four {
+            animation: leak_water_four 12s infinite linear;
+        }
+
+        #leak:hover .leak-water-two-one {
+            animation: leak_water_two_one 12s infinite linear;
+        }
+        #leak:hover .leak-water-two-two {
+            animation: leak_water_two_two 12s infinite linear;
+        }
+        #leak:hover .leak-water-two-three {
+            animation: leak_water_two_three 12s infinite linear;
+        }
+        #leak:hover .leak-water-two-four {
+            animation: leak_water_two_four 12s infinite linear;
+        }
+
+        #leak:hover .leak-water-three-one {
+            animation: leak_water_three_one 12s infinite linear;
+        }
+        #leak:hover .leak-water-three-two {
+            animation: leak_water_three_two 12s infinite linear;
+        }
+        #leak:hover .leak-water-three-three {
+            animation: leak_water_three_three 12s infinite linear;
+        }
+        #leak:hover .leak-water-three-four {
+            animation: leak_water_three_four 12s infinite linear;
+        }
+
+        @keyframes leak_stop {
+            0% {
+                height: 0;
+            }
+            40% {
+                height: 0;
+            }
+            50% {
+                height: 35px;
+            }
+            100% {
+                height: 35px;
+            }
+
+        }
+
+        @keyframes leak_text {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
+            }
+            60% {
+                opacity: 1;
+            }
+            65% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes leak_water_one {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            5% {
+                stroke-dashoffset: 2;
+            }
+            100% {
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_two {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            5% {
+                stroke-dashoffset: 120;
+            }
+            10% {
+                stroke-dashoffset: 2;
+            }
+            100% {
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_three {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            10% {
+                stroke-dashoffset: 120;
+            }
+            15% {
+                stroke-dashoffset: 2;
+            }
+            50% {
+                opacity: 1;
+            }
+            52% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_four {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            15% {
+                stroke-dashoffset: 120;
+            }
+            20% {
+                stroke-dashoffset: 2;
+            }
+            50% {
+                opacity: 1;
+            }
+            52% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                stroke-dashoffset: 2;
+            }
+        }
+
+        @keyframes leak_water_two_one {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            5% {
+                stroke-dashoffset: 2;
+            }
+            100% {
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_two_two {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            5% {
+                stroke-dashoffset: 120;
+            }
+            10% {
+                stroke-dashoffset: 2;
+            }
+            100% {
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_two_three {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            10% {
+                stroke-dashoffset: 120;
+            }
+            15% {
+                stroke-dashoffset: 2;
+            }
+            50% {
+                opacity: 1;
+            }
+            52% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_two_four {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            15% {
+                stroke-dashoffset: 120;
+            }
+            20% {
+                stroke-dashoffset: 2;
+            }
+            50% {
+                opacity: 1;
+            }
+            52% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                stroke-dashoffset: 2;
+            }
+        }
+
+        @keyframes leak_water_three_one {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            5% {
+                stroke-dashoffset: 2;
+            }
+            100% {
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_three_two {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            5% {
+                stroke-dashoffset: 120;
+            }
+            10% {
+                stroke-dashoffset: 2;
+            }
+            100% {
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_three_three {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            10% {
+                stroke-dashoffset: 120;
+            }
+            15% {
+                stroke-dashoffset: 2;
+            }
+            50% {
+                opacity: 1;
+            }
+            52% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                stroke-dashoffset: 2;
+            }
+        }
+        @keyframes leak_water_three_four {
+            0% {
+                stroke-dashoffset: 120;
+            }
+            15% {
+                stroke-dashoffset: 120;
+            }
+            20% {
+                stroke-dashoffset: 2;
+            }
+            50% {
+                opacity: 1;
+            }
+            52% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                stroke-dashoffset: 2;
+            }
+        }
+
+        @keyframes leak_arrow {
+            0% {
+                opacity: 0;
+                transform: translateX(-41px);
+            }
+            5% {
+                opacity: 0;
+                transform: translateX(-41px); 
+            }
+            10% {
+                opacity: 1;
+            }
+            20% {
+                opacity: 0;
+                transform: translateX(230px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(230px);
+            }
+        }
+        @keyframes leak_open {
+            0% {
+                opacity: 1;
+            }
+            45% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            95% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes leak_close {
+            0% {
+                opacity: 0;
+            }
+            45% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes leak_on_move {
+            0% {
+                transform: translate(60px, 4px);
+            }
+            40% {
+                transform: translate(60px, 4px); 
+            }
+            50% {
+                transform: translate(5px, 4px);
+            }
+            90% {
+                transform: translate(5px, 4px);   
+            }
+            100% {
+                transform: translate(60px, 4px);
+            }
+        }
+
+        @keyframes leak_on {
+            0% {
+                fill: #FF6600;
+            }
+            40% {
+                fill: #FF6600;
+            }
+            50% {
+                fill: rgba(255, 255, 255, 0.24);
+            }
+            90% {
+                fill: rgba(255, 255, 255, 0.24);
+            }
+            100% {
+                fill: #FF6600;
+            }
+        }
+    </style>
+    <defs>
+        <rect id="leak-path-1" x="0" y="0" width="90" height="32" rx="16"></rect>
+        <rect id="leak-path-3" x="0" y="0" width="24" height="24" rx="12"></rect>
+        <path d="M9.75,2.25 L8.25,2.25 L8.25,9.75 L9.75,9.75 L9.75,2.25 Z M13.3725,3.8775 L12.3075,4.9425 C13.4925,5.895 14.25,7.3575 14.25,9 C14.25,11.9025 11.9025,14.25 9,14.25 C6.0975,14.25 3.75,11.9025 3.75,9 C3.75,7.3575 4.5075,5.895 5.685,4.935 L4.6275,3.8775 C3.1725,5.115 2.25,6.945 2.25,9 C2.25,12.7275 5.2725,15.75 9,15.75 C12.7275,15.75 15.75,12.7275 15.75,9 C15.75,6.945 14.8275,5.115 13.3725,3.8775 Z" id="leak-path-5"></path>
+        <polygon id="leak-path-7" points="16.01 11 4 11 4 13 16.01 13 16.01 16 20 12 16.01 8"></polygon>
+        <polygon id="leak-path-9" points="16.01 11 4 11 4 13 16.01 13 16.01 16 20 12 16.01 8"></polygon>
+        <polygon id="leak-path-11" points="16.01 11 4 11 4 13 16.01 13 16.01 16 20 12 16.01 8"></polygon>
+        <polygon id="leak-path-13" points="16.01 11 4 11 4 13 16.01 13 16.01 16 20 12 16.01 8"></polygon>
+        <polygon id="leak-path-15" points="16.01 11 4 11 4 13 16.01 13 16.01 16 20 12 16.01 8"></polygon>
+        <polygon id="leak-path-17" points="16.01 11 4 11 4 13 16.01 13 16.01 16 20 12 16.01 8"></polygon>
+    </defs>
+    <defs>
+        <path id="2pw13twwua" d="M.75 15.75h16.5L9 1.5.75 15.75zm9-2.25h-1.5V12h1.5v1.5zm0-3h-1.5v-3h1.5v3z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g class="leak-text-icon">
+                <path d="M0 0L18 0 18 18 0 18z"/>
+                <mask id="aivms4ojlb" fill="#fff">
+                    <use xlink:href="#2pw13twwua"/>
+                </mask>
+                <g fill="#FFF" mask="url(#aivms4ojlb)">
+                    <path d="M0 0H18V18H0z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <rect class="leak-stop" x="259" y="142" width="10" height="0" fill="#FFFFFF"/>
+    <text class="leak-text" font-family="Helvetica" font-size="14" font-weight="normal" line-spacing="16" letter-spacing="1.25" fill="#FFFFFF">
+        <tspan x="244" y="107">Leakage</tspan>
+    </text>
+    <g id="leakConstructor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="leakConstructor_Select-advanced-options" transform="translate(-1010.000000, -353.000000)">
+            <g id="leakGroup-46" transform="translate(778.000000, 222.000000)">
+                <g id="Cards-/-List-2-up-/-Filled-/-Image-Lead-/-Resting-Copy" transform="translate(336.000000, 56.000000)">
+                    <g id="leakGroup-11" transform="translate(-104.000000, 76.000000)">
+                        <g id="leakGroup-45" transform="translate(103.000000, 0.000000)" stroke="#FFFFFF" stroke-width="2">
+                            <path d="M228,180 L208,180 L208,177 L114,177 L114,180 L94,180 L94,177 L0,177 L0,141 L94,141 L94,138 L114,138 L114,141 L144,141 L144,129 L128,129 L128,119 L123.583233,119 C116.022459,119 109.493698,113.707489 107.929419,106.310305 L107.929419,106.310305 L103,83 L100,83 L100,59 L103,59 L108.812586,13.9524586 C109.842114,5.97361598 116.636042,-2.07487306e-15 124.681032,0 L199.318968,0 C207.363958,2.07487306e-15 214.157886,5.97361598 215.187414,13.9524586 L221,59 L224,59 L224,83 L221,83 L216.070581,106.310305 C214.506302,113.707489 207.977541,119 200.416767,119 L200.416767,119 L196,119 L196,129 L178,129 L178,141 L208,141 L208,138 L228,138 L228,141 L322,141 L322,177 L228,177 L228,180 Z" id="Combined-Shape"></path>
+                        </g>
+                        <g id="leakGroup-45">
+                            <path d="M227.681032,0 L302.318968,0 C310.363958,2.07487306e-15 317.157886,5.97361598 318.187414,13.9524586 L324,59 L324,59 L206,59 L211.812586,13.9524586 C212.842114,5.97361598 219.636042,-2.07487306e-15 227.681032,0 Z" id="leakRectangle" stroke="#FFFFFF"></path>
+                            <g id="leakGroup-49" transform="translate(220.000000, 14.000000)">
+                                <g id="leakGroup-15">
+                                    <g id="leakGroup-48">
+                                        <mask id="leakmask-2" fill="white">
+                                            <use xlink:href="#leak-path-1"></use>
+                                        </mask>
+                                        <g id="leakRectangle"></g>
+                                        <g id="Group" mask="url(#leakmask-2)" fill="#4E4E51">
+                                            <g id="✱-/-Color-/-Primary-/-700">
+                                                <rect id="leakRectangle-13" x="0" y="0" width="90" height="32"></rect>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <text id="leak-open" font-family="Helvetica" font-size="14" font-weight="normal" line-spacing="16" letter-spacing="1.25" fill="#FFFFFF">
+                                        <tspan x="12.5" y="22">OPEN</tspan>
+                                    </text>
+																		<text id="leak-closed" font-family="Helvetica" font-size="11" font-weight="normal" line-spacing="16" letter-spacing="1.25" fill="#FFFFFF">
+                                        <tspan x="30.5" y="21">CLOSED</tspan>
+                                    </text>
+                                </g>
+                                <g id="Group" class="leak-on-move">
+                                    <mask id="leakmask-4" fill="white">
+                                        <use xlink:href="#leak-path-3"></use>
+                                    </mask>
+                                    <use id="Container-Copy-2" fill="#FF6600" xlink:href="#leak-path-3" class="leak-on"></use>
+                                    <g mask="url(#leakmask-4)" id="Icon-/-power-Filled">
+                                        <g transform="translate(3.000000, 3.000000)" id="power_settings_new-24px">
+                                            <polygon id="Path" points="0 0 18 0 18 18 0 18"></polygon>
+                                            <mask id="leakmask-6" fill="white">
+                                                <use xlink:href="#leak-path-5"></use>
+                                            </mask>
+                                            <g id="Shape" fill-rule="nonzero"></g>
+                                            <g id="Group" mask="url(#leakmask-6)" fill="#FFFFFF">
+                                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                                    <rect id="leakRectangle-13" x="0" y="0" width="18" height="18"></rect>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <path d="M226.583233,83 L303.416767,83 C310.977541,83 317.506302,88.2925111 319.070581,95.6896953 L324,119 L324,119 L206,119 L210.929419,95.6896953 C212.493698,88.2925111 219.022459,83 226.583233,83 Z" id="leakRectangle-Copy-31" stroke="#FFFFFF" transform="translate(265.000000, 101.000000) scale(1, -1) translate(-265.000000, -101.000000) "></path>
+                            <rect id="leakRectangle" stroke="#FFFFFF" x="203" y="59" width="124" height="12"></rect>
+                            <rect id="leakRectangle-Copy-30" stroke="#FFFFFF" x="203" y="71" width="124" height="12"></rect>
+                            <rect id="leakRectangle" stroke="#FFFFFF" x="231" y="119" width="68" height="10"></rect>
+                            <rect id="leakRectangle" stroke="#FFFFFF" x="247" y="129" width="34" height="12"></rect>
+                            <rect id="leakRectangle" stroke="#FFFFFF" x="217" y="141" width="94" height="36"></rect>
+                            <rect id="leakRectangle-Copy-38" stroke="#FFFFFF" x="103" y="141" width="94" height="36"></rect>
+                            <g id="leakGroup-47" opacity="0.479999989" transform="translate(0.000000, 147.000000)">
+                                <g id="leakGroup-10" transform="translate(42.000000, 0.000000)" stroke="#32BAFF" stroke-width="2">
+                                    <path d="M0,14.9976019 C21.8654467,14.9976019 27.75,1.18423789e-15 55.5,1.18423789e-15 C83.25,1.18423789e-15 82.8019376,14.9976019 111,14.9976019" id="leak-path-2" class="leak-water-one"></path>
+                                    <path d="M111,14.9976019 C132.865447,14.9976019 138.75,1.18423789e-15 166.5,1.18423789e-15 C194.25,1.18423789e-15 193.801938,14.9976019 222,14.9976019" id="leak-path-2-Copy" class="leak-water-two"></path>
+                                </g>
+                                <g id="leakGroup-10-Copy" opacity="0.539999962" transform="translate(23.000000, 5.000000)" stroke="#32C5FF">
+                                    <path d="M0,14.9976019 C21.8654467,14.9976019 27.75,1.18423789e-15 55.5,1.18423789e-15 C83.25,1.18423789e-15 82.8019376,14.9976019 111,14.9976019" id="leak-path-2" class="leak-water-two-one"></path>
+                                    <path d="M111,14.9976019 C132.865447,14.9976019 138.75,1.18423789e-15 166.5,1.18423789e-15 C194.25,1.18423789e-15 193.801938,14.9976019 222,14.9976019" id="leak-path-2-Copy" class="leak-water-two-two"></path>
+                                </g>
+                                <g id="leakGroup-10-Copy" opacity="0.239999995" transform="translate(0.000000, 9.000000)" stroke="#32C5FF">
+                                    <path d="M0,14.9976019 C21.8654467,14.9976019 27.75,1.18423789e-15 55.5,1.18423789e-15 C83.25,1.18423789e-15 82.8019376,14.9976019 111,14.9976019" id="leak-path-2" class="leak-water-three-one"></path>
+                                    <path d="M111,14.9976019 C132.865447,14.9976019 138.75,1.18423789e-15 166.5,1.18423789e-15 C194.25,1.18423789e-15 193.801938,14.9976019 222,14.9976019" id="leak-path-2-Copy" class="leak-water-three-two"></path>
+                                </g>
+                            </g>
+                            <g id="leakGroup-47-Copy" opacity="0.479999989" transform="translate(222.000000, 147.000000)" stroke="#32C5FF">
+                                <g id="leakGroup-10" transform="translate(42.000000, 0.000000)" stroke-width="2">
+                                    <path d="M0,14.9976019 C21.8654467,14.9976019 27.75,1.18423789e-15 55.5,1.18423789e-15 C83.25,1.18423789e-15 82.8019376,14.9976019 111,14.9976019" id="leak-path-2" class="leak-water-three"></path>
+                                    <path d="M111,14.9976019 C132.865447,14.9976019 138.75,1.18423789e-15 166.5,1.18423789e-15 C194.25,1.18423789e-15 193.801938,14.9976019 222,14.9976019" id="leak-path-2-Copy" class="leak-water-four"></path>
+                                </g>
+                                <g id="leakGroup-10-Copy" opacity="0.539999962" transform="translate(23.000000, 5.000000)">
+                                    <path d="M0,14.9976019 C21.8654467,14.9976019 27.75,1.18423789e-15 55.5,1.18423789e-15 C83.25,1.18423789e-15 82.8019376,14.9976019 111,14.9976019" id="leak-path-2" class="leak-water-two-three"></path>
+                                    <path d="M111,14.9976019 C132.865447,14.9976019 138.75,1.18423789e-15 166.5,1.18423789e-15 C194.25,1.18423789e-15 193.801938,14.9976019 222,14.9976019" id="leak-path-2-Copy" class="leak-water-two-four"></path>
+                                </g>
+                                <g id="leakGroup-10-Copy" opacity="0.239999995" transform="translate(0.000000, 9.000000)">
+                                    <path d="M0,14.9976019 C21.8654467,14.9976019 27.75,1.18423789e-15 55.5,1.18423789e-15 C83.25,1.18423789e-15 82.8019376,14.9976019 111,14.9976019" id="leak-path-2" class="leak-water-three-three"></path>
+                                    <path d="M111,14.9976019 C132.865447,14.9976019 138.75,1.18423789e-15 166.5,1.18423789e-15 C194.25,1.18423789e-15 193.801938,14.9976019 222,14.9976019" id="leak-path-2-Copy" class="leak-water-three-four"></path>
+                                </g>
+                            </g>
+                            <rect id="leakRectangle-Copy-39" stroke="#FFFFFF" x="331" y="141" width="97" height="36"></rect>
+                            <rect id="leakRectangle-Copy-32" stroke="#FFFFFF" x="197" y="138" width="20" height="14"></rect>
+                            <rect id="leakRectangle-Copy-33" stroke="#FFFFFF" x="311" y="138" width="20" height="14"></rect>
+                            <rect id="leakRectangle-Copy-34" stroke="#FFFFFF" x="197" y="152" width="20" height="14"></rect>
+                            <rect id="leakRectangle-Copy-36" stroke="#FFFFFF" x="311" y="152" width="20" height="14"></rect>
+                            <rect id="leakRectangle-Copy-35" stroke="#FFFFFF" x="197" y="166" width="20" height="14"></rect>
+                            <rect id="leakRectangle-Copy-37" stroke="#FFFFFF" x="311" y="166" width="20" height="14"></rect>
+                        </g>
+                        <g id="arrow_right_alt-24px" transform="translate(118.000000, 147.000000)">
+                            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                            <mask id="leakmask-8" fill="white">
+                                <use xlink:href="#leak-path-7"></use>
+                            </mask>
+                            <g id="Path" fill-rule="nonzero"></g>
+                            <g id="Group" mask="url(#leakmask-8)" fill="#FFFFFF" class="leak-arrow-hide">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="arrow_right_alt-24px" transform="translate(232.000000, 147.000000)">
+                            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                            <mask id="leakmask-10" fill="white">
+                                <use xlink:href="#leak-path-9"></use>
+                            </mask>
+                            <g id="Path" fill-rule="nonzero"></g>
+                            <g id="Group" mask="url(#leakmask-10)" fill="#FFFFFF" class="leak-arrow-hide">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="arrow_right_alt-24px" transform="translate(347.000000, 147.000000)">
+                            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                            <mask id="leakmask-12" fill="white">
+                                <use xlink:href="#leak-path-11"></use>
+                            </mask>
+                            <g id="Path" fill-rule="nonzero"></g>
+                            <g id="Group" mask="url(#leakmask-12)" fill="#FFFFFF" class="leak-arrow-hide">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="arrow_right_alt-24px" transform="translate(272.000000, 147.000000)">
+                            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                            <mask id="leakmask-14" fill="white">
+                                <use xlink:href="#leak-path-13"></use>
+                            </mask>
+                            <g id="Path" fill-rule="nonzero"></g>
+                            <g id="Group" mask="url(#leakmask-14)" fill="#FFFFFF" class="leak-arrow-hide">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="arrow_right_alt-24px" transform="translate(387.000000, 147.000000)">
+                            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                            <mask id="leakmask-16" fill="white">
+                                <use xlink:href="#leak-path-15"></use>
+                            </mask>
+                            <g id="Path" fill-rule="nonzero"></g>
+                            <g id="Group" mask="url(#leakmask-16)" fill="#FFFFFF" class="leak-arrow-hide">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="arrow_right_alt-24px" transform="translate(158.000000, 147.000000)">
+                            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                            <mask id="leakmask-18" fill="white">
+                                <use xlink:href="#leak-path-17"></use>
+                            </mask>
+                            <g id="Path" fill-rule="nonzero"></g>
+                            <g id="Group" mask="url(#leakmask-18)" fill="#FFFFFF" class="leak-arrow">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                            <g id="Group2" mask="url(#leakmask-18)" fill="#FFFFFF" class="leak-arrow leak-arrow-two">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                            <g id="Group3" mask="url(#leakmask-18)" fill="#FFFFFF" class="leak-arrow leak-arrow-three">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                            <g id="Group4" mask="url(#leakmask-18)" fill="#FFFFFF" class="leak-arrow leak-arrow-four">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                            <g id="Group5" mask="url(#leakmask-18)" fill="#FFFFFF" class="leak-arrow leak-arrow-five">
+                                <g id="✱-/-Color-/-Icons-/-Black-/-Inactive">
+                                    <rect id="leakRectangle-13" x="0" y="0" width="24" height="24"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

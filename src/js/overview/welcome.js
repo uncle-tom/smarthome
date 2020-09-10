@@ -30,7 +30,7 @@ var overviewLightLampRayHeight = $( window ).height() * 0.641666667;
 var overviewLightLampRayLeft = $( window ).outerWidth() * 0.561979167;
 var overviewLightLampRayTop = $( window ).height() * 0.316666667;
 
-if ($(window).outerWidth() > 998) {
+if ($(window).outerWidth() > 768) {
 	$('.light-lamp-ray').css({
 		'width': overviewLightLampRayWidth,
 		'height': overviewLightLampRayHeight,

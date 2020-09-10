@@ -19,24 +19,6 @@ function scrollToTop() {
   }, 400);
 }
 
-//Элемент виден при скролле
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('show-smart');
-    }
-  });
-};
-
-let scrollOptions = {
-  threshold: [0.1] };
-let observer = new IntersectionObserver(onEntry, scrollOptions);
-let elements = document.querySelectorAll('.animate-smart');
-
-for (let elm of elements) {
-  observer.observe(elm);
-}
-
 //HEADER MENU TOGGLE
 $('.header_mobile_toggle').on('click', function(){
 	$(this).toggleClass('open');
@@ -134,7 +116,7 @@ $('.send_success_close').on('click', function(){
 });
 
 //Отступ для HEADER
-if ($(window).outerWidth() > 998) {
+if ($(window).outerWidth() > 768) {
 	var headerPaddingTop = $( window ).height() * 0.0925925;
 	$('.header').css({'padding-top': headerPaddingTop});	
 }
@@ -146,7 +128,7 @@ let constrBlocks = document.querySelectorAll('.constr_block');
 let constrMetaSticky = document.querySelector('.constr_meta_sticky');
 let constrBoxes = document.querySelectorAll('.constr_box');
 let constrBlocksHeight = window.innerHeight*0.644;
-let constrBoxHeight = window.innerHeight/2.35;
+let constrBoxHeight = window.innerHeight*0.337962963;
 
 
 if ($(window).outerWidth() > 768) {

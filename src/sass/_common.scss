@@ -115,6 +115,7 @@ p {
 	}
 	@include for-tablet {
 		font-size: 14px;
+		padding: 12px 24px;
 	}
 	@include for-phone {
 		font-size: 12px;
@@ -193,6 +194,9 @@ p {
 		}
 		@include for-desktop {
 			width: 18px;
+		}
+		@include for-tablet {
+			width: 12px;
 		}
 		@include for-phone {
 			width: 12px;

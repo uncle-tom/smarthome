@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="camera" width="50%" height="251px" viewBox="0 0 159 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <style>
+        #camera {
+          margin: auto;
+        }
+        #camera:hover .camera-lamp {
+          animation: camera_lamp 1s infinite, camera_move 3s infinite linear;
+        }
+
+        #camera:hover .camera-move {
+          animation: camera_move 3s infinite linear;
+        }
+
+        @keyframes camera_move {
+          0% {
+            transform: translateY(0);
+          }
+          30% {
+            transform: translateY(27px);
+          }
+          75% {
+            transform: translateY(-14px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+
+        @keyframes camera_lamp {
+            0% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+        }
+    </style>
+    <defs>
+        <circle id="camera-path-1" cx="76.9492814" cy="201" r="2"></circle>
+        <filter x="-262.5%" y="-262.5%" width="625.0%" height="625.0%" filterUnits="objectBoundingBox" id="camera-filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.941176471   0 0 0 0 0.501960784   0 0 0 0 0.0980392157  0 0 0 0.54 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Constructor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Constructor_Select-advanced-options" transform="translate(-1531.000000, -259.000000)">
+            <g id="camera-Group-46" transform="translate(778.000000, 222.000000)">
+                <g id="Cards-/-List-2-up-/-Filled-/-Image-Lead-/-Resting-Copy-2" transform="translate(672.000000, 56.000000)">
+                    <g id="camera-Group-12" transform="translate(83.000000, -17.000000)">
+                        <rect id="Rectangle" stroke="#FFFFFF" x="34.9492814" y="119" width="84" height="124" rx="41.5"></rect>
+                        <rect id="Rectangle" stroke="#FFFFFF" x="38.9492814" y="123" width="76" height="116" rx="38"></rect>
+                        <circle id="Oval" stroke="#FFFFFF" stroke-width="3" cx="76.9492814" cy="175" r="36" class="camera-move"></circle>
+                        <circle id="Oval" stroke="#FFFFFF" cx="76.9492814" cy="175" r="18" class="camera-move"></circle>
+                        <circle id="Oval" stroke="#FFFFFF" cx="76.9492814" cy="175" r="11" class="camera-move"></circle>
+                        <g id="Oval" class="camera-lamp">
+                            <use fill="black" fill-opacity="1" filter="url(#camera-filter-2)" xlink:href="#camera-path-1"></use>
+                            <use fill="#F08019" fill-rule="evenodd" xlink:href="#camera-path-1"></use>
+                        </g>
+                        <path d="M151.568701,26.5 C155.503706,40.8850696 154.737725,55.2087425 149.273261,69.4711268 C143.765048,83.8476981 134.930752,97.8563398 122.775388,111.5 L122.775388,111.5 L30.7537602,111.5 C19.4323936,97.9098311 11.0377883,83.9014495 5.57333241,69.4729272 C0.15177243,55.1576687 -0.92492028,40.833434 2.34694966,26.5 L2.34694966,26.5 Z" id="Rectangle" stroke="#FFFFFF"></path>
+                        <path d="M146.763475,-0.385308385 L150.71534,14.1250986 L152.923901,25.7721805 C157.047448,40.5805857 156.299179,55.3258635 150.673971,70.0077925 C145.206127,84.2789994 136.502817,98.1962346 124.557963,111.755293 C141.87016,125.685546 152.949281,147.048997 152.949281,171 C152.949281,191.98682 144.442692,210.98682 130.689397,224.740115 C116.936102,238.49341 97.9361018,247 76.9492814,247 C55.9624609,247 36.9624609,238.49341 23.209166,224.740115 C9.45587111,210.98682 0.949281357,191.98682 0.949281357,171 C0.949281357,147.106217 11.9755269,125.787639 29.2138925,111.853861 C17.9162391,98.3156993 9.60915175,84.3644097 4.17056447,70.0041918 C-1.41209587,55.2635588 -2.47324399,40.5137833 0.979519647,25.7553237 L0.979519647,25.7553237 L4.15505565,14.0349082 L9.83899918,-0.385308385 L146.763475,-0.385308385 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
