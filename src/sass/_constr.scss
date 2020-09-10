@@ -251,6 +251,11 @@
 				margin-bottom: 30px;
 			}
 		}
+		&_option {
+			border-bottom: 1px solid rgba(255,255,255,0.12);
+			padding-bottom: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
 		&_item {
 			position: relative;
 			display: -webkit-box;
@@ -262,10 +267,10 @@
 			-ms-flex-align: center;
 			align-items: center;
 			margin-bottom: 24px;
-			padding-left: 9px;
+			padding-left: 8px;
 			@include for-desktop {
 				margin-bottom: 12px;
-				padding-left: 6px;
+				padding-left: 5px;
 			}
 			@include for-phone {
 				width: 100%;
@@ -282,15 +287,14 @@
 				}
 			}
 			span {
-				font-family: 'Roboto Bold';
-				font-style: normal;
-				font-weight: bold;
+				font-family: 'Roboto Regular';
 				font-size: 16px;
 				line-height: 24px;
 				letter-spacing: 0.15px;
 				margin-left: 20px;
 				@include for-desktop {
 					margin-left: 16px;
+					font-size: 13px;
 				}
 				@include for-phone {
 					font-family: 'Roboto-Regular';

@@ -51,24 +51,24 @@
 								</div>
 								<ul class="constr_block_list">
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
+										<img src="img/constr/personal.svg" alt="">
 										<span>Motion sensor</span>
 									</li>
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
+										<img src="img/constr/door.svg" alt="">
 										<span>Door sensor</span>
 									</li>
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
+										<img src="img/constr/fire.svg" alt="">
 										<span>Fire detector</span>
 									</li>
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
+										<img src="img/constr/leakage.svg" alt="">
 										<span>Leakage sensor</span>
 									</li>
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
-										<span>Leakage sensor</span>
+										<img src="img/constr/alarm.svg" alt="">
+										<span>Alarm button</span>
 									</li>
 								</ul>
 								<div class="constr_block_subtitle">
@@ -76,24 +76,20 @@
 								</div>
 								<ul class="constr_block_list">
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
-										<span>Motion sensor</span>
+										<img src="img/constr/panel.svg" alt="">
+										<span>Control panel</span>
 									</li>
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
-										<span>Door sensor</span>
+										<img src="img/constr/turn-off.svg" alt="">
+										<span>"Turn off all" function</span>
 									</li>
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
-										<span>Fire detector</span>
+										<img src="img/constr/temp.svg" alt="">
+										<span>Temperature Sensor</span>
 									</li>
 									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
-										<span>Leakage sensor</span>
-									</li>
-									<li class="constr_block_item">
-										<img src="img/constr/Filled.svg" alt="">
-										<span>Leakage sensor</span>
+										<img src="img/constr/sensor.svg" alt="">
+										<span>Humidity sensor</span>
 									</li>
 								</ul>
 							</div>
@@ -109,12 +105,35 @@
 								<div class="constr_block_subtitle mb-3">
 									Safety
 								</div>
-								<div class="flex justify-between items-center">
+								<div class="constr_block_option flex justify-between items-center">
 									<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
-									@@include('components/constructor/constructor-about-item.html')	
+									@@include('components/constructor/constructor-about-item.html', {
+										"name": "Voice assistant",
+										"img": "voice"
+									})	
 									
 									<!-- Constructor Item Count -->
 									<div class="constr-add-count flex items-center" data-box-id="6">
+										<div class="constr_count flex">
+											<span class="constr_count_minus">
+												<img src="img/icons/minus.svg" alt="" width="15px">
+											</span>
+											<input type="text" value="1" class="constr_count_input">
+											<span class="constr_count_plus plus">
+												<img src="img/icons/plus.svg" alt="" width="15px">
+											</span>	
+										</div>
+									</div>
+								</div>
+								<div class="constr_block_option flex justify-between items-center">
+									<!-- Constructor ABOUT-ITEM :: components/constructor/constructor-about-item.html -->
+									@@include('components/constructor/constructor-about-item.html', {
+										"name": "Electro curtains",
+										"img": "shtora"
+									})	
+									
+									<!-- Constructor Item Count -->
+									<div class="constr-add-count flex items-center" data-box-id="7">
 										<div class="constr_count flex">
 											<span class="constr_count_minus">
 												<img src="img/icons/minus.svg" alt="" width="15px">
