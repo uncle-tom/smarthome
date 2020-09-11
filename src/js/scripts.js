@@ -1,10 +1,8 @@
-$( document ).ready(function() {
-	setTimeout(function(){
-		//Preloader
-		let preloader = document.querySelector('.preloader');
-		preloader.classList.add('hide');
-	}, 3500);
-});
+setTimeout(function(){
+	//Preloader
+	let preloader = document.querySelector('.preloader');
+	preloader.classList.add('hide');
+}, 3500);
 
 $.scrollify({
   section : ".smart-slide",

@@ -283,7 +283,7 @@
 					width: 16px;
 				}
 				@include for-phone {
-					width: 13px;
+					width: 14px;
 				}
 			}
 			span {
@@ -298,7 +298,7 @@
 				}
 				@include for-phone {
 					font-family: 'Roboto-Regular';
-					font-size: 12px;
+					font-size: 13px;
 					letter-spacing: 0.21px;
 					line-height: 20px;
 					margin-left: 15px;
@@ -341,8 +341,8 @@
 					height: 26px;
 				}
 				@include for-phone {
-					width: 23px;
-					height: 23px;
+					width: 25px;
+					height: 25px;
 				}
 			}
 		}
@@ -502,6 +502,10 @@
 			@include for-desktop {
 				font-size: 12px;
 				line-height: 18px;
+			}
+			@include for-phone {
+				font-size: 14px;
+				margin-right: 5px;
 			}
 		}
 		&_price {
