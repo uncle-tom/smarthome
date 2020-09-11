@@ -65229,7 +65229,7 @@ input.input-with-icon {
         .constr_block_item {
           width: 100%;
           padding-left: 5px;
-          margin-bottom: 5px; } }
+          margin-bottom: 10px; } }
       .constr_block_item img {
         width: 24px; }
         @media (min-width: 1280px) and (max-width: 1440px) {
@@ -65274,7 +65274,7 @@ input.input-with-icon {
           .constr_block_item:after {
             width: -webkit-calc(100% - 32px);
             width: calc(100% - 32px);
-            bottom: -5px; } }
+            bottom: -10px; } }
       .constr_block_item:before {
         content: '';
         width: 40px;
