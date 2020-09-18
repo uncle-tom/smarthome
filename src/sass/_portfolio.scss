@@ -1,0 +1,166 @@
+.portfolio-page {
+	min-height: 100vh;
+	background-image: -o-linear-gradient(top, #000000 0%, #191a30 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#191a30));
+	background-image: linear-gradient(180deg, #000000 0%, #191a30 100%);
+	.header {
+		position: relative;
+	}
+}
+
+.portfolio {
+	&-masonry {
+		width: -webkit-calc(33.3333% - 20px);
+		width: calc(33.3333% - 20px);
+		margin-bottom: 20px;
+		@include for-tablet {
+			width: -webkit-calc(50% - 20px);
+			width: calc(50% - 20px);
+		}
+		@include for-phone {
+			width: 100%;
+		}
+		&-size {
+			width: -webkit-calc(33.3333% - 20px);
+			width: calc(33.3333% - 20px);
+			@include for-tablet {
+				width: -webkit-calc(50% - 20px);
+				width: calc(50% - 20px)
+			}
+			@include for-phone {
+				width: 100%;
+			}
+		}
+	}
+	&_wrap {
+		padding-top: 60px;
+		margin: 0 -20px;
+		@include for-phone {
+			margin: 0;
+		}
+	}
+	&_item {
+		display: inline-block;
+		background: rgba(255,255,255,0.10);
+		border-radius: 20px;
+		&_photo {
+			height: 315px;
+			@include for-desktop {
+				height: 240px;
+			}
+			@include for-phone {
+				height: 220px;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				-o-object-fit: cover;
+				object-fit: cover;
+				border-radius: 20px;
+			}
+		}
+		&_title {
+			font-family: "Roboto Bold";
+			font-size: 30px;
+			color: #FFFFFF;
+			text-align: left;
+			line-height: 41px;
+			text-transform: uppercase;
+		}
+		&_text {
+			font-family: "Roboto Regular";
+			font-size: 20px;
+			color: #FFFFFF;
+			letter-spacing: 0.25px;
+			line-height: 26px;
+			@include for-phone {
+				font-size: 16px;
+				letter-spacing: 0.2px;
+				line-height: 22px;
+			}
+		}
+	}
+	.swiper-wrapper {
+		height: 315px;
+		@include for-desktop {
+			height: 240px;
+		}
+		@include for-phone {
+			height: 220px;
+		}
+	}
+	.swiper-portfolio-button-next, .swiper-portfolio-button-prev {
+		min-width: 38px;
+		min-height: 38px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 1;
+		outline: none;
+		@include for-desktop {
+			min-width: 32px;
+			min-height: 32px;
+		}
+		@include for-phone {
+			min-width: 28px;
+			min-height: 28px;
+		}
+		img {
+			width: 18px;
+			z-index: 2;
+			@include for-desktop {
+				width: 14px;
+			}
+			@include for-phone {
+				width: 12px;
+			}
+		}
+		&:before {
+			content: '';
+			min-width: 38px;
+			min-height: 38px;
+			position: absolute;
+			background: rgba(0,0,0,0.30);
+			border-radius: 50%;
+			z-index: 1;
+			@include for-desktop {
+				min-width: 32px;
+				min-height: 32px;
+			}
+			@include for-phone {
+				min-width: 28px;
+				min-height: 28px;
+			}
+		}
+	}
+	.swiper-portfolio-button-next {
+		right: 10px;
+    left: auto;
+    &:before {
+    	content: '';
+    	right: 2px;
+    }
+	}
+	.swiper-portfolio-button-prev {
+		left: 10px;
+    right: auto;
+    &:before {
+    	content: '';
+    	left: 2px;
+    }
+	}
+}

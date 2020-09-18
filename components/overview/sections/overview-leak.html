@@ -1,6 +1,8 @@
-<section class="overview smart-slide" data-slide-id="5">
+<section class="overview smart-slide animate-smart" data-slide-id="5">
 	<div class="overview_leak overview_screen">
-		<div class="wrapper mx-auto">
+		<div class="overview_leak_top"></div>
+		@@include('components/overview/elements/overview-leak-waves.html')
+		<div class="wrapper mx-auto z-10">
 			<div class="overview_content">
 				<div class="overview_content_title">
 					Датчик протечки
@@ -13,8 +15,33 @@
 				</div>
 			</div>
 		</div>
-		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
-		@@include('components/blocks/overview-bottom.html', {
+		<div class="overview_leak_notices">
+			<div class="overview_leak_notices_wrapper">
+				<div class="overview_leak_notice overview_leak_notice-warning">
+					<div class="overview_leak_notice_title">Warning</div>
+					<div class="flex items-center">
+						<img src="img/icons/warning.png" alt="" class="overview_leak_notice_icon mr-2">
+						<span>Water leak detected.</span>
+					</div>
+				</div>
+				<div class="overview_leak_notice">
+					<div class="overview_leak_notice_title">Bathroom tap</div>
+					<div class="flex items-center">
+						<img src="img/icons/kran.png" alt="" class="overview_leak_notice_icon mr-2">
+						<span>Tap was shutoff.</span>
+					</div>
+				</div>
+				<div class="overview_leak_notice overview_leak_notice-success">
+					<div class="overview_leak_notice_title">Notification</div>
+					<div class="flex items-center">
+						<img src="img/icons/check.png" alt="" class="overview_leak_notice_icon mr-2">
+						<span>Water leak prevented.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
+		@@include('components/overview/elements/overview-bottom.html', {
 			'overview-number': '05'
 		})
 	</div>

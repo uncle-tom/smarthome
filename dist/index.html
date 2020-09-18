@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Home Page</title>
@@ -30,16 +30,16 @@
 				<nav class="header_menu hidden lg:block">
 					<ul class="flex justify-between">
 						<li>
-							<a href="#" class="header_menu_link active">Обзор</a>
+							<a href="index.html" class="header_menu_link active">Обзор</a>
 						</li>
 						<li>
-							<a href="#" class="header_menu_link">Продукт</a>
+							<a href="products.html" class="header_menu_link">Продукт</a>
 						</li>
 						<li>
-							<a href="#" class="header_menu_link">Блог</a>
+							<a href="blog.html" class="header_menu_link">Блог</a>
 						</li>
 						<li>
-							<a href="#" class="header_menu_link">Портфолио</a>
+							<a href="portfolio.html" class="header_menu_link">Портфолио</a>
 						</li>
 						<li>
 							<a href="#" class="header_menu_link">Контакты</a>
@@ -66,16 +66,16 @@
 					<nav class="header_menu">
 						<ul class="flex justify-between flex-col">
 							<li>
-								<a href="#" class="header_menu_link active">Обзор</a>
+								<a href="index.html" class="header_menu_link active">Обзор</a>
 							</li>
 							<li>
-								<a href="#" class="header_menu_link">Продукт</a>
+								<a href="products.html" class="header_menu_link">Продукт</a>
 							</li>
 							<li>
-								<a href="#" class="header_menu_link">Блог</a>
+								<a href="blog.html" class="header_menu_link">Блог</a>
 							</li>
 							<li>
-								<a href="#" class="header_menu_link">Портфолио</a>
+								<a href="portfolio.html" class="header_menu_link">Портфолио</a>
 							</li>
 							<li>
 								<a href="#" class="header_menu_link">Контакты</a>
@@ -202,7 +202,7 @@
 				<span>Сделать заказ</span>
 			</div>
 		</div>
-		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+		<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
 		<div class="wrapper mx-auto overview_bottom">
 			<div class="flex justify-between items-center">
 				<div class="overview_bottom_logo">
@@ -352,7 +352,7 @@
 				</div>
 			</div> -->
 		</div>
-		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+		<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
 		<div class="wrapper mx-auto overview_bottom">
 			<div class="flex justify-between items-center">
 				<div class="overview_bottom_logo">
@@ -372,7 +372,7 @@
 </section>
 		
 		<!-- Overview OVERVIEW SECURITY :: components/overview/sections/overview-security.html -->
-		<section class="overview smart-slide" data-slide-id="3">
+		<section class="overview smart-slide animate-smart" data-slide-id="3">
 	<div class="overview_security overview_screen animate-smart">
 		<div class="wrapper">
 			<div class="overview_content">
@@ -391,7 +391,7 @@
 		</div>
 	</div>
 	
-	<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+	<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
 	<div class="wrapper mx-auto overview_bottom">
 			<div class="flex justify-between items-center">
 				<div class="overview_bottom_logo">
@@ -475,7 +475,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+	<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
 	<div class="wrapper mx-auto overview_bottom">
 			<div class="flex justify-between items-center">
 				<div class="overview_bottom_logo">
@@ -494,9 +494,82 @@
 </section>
 		
 		<!-- Overview OVERVIEW LEAK :: components/overview/sections/overview-leak.html -->
-		<section class="overview smart-slide" data-slide-id="5">
+		<section class="overview smart-slide animate-smart" data-slide-id="5">
 	<div class="overview_leak overview_screen">
-		<div class="wrapper mx-auto">
+		<div class="overview_leak_top"></div>
+		<div class="overview_leak_waves">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg id="overview-waves" width="100%" height="176px" viewBox="0 0 2774 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <style>
+            .show-smart .overview-wave-1 {
+                    animation: overview_wave_one 8s infinite linear;
+            }
+
+            .show-smart .overview-wave-2 {
+                    animation: overview_wave_two 12s infinite linear;
+            }
+
+            .show-smart .overview-wave-3 {
+                    animation: overview_wave_three 6s infinite linear;
+            }
+
+            @keyframes overview_wave_one {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1, 0.7);
+                }
+            }
+
+            @keyframes overview_wave_two {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1, 1.25);
+                }
+            }
+
+            @keyframes overview_wave_three {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1, 0.75);
+                }
+            }
+            </style>
+        <g id="Overview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Overview_05" transform="translate(427.000000, -818.000000)" stroke="#FFFFFF">
+                <g id="Group-10" transform="translate(-427.000000, 819.000000)">
+                    <g id="Group-7" transform="translate(385.000000, 0.000000)">
+                        <path d="M0,106 C109.52422,106 139,0 278,0 C417,0 414.755651,106 556,106" class="overview-wave-1"></path>
+                        <path d="M556,106 C665.52422,106 695,0 834,0 C973,0 970.755651,106 1112,106" class="overview-wave-1"></path>
+                        <path d="M1112,106 C1221.52422,106 1251,0 1390,0 C1529,0 1526.75565,106 1668,106" class="overview-wave-1"></path>
+                        <path d="M1662,106 C1771.52422,106 1801,0 1940,0 C2079,0 2076.75565,106 2218,106" class="overview-wave-1"></path>
+                    </g>
+                    <g id="Group-7-Copy" opacity="0.359999985" transform="translate(465.000000, 32.000000)">
+                        <path d="M0,106 C109.52422,106 139,0 278,0 C417,0 414.755651,106 556,106" class="overview-wave-2"></path>
+                        <path d="M556,106 C665.52422,106 695,0 834,0 C973,0 970.755651,106 1112,106" class="overview-wave-2"></path>
+                        <path d="M1112,106 C1221.52422,106 1251,0 1390,0 C1529,0 1526.75565,106 1668,106" class="overview-wave-2"></path>
+                        <path d="M1662,106 C1771.52422,106 1801,0 1940,0 C2079,0 2076.75565,106 2218,106" class="overview-wave-2"></path>
+                    </g>
+                    <g id="Group-7-Copy-2" opacity="0.119999997" transform="translate(0.000000, 68.000000)">
+                        <path d="M556,106 C665.52422,106 695,0 834,0 C973,0 970.755651,106 1112,106" class="overview-wave-3"></path>
+                        <path d="M0,106 C109.52422,106 139,0 278,0 C417,0 414.755651,106 556,106" class="overview-wave-3"></path>
+                        <path d="M1112,106 C1221.52422,106 1251,0 1390,0 C1529,0 1526.75565,106 1668,106" class="overview-wave-3"></path>
+                        <path d="M1668,106 C1777.52422,106 1807,0 1946,0 C2085,0 2082.75565,106 2224,106" class="overview-wave-3"></path>
+                        <path d="M2218,106 C2327.52422,106 2357,0 2496,0 C2635,0 2632.75565,106 2774,106" class="overview-wave-3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>    
+</div>
+
+
+		<div class="wrapper mx-auto z-10">
 			<div class="overview_content">
 				<div class="overview_content_title">
 					Датчик протечки
@@ -509,7 +582,32 @@
 				</div>
 			</div>
 		</div>
-		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+		<div class="overview_leak_notices">
+			<div class="overview_leak_notices_wrapper">
+				<div class="overview_leak_notice overview_leak_notice-warning">
+					<div class="overview_leak_notice_title">Warning</div>
+					<div class="flex items-center">
+						<img src="img/icons/warning.png" alt="" class="overview_leak_notice_icon mr-2">
+						<span>Water leak detected.</span>
+					</div>
+				</div>
+				<div class="overview_leak_notice">
+					<div class="overview_leak_notice_title">Bathroom tap</div>
+					<div class="flex items-center">
+						<img src="img/icons/kran.png" alt="" class="overview_leak_notice_icon mr-2">
+						<span>Tap was shutoff.</span>
+					</div>
+				</div>
+				<div class="overview_leak_notice overview_leak_notice-success">
+					<div class="overview_leak_notice_title">Notification</div>
+					<div class="flex items-center">
+						<img src="img/icons/check.png" alt="" class="overview_leak_notice_icon mr-2">
+						<span>Water leak prevented.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
 		<div class="wrapper mx-auto overview_bottom">
 			<div class="flex justify-between items-center">
 				<div class="overview_bottom_logo">
@@ -595,7 +693,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+	<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
 	<div class="wrapper mx-auto overview_bottom">
 			<div class="flex justify-between items-center">
 				<div class="overview_bottom_logo">
@@ -638,7 +736,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Overview Bottom :: components/blocks/overview-bottom.html -->
+		<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
 		<div class="wrapper mx-auto overview_bottom">
 			<div class="flex justify-between items-center">
 				<div class="overview_bottom_logo">

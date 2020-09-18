@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <link rel="apple-touch-icon" href="/example.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- SWIPER SLIDER -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body class="portfolio-page">
+	<!-- PRELOADER :: components/blocks/preloader.html -->
+	@@include('components/blocks/preloader.html')
+	<!-- HEADER :: components/header/header.html -->
+	@@include('components/header/header.html')
+	<main>
+		<div class="portfolio wrapper mx-auto mb-10">
+			<div class="portfolio_wrap flex flex-wrap mx-0 lg:-mx-3 mb-10">
+				<div class="portfolio-masonry-size"></div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "article.html",
+						"title": "Проект 1",
+						"photo": "portfolio1.jpg",
+						"next": "portfolio2.jpg",
+						"text": "Проводное решение подразумевает прокладку кабелей в квартире черновой отделки, т.е. до ремонта."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "article.html",
+						"title": "Проект 2",
+						"photo": "portfolio2.jpg",
+						"next": "portfolio3.jpg",
+						"text": "Беспроводное решение владеет таким же функционалом, что и проводное. Простота монтажа позволяет не прокладывать слаботочный кабель, что становится прекрасным решением для объектов, где уже сделан ремонт."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "article.html",
+						"title": "Проект 3",
+						"photo": "portfolio3.jpg",
+						"next": "portfolio4.jpg",
+						"text": "Умный замок – безопасный и удобный способ открытия двери. Отпечаток пальца, ПИН-код, RF-карта – выбирайте один или комбинируйте несколько вариантов, и создавайте лучший, который подходит именно Вам.<br>*Для резервного открытия предусмотрен механический ключ и разъем для подачи аварийного питания."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "article.html",
+						"title": "Проект 4",
+						"photo": "portfolio4.jpg",
+						"next": "portfolio5.jpg",
+						"text": "Умный Шлагбаум – отличное решение для паркинг-зон. Считывание камерой номерного знака и управление шлагбаумом с помощью мобильного приложения значительно упростит и ускорит проезд."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "article.html",
+						"title": "Проект 5",
+						"photo": "portfolio5.jpg",
+						"next": "portfolio6.jpg",
+						"text": "Подключитесь к камере с любой точки земного шара и всегда будьте в курсе, что происходит у Вас дома."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "article.html",
+						"title": "Проект 6",
+						"photo": "portfolio6.jpg",
+						"next": "portfolio1.jpg",
+						"text": "Подключитесь к камере с любой точки земного шара и всегда будьте в курсе, что происходит у Вас дома."
+					})
+				</div>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="js/lib/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/lib/gsap.min.js"></script>
+	<!-- SWIPER SLIDER -->
+	<script src="js/lib/swiper.min.js"></script>
+	<!-- MASONRY GRID -->
+	<script src="js/lib/masonry.min.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+</body>
+</html>

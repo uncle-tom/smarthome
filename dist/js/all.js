@@ -16,6 +16,20 @@ function overviewMorningNoticeShow(morningNoticeTransform) {
 	}).delay(0.25);
 }
 
+function overviewLeakTopBg() {
+	TweenMax.to('.overview_leak_top', 2, {
+		backgroundImage:"linear-gradient(rgba(110, 255, 0, 0.27) 0%, rgba(0, 5, 46, 0) 100%)"
+	}).delay(7);
+	TweenMax.to('.overview_leak_top', 2, {
+		backgroundImage:"linear-gradient(rgba(110, 255, 0, 0.0) 0%, rgba(0, 5, 46, 0) 100%)"
+	}).delay(10);
+}
+
+function overviewLeakWaves() {
+	TweenMax.to('.overview_leak_waves', 2, {
+		opacity:"0"
+	}).delay(7);
+}
 
 //Элемент виден при скролле
 let scrollOptions = { threshold: [0.1] };
@@ -24,6 +38,15 @@ function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add('show-smart');
+    }
+  });
+};
+
+function overviewLeakShow(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      overviewLeakTopBg();
+      overviewLeakWaves();
     }
   });
 };
@@ -49,9 +72,11 @@ function overviewMorningShow(entry) {
 
 let elements = document.querySelectorAll('.animate-smart');
 let overviewMorningClass = document.querySelector('.overview_morning');
+let overviewLeakClass = document.querySelector('.overview_leak');
 
 let observer = new IntersectionObserver(onEntry, scrollOptions);
 let observerMorningShow = new IntersectionObserver(overviewMorningShow, scrollOptions);
+let observerLeakShow = new IntersectionObserver(overviewLeakShow, scrollOptions);
 
 for (let elm of elements) {
   observer.observe(elm);
@@ -59,6 +84,10 @@ for (let elm of elements) {
 
 if(overviewMorningClass) {
 	observerMorningShow.observe(overviewMorningClass);	
+}
+
+if(overviewLeakClass) {
+	observerLeakShow.observe(overviewLeakClass);	
 }
 
 /*!
@@ -1040,7 +1069,7 @@ let constrBlocks = document.querySelectorAll('.constr_block');
 let constrMetaSticky = document.querySelector('.constr_meta_sticky');
 let constrBoxes = document.querySelectorAll('.constr_box');
 let constrBlocksHeight = window.innerHeight*0.644;
-let constrBoxHeight = window.innerHeight*0.337962963;
+let constrBoxHeight = window.innerHeight*0.4;
 
 
 if ($(window).outerWidth() > 768) {
@@ -1067,42 +1096,6 @@ if ($(window).outerWidth() > 768) {
 		constrMetaSticky.style.top = window.innerHeight/4.736 + 'px';
 	}
 }
-
-// //Анимация при скроле
-// function onEntry(entry) {
-//   entry.forEach(change => {
-//     if (change.isIntersecting) {
-//       change.target.classList.add('show-smart');
-
-//       //Для Morning блока
-//       morningTimeout = 2000;
-//       function addClassFunc(classname) {
-//       	classname.classList.add('show');
-//       	classname.style.opacity = 1;
-//       }
-//       for (morningNoticeItem of morningNoticeItems) {
-//     		if (morningNoticeItem) {
-//     			morningTimeout = morningTimeout + 2000;
-//     			(function(morningNoticeItem){
-// 		        setTimeout(function(){
-// 		          addClassFunc(morningNoticeItem);
-// 		        }, morningTimeout);
-// 			    })(morningNoticeItem);
-//     		}
-//     	}
-//     }
-//   });
-// }
-
-// let options = {
-//   threshold: [0.1] };
-// let observer = new IntersectionObserver(onEntry, options);
-// let elements = document.querySelectorAll('.animate-smart');
-
-// for (let elm of elements) {
-//   observer.observe(elm);
-// }
-
 
 //Audio
 //Audio BTNS
@@ -1263,6 +1256,43 @@ $('.constr_back_slide_js').on('click', function(){
 	//Поднимаемся вверх
 	scrollToTop();
 })
+
+//MASONRY
+if ($('.portfolio_wrap').length > 0) {
+	$('.portfolio_wrap').masonry({
+	  // options
+	  itemSelector: '.portfolio-masonry',
+	  columnWidth: '.portfolio-masonry-size',
+	  percentPosition: true,
+	  gutter: 20
+	});
+}
+
+if ($('.products_wrap').length > 0) {
+	$('.products_wrap').masonry({
+	  // options
+	  itemSelector: '.products-masonry',
+	  columnWidth: '.products-masonry-size',
+	  percentPosition: true,
+	  gutter: 20
+	});	
+}
+
+
+
+//SWIPER
+
+//Portfolio :: SWIPER
+if ($('.swiper-portfolio').length > 0) {
+	var swiper = new Swiper('.swiper-portfolio', {
+		slidesPerView: 'auto',
+		loop: true,
+	  navigation: {
+	    nextEl: '.swiper-portfolio-button-next',
+	    prevEl: '.swiper-portfolio-button-prev',
+	  },
+	});
+}
 $( document ).ready(function() {
   $('.smartslider').each(function(){
   	dataSmartSlider = $(this).data('smartslider');
@@ -1386,6 +1416,15 @@ if ($(window).outerWidth() > 768) {
 	$('.smartslider-bottom').css({'bottom':smartSliderBottom});
 } else {
 	$('.smartslider-bottom').css({'bottom':smartSliderBottomMobile});
+}
+var bottomLeakNotice = $(window).height() * 0.1611111;
+var rightLeakNotice = $(window).outerWidth() * 0.078125;
+var widthLeakNotice = $(window).outerWidth() * 0.179166667;
+
+if ($(window).outerWidth() > 768) {
+	$('.overview_leak_notices').css({'bottom':bottomLeakNotice});
+	$('.overview_leak_notices').css({'right':rightLeakNotice});	
+	$('.overview_leak_notices').css({'min-width':widthLeakNotice});
 }
 var bottomMorningNotices = $(window).height() * 0.1611111;
 var rightMorningNotices = $(window).outerWidth() * 0.078125;

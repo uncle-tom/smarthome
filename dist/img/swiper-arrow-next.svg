@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="10px" viewBox="0 0 7 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon / Add / Filled Copy</title>
+    <defs>
+        <polygon id="path-1" points="0.4425 8.005 3.8775 4.5625 0.4425 1.12 1.5 0.0625 6 4.5625 1.5 9.0625"></polygon>
+    </defs>
+    <g id="Portfolio" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Portfolio-Desktop" transform="translate(-1200.000000, -318.000000)">
+            <g id="Group-3-Copy" transform="translate(705.000000, 310.000000)">
+                <g id="Icon-/-Add-/-Filled-Copy" transform="translate(495.000000, 8.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero"></g>
+                    <g id="↳-Icon-Color" mask="url(#mask-2)" fill="#FFFFFF">
+                        <g transform="translate(-6.000000, -5.000000)" id="Rectangle-13">
+                            <rect x="0" y="0" width="18" height="18"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

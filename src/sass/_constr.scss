@@ -52,6 +52,9 @@
 		@include for-desktop {
 			padding-right: 3rem;
 		}
+		@include for-tablet {
+			padding-right: 0;
+		}
 		@include for-phone {
 			padding-right: 0;
 			margin-bottom: 2rem;
@@ -113,6 +116,10 @@
 				font-size: 28px;
 				line-height: 32px;
 			}
+		}
+		@include for-tablet {
+			font-size: 64px;
+			line-height: 75px;
 		}
 		@include for-phone {
 			font-size: 30px;
@@ -192,6 +199,10 @@
 				font-size: 46px;
 				line-height: 53px;
 			}
+			@include for-tablet {
+				font-size: 34px;
+				line-height: 40px;
+			}
 			@include for-phone {
 				font-size: 30px;
 				line-height: 35px;
@@ -240,6 +251,9 @@
 			@include for-desktop {
 				margin-top: 16px;	
 			}
+			@include for-tablet {
+				grid-template-columns: 100%;
+			}
 			@include for-phone {
 				display: -webkit-box;
 				display: -webkit-flex;
@@ -283,7 +297,7 @@
 					width: 16px;
 				}
 				@include for-phone {
-					width: 14px;
+					width: 22px;
 				}
 			}
 			span {
@@ -298,10 +312,10 @@
 				}
 				@include for-phone {
 					font-family: 'Roboto-Regular';
-					font-size: 13px;
+					font-size: 16px;
 					letter-spacing: 0.21px;
 					line-height: 20px;
-					margin-left: 15px;
+					margin-left: 20px;
 				}
 			}
 			&:after {
@@ -320,8 +334,8 @@
 					bottom: -6px;
 				}
 				@include for-phone {
-					width: -webkit-calc(100% - 32px);
-					width: calc(100% - 32px);
+					width: -webkit-calc(100% - 42px);
+					width: calc(100% - 42px);
 					bottom: -10px;
 				}
 			}
@@ -341,8 +355,8 @@
 					height: 26px;
 				}
 				@include for-phone {
-					width: 25px;
-					height: 25px;
+					width: 32px;
+					height: 32px;
 				}
 			}
 		}
@@ -446,6 +460,10 @@
 					width: 42px;
 					height: 42px;
 				}
+				@include for-tablet {
+					width: 34px;
+					height: 34px;
+				}
 				@include for-phone {
 					width: 45px;
 					height: 45px;
@@ -459,6 +477,10 @@
 			-webkit-transform: translateY(-55%);
 			-ms-transform: translateY(-55%);
 			transform: translateY(-55%);
+			overflow: hidden;
+			@include for-tablet {
+				transform: translateY(-60%);
+			}
 			img {
 				width: 100%;
 			}
@@ -470,12 +492,15 @@
 			@include for-desktop {
 				padding: 14px;
 			}
+			&_icon {
+				min-width: 24px;
+			}
 		}
 	}
 	&_about-item {
 		&_icon {
-			width: 40px;
-			height: 40px;
+			min-width: 40px;
+			min-height: 40px;
 			background: rgba(255, 255, 255, 0.38);
 			border-radius: 50%;
 			margin-right: 20px;
@@ -490,6 +515,14 @@
 					width: 16px;
 				}
 			}
+			@include for-tablet {
+				width: 32px;
+				height: 32px;
+				margin-right: 16px;
+				img {
+					width: 18px;
+				}
+			}
 		}
 		&_title {
 			color: #FFFFFF;
@@ -501,6 +534,10 @@
 			letter-spacing: 0.15px;
 			@include for-desktop {
 				font-size: 12px;
+				line-height: 18px;
+			}
+			@include for-tablet {
+				font-size: 14px;
 				line-height: 18px;
 			}
 			@include for-phone {
@@ -533,6 +570,10 @@
 				width: 42px;
 				height: 42px;
 			}
+			@include for-tablet {
+				width: 32px;
+				height: 32px;
+			}
 			@include for-phone {
 				width: 38px;
 				height: 48px;
@@ -559,6 +600,10 @@
 				width: 42px;
 				height: 42px;
 			}
+			@include for-tablet {
+				width: 32px;
+				height: 32px;
+			}
 			@include for-phone {
 				width: 38px;
 				height: 48px;
@@ -583,6 +628,10 @@
 			@include for-desktop {
 				width: 42px;
 				height: 42px;
+			}
+			@include for-tablet {
+				width: 32px;
+				height: 32px;
 			}
 			@include for-phone {
 				width: 38px;

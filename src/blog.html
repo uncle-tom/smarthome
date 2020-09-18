@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <link rel="apple-touch-icon" href="/example.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="blog-page">
+	<!-- PRELOADER :: components/blocks/preloader.html -->
+	@@include('components/blocks/preloader.html')
+	<!-- HEADER :: components/header/header.html -->
+	@@include('components/header/header.html')
+	<main>
+		<div class="blog wrapper mx-auto">
+			<div class="blog_wrap flex flex-wrap mx-0 lg:-mx-3 mb-10">
+				<div class="w-full lg:w-1/4 px-0 lg:px-3 mb-8">
+					@@include('components/blog/blog-item.html', {
+						"link": "article.html",
+						"photo": "blog.jpg",
+						"title": "Going Wireless With Your Headphones",
+						"date": "05 Jun 2020",
+						"category": "Connected Home Wired"
+					})
+				</div>
+				<div class="w-full lg:w-1/4 px-0 lg:px-3 mb-8">
+					@@include('components/blog/blog-item.html', {
+						"link": "article.html",
+						"photo": "blog.jpg",
+						"title": "Thousands Now Adware Removal Who Never Thought They Could",
+						"date": "05 Jun 2020",
+						"category": "Connected Home Wired"
+					})
+				</div>
+				<div class="w-full lg:w-1/4 px-0 lg:px-3 mb-8">
+					@@include('components/blog/blog-item.html', {
+						"link": "article.html",
+						"photo": "blog.jpg",
+						"title": "Video Games Playing With Imagination",
+						"date": "05 Jun 2020",
+						"category": "Connected Home Wired"
+					})
+				</div>
+				<div class="w-full lg:w-1/4 px-0 lg:px-3 mb-8">
+					@@include('components/blog/blog-item.html', {
+						"link": "article.html",
+						"photo": "blog.jpg",
+						"title": "Download Free Song For Ipod",
+						"date": "05 Jun 2020",
+						"category": "Connected Home Wired"
+					})
+				</div>
+				<div class="w-full lg:w-1/4 px-0 lg:px-3 mb-8">
+					@@include('components/blog/blog-item.html', {
+						"link": "article.html",
+						"photo": "blog.jpg",
+						"title": "Going Wireless With Your Headphones",
+						"date": "05 Jun 2020",
+						"category": "Connected Home Wired"
+					})
+				</div>
+				<div class="w-full lg:w-1/4 px-0 lg:px-3 mb-8">
+					@@include('components/blog/blog-item.html', {
+						"link": "article.html",
+						"photo": "blog.jpg",
+						"title": "Thousands Now Adware Removal Who Never Thought They Could",
+						"date": "05 Jun 2020",
+						"category": "Connected Home Wired"
+					})
+				</div>
+				<div class="w-full lg:w-1/4 px-0 lg:px-3 mb-8">
+					@@include('components/blog/blog-item.html', {
+						"link": "article.html",
+						"photo": "blog.jpg",
+						"title": "Video Games Playing With Imagination",
+						"date": "05 Jun 2020",
+						"category": "Connected Home Wired"
+					})
+				</div>
+				<div class="w-full lg:w-1/4 px-0 lg:px-3 mb-8">
+					@@include('components/blog/blog-item.html', {
+						"link": "article.html",
+						"photo": "blog.jpg",
+						"title": "Download Free Song For Ipod",
+						"date": "05 Jun 2020",
+						"category": "Connected Home Wired"
+					})
+				</div>
+			</div>
+			<div class="text-center mb-10">
+				<div class="inline-block transparent-btn">
+					Load more
+				</div>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="js/lib/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/lib/gsap.min.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+</body>
+</html>
