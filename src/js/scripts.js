@@ -114,10 +114,10 @@ $('.send_success_close').on('click', function(){
 });
 
 //Отступ для HEADER
-if ($(window).outerWidth() > 768) {
-	var headerPaddingTop = $( window ).height() * 0.0925925;
-	$('.header').css({'padding-top': headerPaddingTop});	
-}
+// if ($(window).outerWidth() > 768) {
+// 	var headerPaddingTop = $( window ).height() * 0.0925925;
+// 	$('.header').css({'padding-top': headerPaddingTop});	
+// }
 
 
 //Размеры и отступы в Конструкторе
@@ -315,27 +315,32 @@ $('.constr_back_slide_js').on('click', function(){
 })
 
 //MASONRY
-if ($('.portfolio_wrap').length > 0) {
-	$('.portfolio_wrap').masonry({
-	  // options
-	  itemSelector: '.portfolio-masonry',
-	  columnWidth: '.portfolio-masonry-size',
-	  percentPosition: true,
-	  gutter: 20
-	});
-}
+var portfolioWrap = document.querySelector('.portfolio_wrap');
+var portfolioMasonry = new Masonry( portfolioWrap, {
+  itemSelector: '.portfolio-masonry',
+  columnWidth: '.portfolio-masonry-size',
+  percentPosition: true,
+  gutter: 20,
+  horizontalOrder: true,
+});
 
-if ($('.products_wrap').length > 0) {
-	$('.products_wrap').masonry({
-	  // options
-	  itemSelector: '.products-masonry',
-	  columnWidth: '.products-masonry-size',
-	  percentPosition: true,
-	  gutter: 20
-	});	
-}
+var productsWrap = document.querySelector('.products_wrap');
+var productsMasonry = new Masonry( productsWrap, {
+  itemSelector: '.products-masonry',
+  columnWidth: '.products-masonry-size',
+  percentPosition: true,
+  gutter: 20,
+  horizontalOrder: true
+});
 
-
+$( document ).ready(function() {
+	if ($('.portfolio_wrap').length > 0) {
+		portfolioMasonry();
+	}
+	if ($('.products_wrap').length > 0) {
+		productsMasonry();
+	}
+});
 
 //SWIPER
 

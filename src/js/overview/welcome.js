@@ -14,6 +14,63 @@ $('.overview_welcome_torchere').css({'right':rightTorchere});
 var rightTorchereCircle = widthTorchereLine + 4;
 $('.overview_welcome_torchere_circle').css({'right':-rightTorchereCircle});
 
+var overviewWelcomeSecurityNoticesBottom = $(window).height() * 0.1611111;
+var overviewWelcomeSecurityNoticesRight = $(window).outerWidth() * 0.078125;
+
+if ($(window).outerWidth() > 768) {
+	$('.overview_welcome_security_notice').css({
+		'bottom': overviewWelcomeSecurityNoticesBottom,
+		'right': overviewWelcomeSecurityNoticesRight
+	});
+} else {
+	$('.overview_welcome_security_notice').css({
+		'bottom': overviewWelcomeSecurityNoticesBottom,
+		'right': '10px',
+	});
+}
+
+var overviewWelcomeLampLightWidth = $(window).outerWidth() * 0.0135416667
+
+var overviewWelcomeLampLightOneRight = $(window).outerWidth() * 0.2625;
+var overvieWelcomeLampLightOneTop = $(window).height() * 0.236111111;
+var overviewWelcomeLampLightTwoRight = $(window).outerWidth() * 0.24;
+var overvieWelcomeLampLightTwoTop = $(window).height() * 0.292;
+var overviewWelcomeLampLightThreeRight = $(window).outerWidth() * 0.220833333;
+var overvieWelcomeLampLightThreeTop = $(window).height() * 0.257407407;
+
+$('.overview_welcome_lamp_light_small').css({
+	'top': overvieWelcomeLampLightOneTop,
+	'right': overviewWelcomeLampLightOneRight,
+	'width': overviewWelcomeLampLightWidth
+});
+$('.overview_welcome_lamp_light_big').css({
+	'top': overvieWelcomeLampLightOneTop,
+	'right': overviewWelcomeLampLightOneRight,
+	'width': overviewWelcomeLampLightWidth
+});
+
+$('.overview_welcome_lamp_light_small_two').css({
+	'top': overvieWelcomeLampLightTwoTop,
+	'right': overviewWelcomeLampLightTwoRight,
+	'width': overviewWelcomeLampLightWidth
+});
+$('.overview_welcome_lamp_light_big_two').css({
+	'top': overvieWelcomeLampLightTwoTop,
+	'right': overviewWelcomeLampLightTwoRight,
+	'width': overviewWelcomeLampLightWidth
+});
+
+$('.overview_welcome_lamp_light_small_three').css({
+	'top': overvieWelcomeLampLightThreeTop,
+	'right': overviewWelcomeLampLightThreeRight,
+	'width': overviewWelcomeLampLightWidth
+});
+$('.overview_welcome_lamp_light_big_three').css({
+	'top': overvieWelcomeLampLightThreeTop,
+	'right': overviewWelcomeLampLightThreeRight,
+	'width': overviewWelcomeLampLightWidth
+});
+
 var overviewLightLampCircle = $( window ).outerWidth() * 0.1734375;
 var overviewLightLampCircleLeft = $( window ).outerWidth() * 0.6671875;
 var overviewLightLampCircleTop = $( window ).height() * 0.153703704;
@@ -78,6 +135,9 @@ function welcomeLightOn() {
 	$('.light-lamp-ray').toggleClass('on');
 	$('.torchere-path-up').toggleClass('animate');
 	$('.torchere-path-down').toggleClass('animate');	
+	if ($(window).outerWidth() > 768) {
+		$('.overview_welcome_lamp_light').toggleClass('show');
+	}
 }
 $('.light-toggle-js').on('click', function(){
 	welcomeLightOn();
@@ -93,4 +153,12 @@ $( document ).ready(function() {
 $('.security-toggle-js').on('click', function(){
 	$(this).toggleClass('on');
 	$(this).closest('.security-widget').find('.notice').toggleClass('on');
+	$('.overview_welcome_security_notice.on').toggleClass('show');
+	if ($('.security-toggle-js.on').length > 0) {
+		$('.overview_welcome_security_notice.off').removeClass('show');	
+		console.log('включен');
+	} else {
+		$('.overview_welcome_security_notice.off').addClass('show');	
+		console.log('выключен');
+	}
 });

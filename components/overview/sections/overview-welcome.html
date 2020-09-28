@@ -32,6 +32,35 @@
 			<img src="img/icons/lamp.svg" alt="" width="18px" class="mr-1">
 			<span>Torchere</span>
 		</div>
+		<!-- LAMP LIGHT -->
+		<div class="overview_welcome_lamp_light">
+			<!-- First (Left) LAMP LIGHT -->
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small one">
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small two">
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small three">
+
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big">
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big two">
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big three">
+
+			<!-- Second (Center) LAMP LIGHT -->
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small_two one">
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small_two two">
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small_two three">
+
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big_two">
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big_two two">
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big_two three">
+
+			<!-- Third (Right) LAMP LIGHT -->
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small_three one">
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small_three two">
+			<img src="img/overview/lamp-light-circle.svg" class="overview_welcome_lamp_light_small_three three">
+
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big_three">
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big_three two">
+			<img src="img/overview/lamp-light-circle-big.svg" class="overview_welcome_lamp_light_big_three three">
+		</div>
 		<div class="wrapper overview_welcome_mobile_wrapper relative h-full mx-auto">
 			<!-- ФОТО ПЛАНШЕТА -->
 			<div class="overview_welcome_border-tablet">
@@ -104,9 +133,67 @@
 				<span>Сделать заказ</span>
 			</div>
 		</div>
-		<!-- Overview Bottom :: components/overview/elements/overview-bottom.html -->
-		@@include('components/overview/elements/overview-bottom.html', {
-			'overview-number': '01'
-		})
+		<div class="wrapper mx-auto overview_bottom">
+			<div class="block lg:hidden flex justify-between items-center mb-4">
+				<div class="overview_bottom_phone mr-6">
+					<a href="tel:+7 771 072 4373">+7 771 072 4373</a>
+				</div>
+				<div>
+					<a href="https://www.instagram.com/connectedhome.kz/" target="_blank"><img src="img/instagram-icon.svg" width="25px"></a>
+				</div>
+			</div>
+			<div class="flex justify-between items-center">
+				<div class="overview_bottom_about flex items-center">
+					<div class="overview_bottom_logo mr-12">
+						<img src="img/overview_bottom_logo.svg" alt="" width="103px">
+					</div>
+					<div class="hidden lg:block overview_bottom_phone mr-6">
+						<a href="tel:+7 771 072 4373">+7 771 072 4373</a>
+					</div>
+					<div class="hidden lg:block">
+						<a href="https://www.instagram.com/connectedhome.kz/" target="_blank"><img src="img/instagram-icon.svg" width="25px"></a>
+					</div>
+				</div>
+				
+				<div class="overview_bottom_down flex items-center">
+					<img src="img/overview_bottom_down.svg" alt="" width="13" class="mr-4">
+					<span>Прокрутить вниз</span>
+				</div>
+				<div class="overview_bottom_numbers">
+					<span>01</span>
+					<span>/07</span>
+				</div>
+			</div>
+		</div>
+		<div class="overview_welcome_security_notice on">
+			<div class="overview_welcome_security_notice_title">
+				Охрана
+			</div>
+			<div class="flex justify-between items-center">
+				<div class="flex items-center">
+					<div class="overview_welcome_security_notice_icon mr-2 lg:mr-4">
+						<img src="img/icons/security.svg">
+					</div>
+					<div class="overview_welcome_security_notice_text">
+						Объект под охраной.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="overview_welcome_security_notice off">
+			<div class="overview_welcome_security_notice_title">
+				Охрана
+			</div>
+			<div class="flex justify-between items-center">
+				<div class="flex items-center">
+					<div class="overview_welcome_security_notice_icon mr-2 lg:mr-4">
+						<img src="img/icons/security.svg">
+					</div>
+					<div class="overview_welcome_security_notice_text">
+						Охрана отключена
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>

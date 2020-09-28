@@ -15,63 +15,191 @@
 	<!-- PRELOADER :: components/blocks/preloader.html -->
 	@@include('components/blocks/preloader.html')
 	<!-- HEADER :: components/header/header.html -->
-	@@include('components/header/header.html')
+	<header class="header">
+		<div class="wrapper mx-auto">
+			<div class="flex justify-between items-center">
+				<a href="index.html">
+					<div class="header_logo">
+						<img src="img/logo.svg" alt="">
+					</div>
+				</a>
+				<nav class="header_menu hidden lg:block">
+					<ul class="flex justify-between">
+						<li>
+							<a href="index.html" class="header_menu_link">Обзор</a>
+						</li>
+						<li>
+							<a href="products.html" class="header_menu_link">Продукт</a>
+						</li>
+						<li>
+							<a href="blog.html" class="header_menu_link">Блог</a>
+						</li>
+						<li>
+							<a href="portfolio.html" class="header_menu_link active">Портфолио</a>
+						</li>
+						<li>
+							<a href="#" class="header_menu_link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header_lang lang-toggle hidden lg:block">
+					<div class="select">
+						<select>
+						  <option>RU</option>
+						  <option>ENG</option>
+						</select>	
+					</div>
+				</div>
+				<!-- MOBILE TOGGLE -->
+				<div class="header_mobile_toggle">
+					<div class="header_mobile_toggle_circle"></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<!-- MOBILE MENU -->
+				<div class="header_mobile_menu">
+					<nav class="header_menu">
+						<ul class="flex justify-between flex-col">
+							<li>
+								<a href="index.html" class="header_menu_link">Обзор</a>
+							</li>
+							<li>
+								<a href="products.html" class="header_menu_link">Продукт</a>
+							</li>
+							<li>
+								<a href="blog.html" class="header_menu_link">Блог</a>
+							</li>
+							<li>
+								<a href="portfolio.html" class="header_menu_link active">Портфолио</a>
+							</li>
+							<li>
+								<a href="#" class="header_menu_link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header_lang lang-toggle">
+						<div class="select">
+							<select>
+							  <option>RU</option>
+							  <option>ENG</option>
+							</select>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 	<main>
 		<div class="portfolio wrapper mx-auto mb-10">
 			<div class="portfolio_wrap flex flex-wrap mx-0 lg:-mx-3 mb-10">
 				<div class="portfolio-masonry-size"></div>
 				<div class="portfolio-masonry">
 					@@include('components/portfolio/portfolio-item.html', {
-						"link": "article.html",
-						"title": "Проект 1",
-						"photo": "portfolio1.jpg",
-						"next": "portfolio2.jpg",
-						"text": "Проводное решение подразумевает прокладку кабелей в квартире черновой отделки, т.е. до ремонта."
+						"link": "portfolio/gk-remark.html",
+						"title": "ЖК РЕМАРК",
+						"photo": "gk-remark-01.png",
+						"next": "gk-remark-01.png",
+						"text": "Проектирование и установка системы «умный дом» в апартаментах ЖК Ремарк"
 					})
 				</div>
 				<div class="portfolio-masonry">
 					@@include('components/portfolio/portfolio-item.html', {
-						"link": "article.html",
-						"title": "Проект 2",
-						"photo": "portfolio2.jpg",
-						"next": "portfolio3.jpg",
-						"text": "Беспроводное решение владеет таким же функционалом, что и проводное. Простота монтажа позволяет не прокладывать слаботочный кабель, что становится прекрасным решением для объектов, где уже сделан ремонт."
+						"link": "portfolio/bc-aura.html",
+						"title": "БЦ АУРА",
+						"photo": "bc-aura-01.png",
+						"next": "bc-aura-01.png",
+						"text": "Установка системы управления элетрокарнизом для штор и освещения в кабинете председателя Национального Банка РК, автоматизация открытия шлагбаумов на парковке."
 					})
 				</div>
 				<div class="portfolio-masonry">
 					@@include('components/portfolio/portfolio-item.html', {
-						"link": "article.html",
-						"title": "Проект 3",
-						"photo": "portfolio3.jpg",
-						"next": "portfolio4.jpg",
-						"text": "Умный замок – безопасный и удобный способ открытия двери. Отпечаток пальца, ПИН-код, RF-карта – выбирайте один или комбинируйте несколько вариантов, и создавайте лучший, который подходит именно Вам.<br>*Для резервного открытия предусмотрен механический ключ и разъем для подачи аварийного питания."
+						"link": "portfolio/bc-green-tower.html",
+						"title": "БЦ GREEN TOWER",
+						"photo": "bc-green-tower-01.png",
+						"next": "bc-green-tower-01.png",
+						"text": "Установка системы «Умный Офис» в коворкинге, установка управления освещением в концеренц зале, сстановка системы оплаты за обед через распознавание лица в столовой БЦ Green Tower."
 					})
 				</div>
 				<div class="portfolio-masonry">
 					@@include('components/portfolio/portfolio-item.html', {
-						"link": "article.html",
-						"title": "Проект 4",
-						"photo": "portfolio4.jpg",
-						"next": "portfolio5.jpg",
-						"text": "Умный Шлагбаум – отличное решение для паркинг-зон. Считывание камерой номерного знака и управление шлагбаумом с помощью мобильного приложения значительно упростит и ускорит проезд."
+						"link": "portfolio/village-deluxe.html",
+						"title": "Коттеджный городок BI VILLAGE DELUXE",
+						"photo": "village-deluxe-01.png",
+						"next": "village-deluxe-01.png",
+						"text": "Проектирование и установка системы «умный дом» в апартаментах ЖК BI VILLAGE Deluxe, автоматизация открытия ворот, ролл-штор."
 					})
 				</div>
 				<div class="portfolio-masonry">
 					@@include('components/portfolio/portfolio-item.html', {
-						"link": "article.html",
-						"title": "Проект 5",
-						"photo": "portfolio5.jpg",
-						"next": "portfolio6.jpg",
-						"text": "Подключитесь к камере с любой точки земного шара и всегда будьте в курсе, что происходит у Вас дома."
+						"link": "portfolio/gk-grand-opera.html",
+						"title": "ШОУРУМ ЖК GRAND OPERA",
+						"photo": "gk-grand-opera-01.png",
+						"next": "gk-grand-opera-01.png",
+						"text": "Проектирование и установка системы «Умный дом» в шоуруме ЖК Grand Opera."
 					})
 				</div>
 				<div class="portfolio-masonry">
 					@@include('components/portfolio/portfolio-item.html', {
-						"link": "article.html",
-						"title": "Проект 6",
-						"photo": "portfolio6.jpg",
-						"next": "portfolio1.jpg",
-						"text": "Подключитесь к камере с любой точки земного шара и всегда будьте в курсе, что происходит у Вас дома."
+						"link": "portfolio/gk-only-sun.html",
+						"title": "ЖК ONLY SUN",
+						"photo": "gk-only-sun-01.jpg",
+						"next": "gk-only-sun-02.jpg",
+						"text": "Проектирование и установка системы «Умный дом» в апортаментах ЖК Only Sun."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "portfolio/gk-seoul.html",
+						"title": "ЖК BI CITY SEOUL",
+						"photo": "gk-seoul-01.jpg",
+						"next": "gk-seoul-02.jpg",
+						"text": "Проектирование и установка системы «Умный дом» в апортаментах ЖК BI City Seoul."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "portfolio/gk-atlant.html",
+						"title": "ШОУРУМ ЖК ATLANT",
+						"photo": "gk-atlant-01.png",
+						"next": "gk-atlant-01.png",
+						"text": "Проектирование и установка системы «Умный дом» в шоуруме ЖК Atlant."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "portfolio/gk-adal.html",
+						"title": "ЖК ADAL",
+						"photo": "gk-adal-01.jpg",
+						"next": "gk-adal-02.jpg",
+						"text": "Проектирование и установка системы «Умный дом» в апортаментах ЖК Adal."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "portfolio/gk-arnau.html",
+						"title": "ЖК ARNAU",
+						"photo": "gk-arnau-01.jpg",
+						"next": "gk-arnau-02.jpg",
+						"text": "Проектирование и установка системы «Умный дом» в апортаментах ЖК Arnau."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "portfolio/gk-tokyo.html",
+						"title": "ЖК BI CITY TOKYO",
+						"photo": "gk-tokyo-01.jpg",
+						"next": "gk-tokyo-02.jpg",
+						"text": "Проектирование и установка системы «Умный дом» в апортаментах ЖК BI City Tokyo."
+					})
+				</div>
+				<div class="portfolio-masonry">
+					@@include('components/portfolio/portfolio-item.html', {
+						"link": "portfolio/gk-panorama-park.html",
+						"title": "ЖК PANORAMA PARK",
+						"photo": "gk-panorama-park-01.jpg",
+						"next": "gk-panorama-park-02.jpg",
+						"text": "Проектирование и установка системы «Умный дом» в апортаментах ЖК Panorama Park."
 					})
 				</div>
 			</div>

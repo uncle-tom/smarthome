@@ -1,7 +1,7 @@
 $phone_size: 320px; 
 $tablet_size: 768px;
 $desktop_size: 1280px;
-$pc_size: 1440px;
+$pc_size: 1600px;
 $full_size: 1920px;
 
 @mixin for-phone {
@@ -18,5 +18,9 @@ $full_size: 1920px;
 
 @mixin for-pc {
   @media (min-width: $pc_size) and (max-width: $full_size) { @content; }
+}
+
+@mixin for-dock {
+	@media (min-width: $desktop_size) and (min-height: 580px) and (max-height: 1079px) { @content; }
 }
 

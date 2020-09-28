@@ -2,6 +2,10 @@
 	width: 100%;
 	position: fixed;
 	z-index: 9;
+	padding-top: 5%;
+	@include for-dock {
+		padding-top: 2%;
+	}
 	@include for-phone {
 		padding: 8px 0;
 	}

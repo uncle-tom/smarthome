@@ -114,7 +114,7 @@ $('.smartslider-prev').on('click', function(){
 	}
 });
 
-var smartSliderBottom = $(window).height() * 0.2814814;
+var smartSliderBottom = $(window).height() * 0.22;
 var smartSliderBottomMobile = $(window).height() * 0.266129032;
 
 if ($(window).outerWidth() > 768) {
