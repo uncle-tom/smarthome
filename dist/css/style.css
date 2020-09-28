@@ -63101,7 +63101,7 @@ p {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
   z-index: 1;
   padding: 15px 30px; }
-  @media (min-width: 1600px) and (max-width: 1920px) {
+  @media (min-width: 1600px) and (max-width: 2160px) {
     .order-btn {
       font-size: 14px; } }
   @media (min-width: 769px) and (max-width: 1280px) {
@@ -63189,7 +63189,7 @@ p {
 
 .player_btns img {
   width: 24px; }
-  @media (min-width: 1600px) and (max-width: 1920px) {
+  @media (min-width: 1600px) and (max-width: 2160px) {
     .player_btns img {
       width: 20px; } }
   @media (min-width: 1280px) and (max-width: 1600px) {
@@ -63242,7 +63242,7 @@ select::-ms-expand {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 10px 32px 10px 16px; }
-    @media (min-width: 1600px) and (max-width: 1920px) {
+    @media (min-width: 1600px) and (max-width: 2160px) {
       .select select {
         font-size: 14px;
         padding: 8px 32px 8px 16px; } }
@@ -63593,7 +63593,7 @@ input.input-with-icon {
     -webkit-transition: all 0.12s;
     -o-transition: all 0.12s;
     transition: all 0.12s; }
-    @media (min-width: 1600px) and (max-width: 1920px) {
+    @media (min-width: 1600px) and (max-width: 2160px) {
       .header_menu_link {
         font-size: 14px; } }
     @media (min-width: 769px) and (max-width: 1280px) {
@@ -64074,7 +64074,7 @@ input.input-with-icon {
       letter-spacing: -1.5px;
       text-transform: uppercase;
       margin-bottom: 24px; }
-      @media (min-width: 1600px) and (max-width: 1920px) {
+      @media (min-width: 1600px) and (max-width: 2160px) {
         .overview_content_title {
           font-size: 96px;
           line-height: 112px; } }
@@ -64109,7 +64109,7 @@ input.input-with-icon {
       letter-spacing: 0.25px;
       color: #FFFFFF;
       margin-bottom: 72px; }
-      @media (min-width: 1600px) and (max-width: 1920px) {
+      @media (min-width: 1600px) and (max-width: 2160px) {
         .overview_content_text {
           font-size: 20px;
           line-height: 26px; } }
@@ -64292,7 +64292,7 @@ input.input-with-icon {
         text-transform: uppercase;
         color: #ffffff;
         margin-bottom: 48px; }
-        @media (min-width: 1600px) and (max-width: 1920px) {
+        @media (min-width: 1600px) and (max-width: 2160px) {
           .overview_welcome_tablet_title {
             font-size: 48px;
             margin-bottom: 28px; } }
@@ -64311,7 +64311,7 @@ input.input-with-icon {
             margin-bottom: 10px; } }
       .overview_welcome_tablet_info {
         margin-bottom: 52px; }
-        @media (min-width: 1600px) and (max-width: 1920px) {
+        @media (min-width: 1600px) and (max-width: 2160px) {
           .overview_welcome_tablet_info {
             margin-bottom: 38px;
             padding-right: 20px; } }
@@ -64345,7 +64345,7 @@ input.input-with-icon {
           line-height: 1.38;
           letter-spacing: 0.15px;
           color: #ffffff; }
-          @media (min-width: 1600px) and (max-width: 1920px) {
+          @media (min-width: 1600px) and (max-width: 2160px) {
             .overview_welcome_tablet_box_title {
               font-size: 16px; } }
           @media (min-width: 1280px) and (max-width: 1600px) {
@@ -64366,7 +64366,7 @@ input.input-with-icon {
           line-height: 1.43;
           letter-spacing: 0.24px;
           color: rgba(255, 255, 255, 0.6); }
-          @media (min-width: 1600px) and (max-width: 1920px) {
+          @media (min-width: 1600px) and (max-width: 2160px) {
             .overview_welcome_tablet_box_subtitle {
               font-size: 14px; } }
           @media (min-width: 769px) and (max-width: 1280px) {
@@ -65078,7 +65078,7 @@ input.input-with-icon {
     text-transform: uppercase;
     color: #FF6600;
     cursor: pointer; }
-    @media (min-width: 1600px) and (max-width: 1920px) {
+    @media (min-width: 1600px) and (max-width: 2160px) {
       .overview_prev, .overview_next {
         font-size: 14px;
         line-height: 16px; } }
@@ -65383,7 +65383,7 @@ input.input-with-icon {
       line-height: 112px;
       letter-spacing: -1.5px;
       text-transform: uppercase; }
-      @media (min-width: 1600px) and (max-width: 1920px) {
+      @media (min-width: 1600px) and (max-width: 2160px) {
         .constr_block_title {
           font-size: 72px;
           line-height: 84px; } }
@@ -65918,7 +65918,7 @@ input.input-with-icon {
       -o-object-fit: cover;
       object-fit: cover;
       border-radius: 20px; }
-    @media (min-width: 1600px) and (max-width: 1920px) {
+    @media (min-width: 1600px) and (max-width: 2160px) {
       .blog_item_photo {
         height: 250px; } }
     @media (min-width: 1280px) and (max-width: 1600px) {

@@ -1259,22 +1259,26 @@ $('.constr_back_slide_js').on('click', function(){
 
 //MASONRY
 var portfolioWrap = document.querySelector('.portfolio_wrap');
-var portfolioMasonry = new Masonry( portfolioWrap, {
-  itemSelector: '.portfolio-masonry',
-  columnWidth: '.portfolio-masonry-size',
-  percentPosition: true,
-  gutter: 20,
-  
-});
+if ($('.portfolio_wrap').length > 0) {
+	var portfolioMasonry = new Masonry( portfolioWrap, {
+	  itemSelector: '.portfolio-masonry',
+	  columnWidth: '.portfolio-masonry-size',
+	  percentPosition: true,
+	  gutter: 20,
+	  horizontalOrder: true,
+	})
+}
 
 var productsWrap = document.querySelector('.products_wrap');
-var productsMasonry = new Masonry( productsWrap, {
-  itemSelector: '.products-masonry',
-  columnWidth: '.products-masonry-size',
-  percentPosition: true,
-  gutter: 20,
-  horizontalOrder: true
-});
+if ($('.products_wrap').length > 0) {
+	var productsMasonry = new Masonry( productsWrap, {
+	  itemSelector: '.products-masonry',
+	  columnWidth: '.products-masonry-size',
+	  percentPosition: true,
+	  gutter: 20,
+	  horizontalOrder: true
+	})
+}
 
 $( document ).ready(function() {
 	if ($('.portfolio_wrap').length > 0) {

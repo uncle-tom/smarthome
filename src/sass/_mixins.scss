@@ -2,7 +2,7 @@ $phone_size: 320px;
 $tablet_size: 768px;
 $desktop_size: 1280px;
 $pc_size: 1600px;
-$full_size: 1920px;
+$full_size: 2160px;
 
 @mixin for-phone {
   @media (max-width: $tablet_size) { @content; }
