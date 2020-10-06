@@ -1,5 +1,5 @@
 body {
-	font-family: 'Roboto Regular';
+	font-family: 'Roboto Regular', 'Arial';
 	margin: 0;
 	padding: 0;
 }
@@ -10,6 +10,12 @@ p {
 
 .wrapper {
 	padding: 0 7.8%;
+	@include for-xltablet {
+		padding: 0 5%;
+	}
+	@include for-tablet {
+		padding: 0 5%;
+	}
 	@include for-phone {
 		padding: 0 10px;
 	}
@@ -115,12 +121,27 @@ p {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
   z-index: 1;
   padding: 15px 30px;
+  @include for-fullhd {
+		font-size: 18px;
+	}
   @include for-pc {
+		font-size: 16px;
+	}
+	@include for-desktop {
+		font-size: 15px;
+		padding: 12px 24px;
+	}
+	@include for-laptop {
 		font-size: 14px;
+		padding: 12px 24px;
+	}
+	@include for-xltablet {
+		font-size: 14px;
+		padding: 10px 20px;
 	}
 	@include for-tablet {
 		font-size: 14px;
-		padding: 12px 24px;
+		padding: 10px 20px;
 	}
 	@include for-phone {
 		font-size: 12px;
@@ -211,11 +232,20 @@ p {
 .player_btns {
 	img {
 		width: 24px;
-		@include for-pc {
+		@include for-fullhd {
 			width: 20px;
+		}
+		@include for-pc {
+			width: 18px;
 		}
 		@include for-desktop {
 			width: 18px;
+		}
+		@include for-laptop {
+			width: 14px;
+		}
+		@include for-xltablet {
+			width: 12px;
 		}
 		@include for-tablet {
 			width: 12px;
@@ -271,9 +301,17 @@ select::-ms-expand {
 			font-size: 14px;
 			padding: 8px 32px 8px 16px;
 		}
-		@include for-tablet {
+		@include for-laptop {
 			font-size: 14px;
 			padding: 8px 32px 8px 16px;
+		}
+		@include for-xltablet {
+			font-size: 12px;
+			padding: 4px 24px 4px 12px;
+		}
+		@include for-tablet {
+			font-size: 12px;
+			padding: 4px 24px 4px 12px;
 		}
   }
   &:after {
@@ -336,10 +374,7 @@ select::-ms-expand {
 	}
 	&_block {
 		position: relative;
-		background: rgba(255, 255, 255, 0.12);
-		background-blend-mode: screen;
-		-webkit-backdrop-filter: blur(97.8581px);
-		backdrop-filter: blur(97.8581px);
+		background: #2e3034;
 		border-radius: 16px;
 		@include for-phone {
 			height: auto;

@@ -7,7 +7,7 @@ var concat = require('gulp-concat');
  
 gulp.task('scripts', function() {
   return gulp.src('./src/js/**/*.js')
-    .pipe(concat('all.js'))
+    .pipe(concat('all-05.js'))
     .pipe(gulp.dest('./dist/js'));
 });
  

@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
 function initSmartslider(dataSmartSlider) {
 	//Считаем отступ слева
-	if ($(window).outerWidth() > 1280) {
+	if ($(window).outerWidth() > 767) {
 		var koefLeft = 0.333333333;
 		var leftSmartsliderPhoto = $( window ).outerWidth() * koefLeft;
 		var leftSmartsliderPhotoNext = leftSmartsliderPhoto;
@@ -24,7 +24,7 @@ function initSmartslider(dataSmartSlider) {
 	});
 }
 
-if ($(window).outerWidth() > 1280) {
+if ($(window).outerWidth() > 767) {
 	var koefTransform = 33;
 } else {
 	var koefTransform = 100;

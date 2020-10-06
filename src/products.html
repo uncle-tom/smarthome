@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="css/swiper.min.css">
 </head>
 <body class="products-page">
-	<!-- PRELOADER :: components/blocks/preloader.html -->
-	@@include('components/blocks/preloader.html')
 	<!-- HEADER :: components/header/header.html -->
 	<header class="header">
 		<div class="wrapper mx-auto">
@@ -23,10 +21,13 @@
 						<img src="img/logo.svg" alt="">
 					</div>
 				</a>
-				<nav class="header_menu hidden lg:block">
+				<nav class="header_menu hidden md:block">
 					<ul class="flex justify-between">
 						<li>
 							<a href="index.html" class="header_menu_link">Обзор</a>
+						</li>
+						<li>
+							<a href="constructor.html" class="header_menu_link">Магазин</a>
 						</li>
 						<li>
 							<a href="products.html" class="header_menu_link active">Продукт</a>
@@ -38,11 +39,11 @@
 							<a href="portfolio.html" class="header_menu_link">Портфолио</a>
 						</li>
 						<li>
-							<a href="#" class="header_menu_link">Контакты</a>
+							<a href="contacts.html" class="header_menu_link">Контакты</a>
 						</li>
 					</ul>
 				</nav>
-				<div class="header_lang lang-toggle hidden lg:block">
+				<div class="header_lang lang-toggle hidden md:block">
 					<div class="select">
 						<select>
 						  <option>RU</option>
@@ -65,6 +66,9 @@
 								<a href="index.html" class="header_menu_link">Обзор</a>
 							</li>
 							<li>
+								<a href="constructor.html" class="header_menu_link">Магазин</a>
+							</li>
+							<li>
 								<a href="products.html" class="header_menu_link active">Продукт</a>
 							</li>
 							<li>
@@ -74,7 +78,7 @@
 								<a href="portfolio.html" class="header_menu_link">Портфолио</a>
 							</li>
 							<li>
-								<a href="#" class="header_menu_link">Контакты</a>
+								<a href="contacts.html" class="header_menu_link">Контакты</a>
 							</li>
 						</ul>
 					</nav>
@@ -92,7 +96,7 @@
 	</header>
 	<main>
 		<div class="products wrapper mx-auto mb-10">
-			<div class="products_wrap flex flex-wrap mx-0 lg:-mx-3 mb-10">
+			<div class="products_wrap flex flex-wrap mx-0 md:-mx-3 mb-10">
 				<div class="products-masonry-size"></div>
 				<div class="products-masonry">
 					@@include('components/products/products-item.html', {

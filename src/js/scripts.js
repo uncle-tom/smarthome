@@ -1,7 +1,9 @@
 setTimeout(function(){
 	//Preloader
 	let preloader = document.querySelector('.preloader');
-	preloader.classList.add('hide');
+	if (preloader) {
+		preloader.classList.add('hide');
+	}
 }, 3500);
 
 $.scrollify({
@@ -122,7 +124,7 @@ $('.send_success_close').on('click', function(){
 
 //Размеры и отступы в Конструкторе
 let constrWrapper = document.querySelectorAll('.constr_wrapper');
-let constrBlocks = document.querySelectorAll('.constr_block');
+let constrBlocks = document.querySelectorAll('.constr-option .constr_block');
 let constrMetaSticky = document.querySelector('.constr_meta_sticky');
 let constrBoxes = document.querySelectorAll('.constr_box');
 let constrBlocksHeight = window.innerHeight*0.644;
@@ -271,6 +273,11 @@ if ($(window).outerWidth() > 768) {
 $('.constr_count_minus').click(function () {
 	var currentCountId = $(this).closest('.constr-add-count').data('box-id');
 	var currentCountInput = $('.constr-add-count[data-box-id='+currentCountId+'] .constr_count_input');
+	//Удаляем из корзины, если 1 и нажали минус
+	if (parseInt(currentCountInput.val()) === 1) {
+		$('.constr_selected_item[data-box-id='+currentCountId+']').removeClass('added');
+		$('.constr-add-js[data-box-id='+currentCountId+']').removeClass('added');
+	}
 	var currentCountNumber = parseInt(currentCountInput.val()) - 1;
 	currentCountNumber = currentCountNumber < 1 ? 1 : currentCountNumber;
 	currentCountInput.val(currentCountNumber);
@@ -313,6 +320,14 @@ $('.constr_back_slide_js').on('click', function(){
 	//Поднимаемся вверх
 	scrollToTop();
 })
+
+//Какие пакеты показывать/Какую опцию выбрали 
+$('.constr_link.option').on('click', function(){
+	var constrSelectOption = $(this).data('select-option');
+	console.log(constrSelectOption);
+	$('.paket').css({'display':'none'});
+	$('.paket[data-select-option='+constrSelectOption+']').css({'display':'flex'});
+});
 
 //MASONRY
 var portfolioWrap = document.querySelector('.portfolio_wrap');

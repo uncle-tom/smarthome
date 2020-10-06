@@ -10,10 +10,87 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="constructor-page">
-	<!-- PRELOADER :: components/blocks/preloader.html -->
-	@@include('components/blocks/preloader.html')
-	<!-- Constructor HEADER :: components/header/header.html -->
-	@@include('components/header/header.html')
+	<header class="header">
+		<div class="wrapper mx-auto">
+			<div class="flex justify-between items-center">
+				<a href="index.html">
+					<div class="header_logo">
+						<img src="img/logo.svg" alt="">
+					</div>
+				</a>
+				<nav class="header_menu hidden md:block">
+					<ul class="flex justify-between">
+						<li>
+							<a href="index.html" class="header_menu_link">Обзор</a>
+						</li>
+						<li>
+							<a href="constructor.html" class="header_menu_link active">Магазин</a>
+						</li>
+						<li>
+							<a href="products.html" class="header_menu_link">Продукт</a>
+						</li>
+						<li>
+							<a href="blog.html" class="header_menu_link">Блог</a>
+						</li>
+						<li>
+							<a href="portfolio.html" class="header_menu_link">Портфолио</a>
+						</li>
+						<li>
+							<a href="contacts.html" class="header_menu_link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header_lang lang-toggle hidden md:block">
+					<div class="select">
+						<select>
+						  <option>RU</option>
+						  <option>ENG</option>
+						</select>	
+					</div>
+				</div>
+				<!-- MOBILE TOGGLE -->
+				<div class="header_mobile_toggle">
+					<div class="header_mobile_toggle_circle"></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<!-- MOBILE MENU -->
+				<div class="header_mobile_menu">
+					<nav class="header_menu">
+						<ul class="flex justify-between flex-col">
+							<li>
+								<a href="index.html" class="header_menu_link">Обзор</a>
+							</li>
+							<li>
+								<a href="constructor.html" class="header_menu_link active">Магазин</a>
+							</li>
+							<li>
+								<a href="products.html" class="header_menu_link">Продукт</a>
+							</li>
+							<li>
+								<a href="blog.html" class="header_menu_link">Блог</a>
+							</li>
+							<li>
+								<a href="portfolio.html" class="header_menu_link">Портфолио</a>
+							</li>
+							<li>
+								<a href="contacts.html" class="header_menu_link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header_lang lang-toggle">
+						<div class="select">
+							<select>
+							  <option>RU</option>
+							  <option>ENG</option>
+							</select>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 	<main>
 		<div class="constructor-slide active" data-constr-slide="1">
 			<!-- Constructor Slide 1 Select Option :: components/constructor/slides/select-option.html -->

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Контакты</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <link rel="apple-touch-icon" href="/example.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- SWIPER SLIDER -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body class="contacts">
+	<!-- HEADER :: components/header/header.html -->
+	<header class="header">
+		<div class="wrapper mx-auto">
+			<div class="flex justify-between items-center">
+				<a href="index.html">
+					<div class="header_logo">
+						<img src="img/logo.svg" alt="">
+					</div>
+				</a>
+				<nav class="header_menu hidden md:block">
+					<ul class="flex justify-between">
+						<li>
+							<a href="index.html" class="header_menu_link">Обзор</a>
+						</li>
+						<li>
+							<a href="constructor.html" class="header_menu_link">Магазин</a>
+						</li>
+						<li>
+							<a href="products.html" class="header_menu_link">Продукт</a>
+						</li>
+						<li>
+							<a href="blog.html" class="header_menu_link">Блог</a>
+						</li>
+						<li>
+							<a href="portfolio.html" class="header_menu_link">Портфолио</a>
+						</li>
+						<li>
+							<a href="contacts.html" class="header_menu_link active">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header_lang lang-toggle hidden md:block">
+					<div class="select">
+						<select>
+						  <option>RU</option>
+						  <option>ENG</option>
+						</select>	
+					</div>
+				</div>
+				<!-- MOBILE TOGGLE -->
+				<div class="header_mobile_toggle">
+					<div class="header_mobile_toggle_circle"></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<!-- MOBILE MENU -->
+				<div class="header_mobile_menu">
+					<nav class="header_menu">
+						<ul class="flex justify-between flex-col">
+							<li>
+								<a href="index.html" class="header_menu_link">Обзор</a>
+							</li>
+							<li>
+								<a href="constructor.html" class="header_menu_link">Магазин</a>
+							</li>
+							<li>
+								<a href="products.html" class="header_menu_link">Продукт</a>
+							</li>
+							<li>
+								<a href="blog.html" class="header_menu_link">Блог</a>
+							</li>
+							<li>
+								<a href="portfolio.html" class="header_menu_link">Портфолио</a>
+							</li>
+							<li>
+								<a href="contacts.html" class="header_menu_link active">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header_lang lang-toggle">
+						<div class="select">
+							<select>
+							  <option>RU</option>
+							  <option>ENG</option>
+							</select>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="contacts_block">
+			<div class="w-full lg:w-2/3 mx-auto">
+				<div class="contacts_box flex flex-col lg:flex-row justify-between p-4 md:p-16">
+					<div class="w-full lg:w-1/2">
+						<div class="contacts_box_title mb-6 lg:mb-4">
+							Контакты
+						</div>
+						<div class="flex items-start justify-center lg:justify-start mb-4">
+							<img src="img/icons/сontact-phone.svg" alt="" class="contacts_box_icon mt-1 mr-3">
+							<div class="flex flex-col">
+								<a href="tel:+7(771)0724373">+7(771)0724373</a>
+								<a href="tel:360">360</a>
+							</div>
+						</div>
+						<div class="flex items-start justify-center lg:justify-start mb-4">
+							<img src="img/icons/email.svg" alt="" class="contacts_box_icon mt-1 mr-3">
+							<div class="flex flex-col">
+								<a href="mailto:sales@connectedhome.kz">sales@connectedhome.kz</a>
+							</div>
+						</div>
+						<div class="flex items-start justify-center lg:justify-start mb-10 lg:mb-0">
+							<img src="img/instagram-icon.svg" alt="" class="contacts_box_icon mt-1 mr-3">
+							<div class="flex flex-col">
+								<a href="www.instagram.com/connectedhome.kz">connectedhome.kz</a>
+							</div>
+						</div>
+					</div>
+					<div class="w-full lg:w-1/2">
+						<div class="contacts_box_title mb-6 lg:mb-4">
+							Отделы продаж
+						</div>
+						<div class="mb-10 lg:mb-6">
+							<p>Астана, ул.Сыгажак 18/3, БЦ Viva Plaza</p>
+							<p>Астана, ул.Мамбетова 24, БЦ Аффари</p>
+							<p>Алматы, ул.Гагарина 241, ОП BI-Group</p>
+						</div>
+						<div class="contacts_box_title mb-6 lg:mb-4">
+							Главный офис
+						</div>
+						<div>
+							<p>Астана, ул.E-10, 17E, БЦ Зеленый квартал</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript" src="js/lib/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/lib/gsap.min.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+</body>
+</html>

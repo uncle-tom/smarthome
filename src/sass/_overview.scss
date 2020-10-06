@@ -28,13 +28,25 @@
 			letter-spacing: -1.5px;
 			text-transform: uppercase;
 			margin-bottom: 24px;
-			@include for-pc {
+			@include for-fullhd {
 				font-size: 96px;
 				line-height: 112px;
 			}
-			@include for-desktop {
-				font-size: 68px;
+			@include for-pc {
+				font-size: 72px;
 				line-height: 80px;
+			}
+			@include for-desktop {
+				font-size: 58px;
+				line-height: 68px;
+			}
+			@include for-laptop {
+				font-size: 52px;
+				line-height: 60px;
+			}
+			@include for-xltablet {
+				font-size: 48px;
+				line-height: 56px;
 			}
 			@include for-tablet {
 				font-size: 48px;
@@ -65,6 +77,10 @@
 			letter-spacing: 0.25px;
 			color: #FFFFFF;
 			margin-bottom: 72px;
+			@include for-fullhd {
+				font-size: 24px;
+				line-height: 31px;
+			}
 			@include for-pc {
 				font-size: 20px;
 				line-height: 26px;
@@ -72,6 +88,14 @@
 			@include for-desktop {
 				font-size: 18px;
 				line-height: 23.5px;
+			}
+			@include for-laptop {
+				font-size: 16px;
+				line-height: 20.8px;
+			}
+			@include for-xltablet {
+				font-size: 16px;
+				line-height: 20.8px;
 			}
 			@include for-tablet {
 				font-size: 16px;
@@ -208,6 +232,9 @@
 			-webkit-transform: translateY(-50%);
 			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
+			@include for-tablet {
+				width: 45.4%;
+			}
 			@include for-phone {
 				width: -webkit-calc(100% + 20px);
 				width: calc(100% + 20px);
@@ -239,8 +266,18 @@
 			padding: 0 2%;
 			margin-top: 24px;
 			margin-left: 2.2%;
-			@include for-tablet {
+			@include for-desktop {
+				margin-top: 30px;
+			}
+			@include for-laptop {
 				margin-top: 32px;
+			}
+			@include for-xltablet {
+				margin-top: 34px;
+			}
+			@include for-tablet {
+				width: 41.1%;
+				margin-top: 34px;
 			}
 			@include for-phone {
 				width: 100%;
@@ -262,17 +299,29 @@
 				text-transform: uppercase;
 				color: #ffffff;
 				margin-bottom: 48px;
-				@include for-pc {
+				@include for-fullhd {
 					font-size: 48px;
 					margin-bottom: 28px;
+				}
+				@include for-pc {
+					font-size: 40px;
+					margin-bottom: 22px;
 				}
 				@include for-desktop {
 					font-size: 28px;
 					margin-bottom: 16px;
 				}
+				@include for-laptop {
+					font-size: 24px;
+					margin-bottom: 12px;
+				}
+				@include for-xltablet {
+					font-size: 18px;
+					margin-bottom: 4px;
+				}
 				@include for-tablet {
 					font-size: 18px;
-					margin-bottom: 8px;
+					margin-bottom: 4px;
 				}
 				@include for-phone {
 					font-size: 18.78px;
@@ -282,15 +331,24 @@
 			}
 			&_info {
 				margin-bottom: 52px;
-				@include for-pc {
+				@include for-fullhd {
 					margin-bottom: 38px;
 					padding-right: 20px;
+				}
+				@include for-pc {
+					margin-bottom: 24px;
 				}
 				@include for-desktop {
 					margin-bottom: 20px; 
 				}
+				@include for-laptop {
+					margin-bottom: 18px;
+				}
+				@include for-xltablet {
+					margin-bottom: 10px;
+				}
 				@include for-tablet {
-					margin-bottom: 16px;
+					margin-bottom: 10px;
 				}
 				@include for-phone {
 					margin-bottom: 0;
@@ -303,25 +361,43 @@
 				backdrop-filter: blur(36px);
 				background-color: #313033;
 				padding: 8px 12px;
+				@include for-laptop {
+					padding: 4px 8px;
+				}
+				@include for-xltablet {
+					padding: 4px 8px;
+				}
+				@include for-tablet {
+					padding: 4px 8px;
+				}
 				@include for-phone {
 					width: 33.333%;
 					overflow: hidden;
 					padding: 4px 6px;
 				}
 				&_title {
-					font-family: HelveticaNeue;
-					font-size: 24px;
+					font-family: 'Roboto Regular';
+					font-size: 32px;
 					font-weight: 500;
 					font-stretch: normal;
 					font-style: normal;
 					line-height: 1.38;
 					letter-spacing: 0.15px;
 					color: #ffffff;
+					@include for-fullhd {
+						font-size: 22px;
+					}
 					@include for-pc {
-						font-size: 16px;
+						font-size: 22px;
 					}
 					@include for-desktop {
 						font-size: 20px;
+					}
+					@include for-laptop {
+						font-size: 16px;
+					}
+					@include for-xltablet {
+						font-size: 14px;
 					}
 					@include for-tablet {
 						font-size: 14px;
@@ -331,15 +407,27 @@
 					}
 				}
 				&_subtitle {
-					font-family: HelveticaNeue;
-					font-size: 18px;
+					font-family: 'Roboto Regular';
+					font-size: 24px;
 					font-weight: normal;
 					font-stretch: normal;
 					font-style: normal;
 					line-height: 1.43;
 					letter-spacing: 0.24px;
 					color: rgba(255, 255, 255, 0.6);
+					@include for-fullhd {
+						font-size: 18px;
+					}
 					@include for-pc {
+						font-size: 18px;
+					}
+					@include for-desktop {
+						font-size: 16px;
+					}
+					@include for-laptop {
+						font-size: 14px;
+					}
+					@include for-xltablet {
 						font-size: 14px;
 					}
 					@include for-tablet {
@@ -351,6 +439,12 @@
 				}
 				&_icon {
 					width: 36px;
+					@include for-laptop {
+						width: 24px;
+					}
+					@include for-xltablet {
+						width: 24px;
+					}
 					@include for-tablet {
 						width: 24px;
 					}
@@ -406,6 +500,12 @@
 					letter-spacing: 0.57px;
 					line-height: 22px;
 					margin-bottom: 14px;
+					@include for-laptop {
+						font-size: 14px;
+					}
+					@include for-xltablet {
+						font-size: 12px;
+					}
 					@include for-tablet {
 						font-size: 12px;
 					}
@@ -421,6 +521,12 @@
 					color: #FFFFFF;
 					letter-spacing: 0.57px;
 					line-height: 20px;
+					@include for-laptop {
+						font-size: 13px;
+					}
+					@include for-xltablet {
+						font-size: 12px;
+					}
 					@include for-tablet {
 						font-size: 12px;
 					}
@@ -446,6 +552,12 @@
 			box-sizing: border-box;
 			border-radius: 8px;
 			padding: 6px 12px;
+			@include for-xltablet {
+				padding: 4px 10px;
+			}
+			@include for-tablet {
+				padding: 4px 10px;
+			}
 			&_line {
 				width: 1px;
 				position: absolute;
@@ -463,6 +575,12 @@
 				font-size: 14px;
 				line-height: 20px;
 				letter-spacing: 0.5px;
+				@include for-xltablet {
+					font-size: 12px;
+				}
+				@include for-tablet {
+					font-size: 12px;
+				}
 			}
 		}
 		&_condit {
@@ -708,6 +826,12 @@
 				letter-spacing: 0.57px;
 				line-height: 22px;
 				margin-bottom: 14px;
+				@include for-laptop {
+					font-size: 13px;
+				}
+				@include for-xltablet {
+					font-size: 12px;
+				}
 				@include for-tablet {
 					font-size: 12px;
 				}
@@ -723,6 +847,12 @@
 				color: #FFFFFF;
 				letter-spacing: 0.57px;
 				line-height: 20px;
+				@include for-laptop {
+					font-size: 12px;
+				}
+				@include for-xltablet {
+					font-size: 12px;
+				}
 				@include for-tablet {
 					font-size: 12px;
 				}
@@ -738,6 +868,12 @@
 				letter-spacing: 0.43px;
 				line-height: 16px;
 				opacity: 0.7;
+				@include for-laptop {
+					font-size: 10px;
+				}
+				@include for-xltablet {
+					font-size: 9px;
+				}
 				@include for-tablet {
 					font-size: 9px;
 				}
@@ -753,6 +889,12 @@
 				color: #FFFFFF;
 				letter-spacing: 1.21px;
 				line-height: 30px;
+				@include for-laptop {
+					font-size: 26px;
+				}
+				@include for-xltablet {
+					font-size: 25px;
+				}
 				@include for-tablet {
 					font-size: 25px;
 				}
@@ -764,6 +906,12 @@
 			}
 			&_icon {
 				img {
+					@include for-laptop {
+						width: 22px;
+					}
+					@include for-xltablet {
+						width: 21px;
+					}
 					@include for-tablet {
 						width: 21px;
 					}
@@ -946,6 +1094,12 @@
 			letter-spacing: 0.57px;
 			line-height: 20px;
 			margin-bottom: 8px;
+			@include for-laptop {
+				font-size: 13px;
+			}
+			@include for-xltablet {
+				font-size: 12px;
+			}
 			@include for-tablet {
 				font-size: 12px;
 			}
@@ -961,6 +1115,12 @@
 				letter-spacing: 0.57px;
 				line-height: 22px;
 				margin-bottom: 18px;
+				@include for-laptop {
+					font-size: 13px;
+				}
+				@include for-xltablet {
+					font-size: 12px;
+				}
 				@include for-tablet {
 					font-size: 12px;
 				}
@@ -975,6 +1135,9 @@
 				width: 36px;
 				@include for-desktop {
 					width: 34px;
+				}
+				@include for-laptop {
+					width: 30px;
 				}
 				@include for-phone {
 					width: 15px;
@@ -1053,12 +1216,21 @@
 		.overview_content {
 			width: 45% !important;
 			@include for-phone {
-				width: 100%;
+				width: 100% !important;
 			}
 		}
 		.overview_content_title {
 			margin-bottom: 72px;
 			@include for-desktop {
+				margin-bottom: 20px;
+			}
+			@include for-laptop {
+				margin-bottom: 20px;
+			}
+			@include for-xltablet {
+				margin-bottom: 20px;
+			}
+			@include for-tablet {
 				margin-bottom: 20px;
 			}
 			@include for-phone {
@@ -1080,10 +1252,10 @@
 		bottom: 0; left: 0; right: 0;
 		z-index: 1;
 		padding-bottom: 5%;
-		@include for-phone {
+		@include for-dock {
 			padding-bottom: 2%;
 		}
-		@include for-dock {
+		@include for-phone {
 			padding-bottom: 2%;
 		}
 		&_down {
@@ -1094,6 +1266,9 @@
 			line-height: 20px;
 			letter-spacing: 0.25px;
 			color: #FFFFFF;
+			@include for-pc {
+				font-size: 18px;
+			}
 			@include for-phone {
 				display: none;
 			}
@@ -1102,6 +1277,12 @@
 			font-family: 'Roboto Regular';
 			font-size: 20px;
 			color: #FFFFFF;
+			@include for-xltablet {
+				font-size: 18px;
+			}
+			@include for-tablet {
+				font-size: 18px;
+			}
 		}
 		&_numbers {
 			span {
@@ -1112,6 +1293,12 @@
 				line-height: 24px;
 				letter-spacing: 0.15px;
 				color: rgba(255, 255, 255, 0.6);
+				@include for-laptop {
+					font-size: 14px;
+				}
+				@include for-xltablet {
+					font-size: 14px;
+				}
 				@include for-tablet {
 					font-size: 14px;
 				}
@@ -1123,6 +1310,12 @@
 					font-size: 48px;
 					line-height: 1;
 					color: #ffffff;
+					@include for-laptop {
+						font-size: 36px;
+					}
+					@include for-xltablet {
+						font-size: 32px;
+					}
 					@include for-tablet {
 						font-size: 32px;
 					}
@@ -1148,7 +1341,23 @@
 		text-transform: uppercase;
 		color: $main_color;
 		cursor: pointer;
+		@include for-fullhd {
+			font-size: 18px;
+			line-height: 21px;
+		}
 		@include for-pc {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		@include for-desktop {
+			font-size: 15px;
+			line-height: 18px;
+		}
+		@include for-laptop {
+			font-size: 14px;
+			line-height: 16px;
+		}
+		@include for-xltablet {
 			font-size: 14px;
 			line-height: 16px;
 		}

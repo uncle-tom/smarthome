@@ -25,9 +25,6 @@
 		width: -webkit-calc(150%/3);
 		width: calc(150%/3);
 		height: 100%;
-		@include for-tablet {
-			width: 100%;
-		}
 		@include for-phone {
 			width: 100%;
 		}
@@ -43,10 +40,7 @@
 			-webkit-transition: all 0.3s;
 			-o-transition: all 0.3s;
 			transition: all 0.3s;
-			@include for-tablet {
-				-webkit-clip-path: none;
-				clip-path: none;
-			}
+			
 			@include for-phone {
 				-webkit-clip-path: none;
 				clip-path: none;

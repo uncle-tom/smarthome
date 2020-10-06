@@ -10,14 +10,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="constructor-page">
-	<!-- PRELOADER :: components/blocks/preloader.html -->
-	<div class="preloader">
-	<div class="flex items-center">
-		<img src="img/logo_small.svg" alt="" class="preloader_logo">
-		<span class="preloader_text">The Art of Living SmArt</span>	
-	</div>
-</div>
-	<!-- Constructor HEADER :: components/header/header.html -->
 	<header class="header">
 		<div class="wrapper mx-auto">
 			<div class="flex justify-between items-center">
@@ -26,10 +18,13 @@
 						<img src="img/logo.svg" alt="">
 					</div>
 				</a>
-				<nav class="header_menu hidden lg:block">
+				<nav class="header_menu hidden md:block">
 					<ul class="flex justify-between">
 						<li>
-							<a href="index.html" class="header_menu_link active">Обзор</a>
+							<a href="index.html" class="header_menu_link">Обзор</a>
+						</li>
+						<li>
+							<a href="constructor.html" class="header_menu_link active">Магазин</a>
 						</li>
 						<li>
 							<a href="products.html" class="header_menu_link">Продукт</a>
@@ -41,11 +36,11 @@
 							<a href="portfolio.html" class="header_menu_link">Портфолио</a>
 						</li>
 						<li>
-							<a href="#" class="header_menu_link">Контакты</a>
+							<a href="contacts.html" class="header_menu_link">Контакты</a>
 						</li>
 					</ul>
 				</nav>
-				<div class="header_lang lang-toggle hidden lg:block">
+				<div class="header_lang lang-toggle hidden md:block">
 					<div class="select">
 						<select>
 						  <option>RU</option>
@@ -65,7 +60,10 @@
 					<nav class="header_menu">
 						<ul class="flex justify-between flex-col">
 							<li>
-								<a href="index.html" class="header_menu_link active">Обзор</a>
+								<a href="index.html" class="header_menu_link">Обзор</a>
+							</li>
+							<li>
+								<a href="constructor.html" class="header_menu_link active">Магазин</a>
 							</li>
 							<li>
 								<a href="products.html" class="header_menu_link">Продукт</a>
@@ -77,7 +75,7 @@
 								<a href="portfolio.html" class="header_menu_link">Портфолио</a>
 							</li>
 							<li>
-								<a href="#" class="header_menu_link">Контакты</a>
+								<a href="contacts.html" class="header_menu_link">Контакты</a>
 							</li>
 						</ul>
 					</nav>
@@ -97,9 +95,9 @@
 		<div class="constructor-slide active" data-constr-slide="1">
 			<!-- Constructor Slide 1 Select Option :: components/constructor/slides/select-option.html -->
 			<div class="constr">
-			<div class="wrapper mx-auto">
+			<div class="wrapper mx-auto constr-option">
 				<div class="constr_wrapper flex flex-col lg:flex-row relative">
-					<div class="constr_meta w-full lg:w-1/3">
+					<div class="constr_meta w-full lg:w-1/3 mb-12 lg:mb-0">
 						<div class="constr_meta_sticky">
 							<a href=index.html class="back-btn inline-flex items-center mb-5">
 								<img src="img/arrow.svg" alt="" width="20px">
@@ -116,10 +114,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="constr_content w-full lg:w-2/3 flex flex-col lg:flex-row lg:pl-16 mb-10">
-						<div class="constr_link constr_next_slide_js cursor-pointer">
+					<div class="constr_content w-full md:w-auto flex flex-col md:flex-row flex-wrap lg:pl-16">
+						<div class="constr_link option constr_next_slide_js cursor-pointer" data-select-option="wired">
 							<div class="constr_block slide-options">
-								<div class="constr_block_subtitle slide-options mb-1">
+								<div class="constr_block_subtitle slide-options mb-1 md:mb-2">
 									Опция #1
 								</div>
 								<div class="constr_block_title slide-options mb-3">
@@ -133,9 +131,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="constr_link constr_next_slide_js cursor-pointer">
+						<div class="constr_link option constr_next_slide_js cursor-pointer" data-select-option="wireless">
 							<div class="constr_block slide-options">
-								<div class="constr_block_subtitle mb-1">
+								<div class="constr_block_subtitle mb-1 md:mb-2">
 									Опция #2
 								</div>
 								<div class="constr_block_title mb-3">
@@ -159,7 +157,7 @@
 			<div class="constr">
 			<div class="wrapper mx-auto">
 				<div class="constr_wrapper flex flex-col lg:flex-row relative">
-					<div class="constr_meta w-full lg:w-1/3">
+					<div class="constr_meta w-full lg:w-1/3 mb-12 lg:mb-0">
 						<div class="constr_meta_sticky">
 							<div class="back-btn inline-flex items-center mb-5 constr_back_slide_js">
 								<img src="img/arrow.svg" alt="" width="20px">
@@ -176,14 +174,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="constr_content w-full lg:w-2/3 flex flex-col lg:flex-row lg:pl-16 mb-10">
-						<div href="#" class="constr_link constr_next_slide_js cursor-pointer">
+					<div class="constr_content w-full md:w-auto flex flex-col md:flex-row flex-wrap lg:pl-16">
+						<!-- Пакет Optimus -->
+						<div class="constr_link paket hidden constr_next_slide_js cursor-pointer mb-6" data-select-option="wired">
 							<div class="constr_block">
 								<div class="constr_block_subtitle mb-1">
 									Usd 9.99
 								</div>
 								<div class="constr_block_title mb-3">
-									Комфорт
+									Optimus
 								</div>
 								<div class="constr_block_subtitle">
 									Безопасность
@@ -195,19 +194,19 @@
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/door.svg" alt="">
-										<span>Датчик двери</span>
+										<span>Датчик открытия двери</span>
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/fire.svg" alt="">
-										<span>Пожарный датчик</span>
+										<span>Датчик пожарный тепловой</span>
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/leakage.svg" alt="">
-										<span>Датчик протечки</span>
+										<span>Датчик протечки воды</span>
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/alarm.svg" alt="">
-										<span>Кнопка тревоги</span>
+										<span>Функция SOS (Тревога)</span>
 									</li>
 								</ul>
 								<div class="constr_block_subtitle">
@@ -215,13 +214,176 @@
 								</div>
 								<ul class="constr_block_list">
 									<li class="constr_block_item">
-										<img src="img/constr/panel.svg" alt="">
-										<span>Панель управления</span>
+										<img src="img/constr/temp.svg" alt="">
+										<span>Датчик температуры</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/sensor.svg" alt="">
+										<span>Датчик влажности</span>
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/turn-off.svg" alt="">
 										<span>Функция "Выключить все"</span>
 									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Пакет Comfort -->
+						<div class="constr_link paket hidden constr_next_slide_js cursor-pointer mb-6" data-select-option="wired">
+							<div class="constr_block">
+								<div class="constr_block_subtitle mb-1">
+									Usd 9.99
+								</div>
+								<div class="constr_block_title mb-3">
+									Comfort
+								</div>
+								<div class="constr_block_subtitle">
+									Безопасность
+								</div>
+								<ul class="constr_block_list">
+									<li class="constr_block_item">
+										<img src="img/constr/personal.svg" alt="">
+										<span>Датчик движения</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/door.svg" alt="">
+										<span>Датчик открытия двери</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/fire.svg" alt="">
+										<span>Датчик пожарный тепловой</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/leakage.svg" alt="">
+										<span>Датчик протечки воды</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/alarm.svg" alt="">
+										<span>Функция SOS (Тревога)</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/leakage.svg" alt="">
+										<span>Клапаны перекрытия воды</span>
+									</li>
+								</ul>
+								<div class="constr_block_subtitle">
+									Комфорт
+								</div>
+								<ul class="constr_block_list">
+									<li class="constr_block_item">
+										<img src="img/constr/temp.svg" alt="">
+										<span>Датчик температуры</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/sensor.svg" alt="">
+										<span>Датчик влажности</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/turn-off.svg" alt="">
+										<span>Функция "Выключить все"</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Пакет Business+ -->
+						<div class="constr_link paket hidden constr_next_slide_js cursor-pointer mb-6" data-select-option="wired">
+							<div class="constr_block">
+								<div class="constr_block_subtitle mb-1">
+									Usd 9.99
+								</div>
+								<div class="constr_block_title mb-3">
+									Business +
+								</div>
+								<div class="constr_block_subtitle">
+									Безопасность
+								</div>
+								<ul class="constr_block_list">
+									<li class="constr_block_item">
+										<img src="img/constr/personal.svg" alt="">
+										<span>Датчик движения</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/door.svg" alt="">
+										<span>Датчик открытия двери</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/fire.svg" alt="">
+										<span>Датчик пожарный тепловой</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/leakage.svg" alt="">
+										<span>Датчик протечки воды</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/alarm.svg" alt="">
+										<span>Функция SOS (Тревога)</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/leakage.svg" alt="">
+										<span>Клапаны перекрытия воды</span>
+									</li>
+								</ul>
+								<div class="constr_block_subtitle">
+									Комфорт
+								</div>
+								<ul class="constr_block_list">
+									<li class="constr_block_item">
+										<img src="img/constr/temp.svg" alt="">
+										<span>Датчик температуры</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/sensor.svg" alt="">
+										<span>Датчик влажности</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/turn-off.svg" alt="">
+										<span>Функция "Выключить все"</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/turn-off.svg" alt="">
+										<span>Управление освещением</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/panel.svg" alt="">
+										<span>Панель управления</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Пакет Security -->
+						<div class="constr_link paket hidden constr_next_slide_js cursor-pointer mb-6"  data-select-option="wireless">
+							<div class="constr_block">
+								<div class="constr_block_subtitle mb-1">
+									usd 9.99
+								</div>
+								<div class="constr_block_title mb-3">
+									Security
+								</div>
+								<div class="constr_block_subtitle mb-1">
+									Безопасность
+								</div>
+								<ul class="constr_block_list">
+									<li class="constr_block_item">
+										<img src="img/constr/personal.svg" alt="">
+										<span>Датчик движения</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/door.svg" alt="">
+										<span>Датчик открытия воды</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/fire.svg" alt="">
+										<span>Датчик пожарный тепловой</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/leakage.svg" alt="">
+										<span>Датчик протечки воды</span>
+									</li>
+								</ul>
+								<div class="constr_block_subtitle">
+									Комфорт
+								</div>
+								<ul class="constr_block_list">
 									<li class="constr_block_item">
 										<img src="img/constr/temp.svg" alt="">
 										<span>Датчик температуры</span>
@@ -233,13 +395,14 @@
 								</ul>
 							</div>
 						</div>
-						<div href="#" class="constr_link constr_next_slide_js cursor-pointer">
+						<!-- Пакет Business -->
+						<div class="constr_link paket hidden constr_next_slide_js cursor-pointer mb-6"  data-select-option="wireless">
 							<div class="constr_block">
 								<div class="constr_block_subtitle mb-1">
 									usd 9.99
 								</div>
 								<div class="constr_block_title mb-3">
-									Бизнес
+									Business
 								</div>
 								<div class="constr_block_subtitle mb-1">
 									Безопасность
@@ -251,19 +414,19 @@
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/door.svg" alt="">
-										<span>Датчик двери</span>
+										<span>Датчик открытия двери</span>
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/fire.svg" alt="">
-										<span>Пожарный датчик</span>
+										<span>Датчик пожарный тепловой</span>
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/leakage.svg" alt="">
-										<span>Датчик протечки</span>
+										<span>Датчик протечки воды</span>
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/alarm.svg" alt="">
-										<span>Кнопка тревоги</span>
+										<span>Функция SOS (Тревога)</span>
 									</li>
 								</ul>
 								<div class="constr_block_subtitle">
@@ -271,20 +434,24 @@
 								</div>
 								<ul class="constr_block_list">
 									<li class="constr_block_item">
-										<img src="img/constr/panel.svg" alt="">
-										<span>Панель управления</span>
-									</li>
-									<li class="constr_block_item">
-										<img src="img/constr/turn-off.svg" alt="">
-										<span>Функция "Выключить все"</span>
-									</li>
-									<li class="constr_block_item">
 										<img src="img/constr/temp.svg" alt="">
 										<span>Датчик температуры</span>
 									</li>
 									<li class="constr_block_item">
 										<img src="img/constr/sensor.svg" alt="">
 										<span>Датчик влажности</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/turn-off.svg" alt="">
+										<span>Функция "Выключить все"</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/panel.svg" alt="">
+										<span>Управление освещением</span>
+									</li>
+									<li class="constr_block_item">
+										<img src="img/constr/panel.svg" alt="">
+										<span>Панель управления</span>
 									</li>
 								</ul>
 							</div>
@@ -300,7 +467,7 @@
 			<div class="wrapper mx-auto">
 				<div class="constr_wrapper flex flex-col lg:flex-row relative">
 					<!-- CONSTRUCTOR META -->
-					<div class="constr_meta w-full lg:w-1/3">
+					<div class="constr_meta w-full lg:w-1/3 mb-12 lg:mb-0">
 						<div class="constr_meta_sticky">
 							<div class="flex justify-between items-center mb-5">
 								<div class="back-btn inline-flex items-center constr_back_slide_js">
@@ -628,14 +795,14 @@
 					</div>
 
 					<!-- CONSTRUCTOR CONTENT -->
-					<div class="constr_content w-full lg:w-2/3 lg:pl-16 xl:pl-24">
+					<div class="constr_content constr_content-advance w-full lg:w-2/3 lg:pl-16 xl:pl-24">
 						<div class="constr_subtitle mb-5">
 							Безопасность
 						</div>
 						<div class="constr_grid flex flex-wrap -mx-2 mb-4">
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="1">
@@ -1368,7 +1535,7 @@
 <!-- END Constructor BOX -->
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="2">
@@ -1510,7 +1677,7 @@
 						<div class="constr_grid flex flex-wrap -mx-2 mb-4">
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="3">
@@ -1857,7 +2024,7 @@
 <!-- END Constructor BOX -->
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="4">
@@ -2067,7 +2234,7 @@
 <!-- END Constructor BOX -->
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="5">
@@ -2288,7 +2455,7 @@
 <!-- END Constructor BOX -->
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="6">
@@ -2711,7 +2878,7 @@
 <!-- END Constructor BOX -->
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="7">
@@ -2867,7 +3034,7 @@
 <!-- END Constructor BOX -->
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="8">
@@ -2902,8 +3069,8 @@
 				<?xml version="1.0" encoding="UTF-8"?>
 <svg id="svg-control" width="100%" height="290px" viewBox="0 0 320 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
-        body {
-            background-color: #000;
+        #svg-control {
+            margin-top: -1.5rem;
         }
         #svg-control:hover .conder-wave {
             stroke-dasharray: 100;
@@ -3097,7 +3264,7 @@
 <!-- END Constructor BOX -->
 							<!-- Constructor Box :: components/constructor/constructor-box.html -->
 							<!-- Constructor BOX -->
-<div class="w-full lg:w-1/2 xl:w-1/3 lg:px-2 mb-2">
+<div class="w-full md:w-1/2 xl:w-1/3 md:px-2 mb-2">
 	<div class="constr_box">
 		<!-- Constructor BOX -- Add Btn -->
 		<div class="constr_box_add constr-add-js flex items-center" data-box-id="9">
@@ -3296,7 +3463,7 @@
 			<div class="constr">
 			<div class="wrapper mx-auto">
 				<div class="constr_wrapper flex flex-col lg:flex-row relative">
-					<div class="constr_meta w-full lg:w-1/3">
+					<div class="constr_meta w-full lg:w-1/3 mb-12 lg:mb-0">
 						<div class="constr_meta_sticky">
 							<div class="flex justify-between items-center mb-5">
 								<div class="back-btn inline-flex items-center constr_back_slide_js">
@@ -3332,8 +3499,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="constr_content w-full lg:w-2/3 flex flex-col lg:flex-row lg:pl-24">
-						<div class="w-full lg:w-1/2 mr-0 lg:mr-2">
+					<div class="constr_content w-full md:w-auto flex flex-col md:flex-row flex-wrap lg:pl-16">
+						<div class="constr_link">
 							<div class="constr_block h-full">
 								<div class="constr_block_subtitle mb-1">
 									Usd 9.99
@@ -3389,7 +3556,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="w-full lg:w-1/2 ml-0 lg:ml-2">
+						<div class="constr_link">
 							<div class="constr_block h-full">
 								<div class="constr_block_subtitle mb-1">
 									Usd 3.98

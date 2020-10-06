@@ -1,7 +1,10 @@
 $phone_size: 320px; 
 $tablet_size: 768px;
+$xltablet_size: 854px;
+$laptop_size: 1080px;
 $desktop_size: 1280px;
 $pc_size: 1600px;
+$fullhd_size: 1919px;
 $full_size: 2160px;
 
 @mixin for-phone {
@@ -9,7 +12,15 @@ $full_size: 2160px;
 }
 
 @mixin for-tablet {
-  @media (min-width: 769px) and (max-width: $desktop_size) { @content; }
+  @media (min-width: 769px) and (max-width: $xltablet_size) { @content; }
+}
+
+@mixin for-xltablet {
+	@media (min-width: $xltablet_size) and (max-width: $laptop_size) { @content; }	
+}
+
+@mixin for-laptop {
+	@media (min-width: $laptop_size) and (max-width: $desktop_size) { @content; }
 }
 
 @mixin for-desktop {
@@ -17,10 +28,14 @@ $full_size: 2160px;
 }
 
 @mixin for-pc {
-  @media (min-width: $pc_size) and (max-width: $full_size) { @content; }
+  @media (min-width: $pc_size) and (max-width: $fullhd_size) { @content; }
+}
+
+@mixin for-fullhd {
+	@media (min-width: $fullhd_size) and (max-width: $full_size) { @content; }
 }
 
 @mixin for-dock {
-	@media (min-width: $desktop_size) and (min-height: 580px) and (max-height: 1079px) { @content; }
+	@media (min-width: $tablet_size) and (min-height: 580px) and (max-height: 1279px) { @content; }
 }
 

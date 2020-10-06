@@ -31,11 +31,27 @@
 			-webkit-transition: all 0.12s;
 			-o-transition: all 0.12s;
 			transition: all 0.12s;
+			@include for-fullhd {
+				font-size: 14px;
+			}
 			@include for-pc {
 				font-size: 14px;
 			}
-			@include for-tablet {
+			@include for-desktop {
 				font-size: 14px;
+				padding: 10px;
+			}
+			@include for-laptop {
+				font-size: 14px;
+				padding: 10px;
+			}
+			@include for-xltablet {
+				font-size: 10px;
+				padding: 8px;
+			}
+			@include for-tablet {
+				font-size: 10px;
+				padding: 8px;
 			}
 			&.active {
 				color: $main_color;
@@ -69,8 +85,20 @@
 		z-index: 9;
 		img {
 			width: 222px;
+			@include for-pc {
+				width: 200px;
+			}
+			@include for-desktop {
+				width: 180px;
+			}
+			@include for-laptop {
+				width: 155px;
+			}
+			@include for-xltablet {
+				width: 130px;
+			}
 			@include for-tablet {
-				width: 150px;
+				width: 130px;
 			}
 			@include for-phone {
 				width: 104px;
